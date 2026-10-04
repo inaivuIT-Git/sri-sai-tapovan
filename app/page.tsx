@@ -1,69 +1,457 @@
-import Image from "next/image";
+import Link from "next/link";
+import "./home.css";
+const homeGalleryImages = [
+  {
+    image: "gallery-1.jpeg",
+    category: "Temple",
+    title: "Temple",
+  },
+  {
+    image: "gallery-3.jpeg",
+    category: "Pooja & Aarti",
+    title: "Daily Aarti",
+  },
+  {
+    image: "gallery-5.jpeg",
+    category: "Festivals",
+    title: "Festival Celebration",
+  },
+  {
+    image: "gallery-7.jpeg",
+    category: "Devotional Moments",
+    title: "Moments of Devotion",
+  },
+];
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert h-5 w-[100px]"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the{" "}
-            <code className="rounded bg-black/[.06] px-1.5 py-0.5 font-mono text-[0.9em] dark:bg-white/[.08]">
-              page.tsx
-            </code>{" "}
-            file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+    <main>
+
+      {/* =====================================================
+          HERO
+      ===================================================== */}
+
+      <section className="hero">
+
+        <div className="hero-content">
+
+          <p className="hero-small">
+            Welcome to
           </p>
+
+          <h1>
+            Sri Sai Tapovan
+            <span>Spiritual Trust</span>
+          </h1>
+
+          <div className="hero-line"></div>
+
+          <p className="hero-description">
+            A sacred space dedicated to devotion, spiritual growth,
+            compassionate service and the timeless teachings of
+            Shirdi Sai Baba.
+          </p>
+
+          <div className="hero-buttons">
+
+            <Link
+              href="/about"
+              className="primary-btn"
+            >
+              Discover Our Trust
+            </Link>
+
+            <Link
+              href="/calendar"
+              className="secondary-btn"
+            >
+              Upcoming Events
+            </Link>
+
+          </div>
+
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert h-[14px] w-4"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={14}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+
+      </section>
+
+
+      {/* =====================================================
+          WELCOME
+      ===================================================== */}
+
+      <section className="welcome-section">
+
+        <div className="section-container welcome-grid">
+
+          <div className="welcome-image">
+
+            <div className="image-placeholder">
+
+              <img
+                src="/images/hero/sai-baba.jpeg"
+                alt="Shirdi Sai Baba"
+              />
+
+            </div>
+
+          </div>
+
+
+          <div className="welcome-content">
+
+            <p className="section-label">
+              WELCOME
+            </p>
+
+            <h2>
+              A Place of Faith, Peace & Service
+            </h2>
+
+            <div className="small-line"></div>
+
+            <p>
+              Sri Sai Tapovan Spiritual Trust is a spiritual and
+              charitable organisation inspired by the divine teachings
+              of Shirdi Sai Baba.
+            </p>
+
+            <p>
+              The Trust provides a peaceful place for devotees to
+              gather, pray and participate in spiritual activities
+              while encouraging compassion, unity and service to
+              humanity.
+            </p>
+
+            <Link
+              href="/about"
+              className="text-link"
+            >
+              Learn more about our Trust →
+            </Link>
+
+          </div>
+
         </div>
-      </main>
+
+      </section>
+
+
+      {/* =====================================================
+          OUR PATH
+      ===================================================== */}
+
+      <section className="values-section">
+
+        <div className="section-heading">
+
+          <p className="section-label">
+            OUR PATH
+          </p>
+
+          <h2>
+            Faith · Devotion · Service
+          </h2>
+
+          <p>
+            Guided by the teachings of Sai Baba, we strive to create
+            a community rooted in faith, compassion and selfless
+            service.
+          </p>
+
+        </div>
+
+
+        <div className="values-grid section-container">
+
+          <div className="value-card">
+
+            <div className="value-icon">
+              ॐ
+            </div>
+
+            <h3>
+              Spirituality
+            </h3>
+
+            <p>
+              Creating a peaceful environment for prayer, meditation
+              and spiritual growth.
+            </p>
+
+          </div>
+
+
+          <div className="value-card">
+
+            <div className="value-icon">
+              🙏
+            </div>
+
+            <h3>
+              Devotion
+            </h3>
+
+            <p>
+              Following the teachings of Sai Baba through faith,
+              patience and devotion.
+            </p>
+
+          </div>
+
+
+          <div className="value-card">
+
+            <div className="value-icon">
+              ♡
+            </div>
+
+            <h3>
+              Service
+            </h3>
+
+            <p>
+              Serving people with compassion and supporting
+              charitable activities.
+            </p>
+
+          </div>
+
+        </div>
+
+      </section>
+
+
+      {/* =====================================================
+          EVENTS
+      ===================================================== */}
+
+      <section className="events-section">
+
+        <div className="section-container">
+
+          <div className="events-header">
+
+            <div>
+
+              <p className="section-label">
+                TEMPLE CALENDAR
+              </p>
+
+              <h2>
+                Upcoming Events
+              </h2>
+
+            </div>
+
+            <Link href="/calendar">
+              View Full Calendar →
+            </Link>
+
+          </div>
+
+
+          <div className="events-grid">
+
+            <article className="event-card">
+
+              <div className="event-date">
+
+                <strong>
+                  15
+                </strong>
+
+                <span>
+                  OCT
+                </span>
+
+              </div>
+
+
+              <div className="event-details">
+
+                <span>
+                  Temple Event
+                </span>
+
+                <h3>
+                  Special Sai Baba Pooja
+                </h3>
+
+                <p>
+                  6:00 PM onwards
+                </p>
+
+              </div>
+
+            </article>
+
+
+            <article className="event-card">
+
+              <div className="event-date">
+
+                <strong>
+                  22
+                </strong>
+
+                <span>
+                  OCT
+                </span>
+
+              </div>
+
+
+              <div className="event-details">
+
+                <span>
+                  Spiritual Gathering
+                </span>
+
+                <h3>
+                  Bhajan & Prayer
+                </h3>
+
+                <p>
+                  6:30 PM onwards
+                </p>
+
+              </div>
+
+            </article>
+
+
+            <article className="event-card">
+
+              <div className="event-date">
+
+                <strong>
+                  30
+                </strong>
+
+                <span>
+                  OCT
+                </span>
+
+              </div>
+
+
+              <div className="event-details">
+
+                <span>
+                  Seva
+                </span>
+
+                <h3>
+                  Annadanam
+                </h3>
+
+                <p>
+                  12:00 PM onwards
+                </p>
+
+              </div>
+
+            </article>
+
+          </div>
+
+        </div>
+
+      </section>
+
+
+      {/* =====================================================
+          QUOTE
+      ===================================================== */}
+
+      <section className="quote-section">
+
+        <div className="quote-symbol">
+          “
+        </div>
+
+        <blockquote>
+          Faith and patience guide the devotee towards peace,
+          compassion and spiritual awakening.
+        </blockquote>
+
+        <p>
+          — Inspired by the teachings of Shirdi Sai Baba
+        </p>
+
+      </section>
+
+
+      {/* =====================================================
+          GALLERY
+      ===================================================== */}
+
+      <section className="home-gallery">
+
+  <div className="home-gallery-container">
+
+    <div className="home-gallery-heading">
+
+      <p className="home-gallery-label">
+        MOMENTS OF DEVOTION
+      </p>
+
+      <h2>
+        Our Gallery
+      </h2>
+
     </div>
+
+
+    <div className="home-gallery-grid">
+
+      {homeGalleryImages.map((item) => (
+
+        <article
+          className="home-gallery-card"
+          key={item.image}
+        >
+
+          <div className="home-gallery-image">
+
+            <img
+              src={`/images/gallery/${item.image}`}
+              alt={item.title}
+            />
+
+          </div>
+
+          <div className="home-gallery-content">
+
+            <p>
+              {item.category}
+            </p>
+
+            <h3>
+              {item.title}
+            </h3>
+
+          </div>
+
+        </article>
+
+      ))}
+
+    </div>
+
+
+    <div className="home-gallery-button">
+
+      <a href="/gallery">
+        View Gallery
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+    </main>
   );
 }

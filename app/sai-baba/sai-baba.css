@@ -1,0 +1,1357 @@
+/* =========================================================
+   SRI SAI TAPOVAN SPIRITUAL TRUST
+   SAI BABA PAGE
+   SAFFRON + WHITE + GOLD + WARM BROWN
+========================================================= */
+
+:root {
+  --saffron: #D9822B;
+  --deep-saffron: #B85C16;
+  --soft-saffron: #FFF5E8;
+  --gold: #B58A3A;
+
+  --brown: #6B442A;
+  --deep-brown: #4A2D1C;
+
+  --white: #FFFFFF;
+  --off-white: #FFFDFC;
+
+  --text: #3F3530;
+  --muted-text: #746963;
+  --border: #E8DED4;
+}
+
+
+/* =========================================================
+   PAGE
+========================================================= */
+
+.sai-page {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background: var(--white);
+  color: var(--text);
+  overflow: hidden;
+}
+
+.sai-page *,
+.sai-page *::before,
+.sai-page *::after {
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   COMMON CONTAINER
+========================================================= */
+
+.sai-container {
+  width: min(1180px, calc(100% - 50px));
+  margin: 0 auto;
+}
+
+
+/* =========================================================
+   COMMON LABEL
+========================================================= */
+
+.sai-label {
+  margin: 0 0 10px;
+
+  color: var(--saffron);
+
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  line-height: 1.4;
+
+  text-transform: uppercase;
+}
+
+
+/* =========================================================
+   COMMON LINE
+========================================================= */
+
+.sai-line {
+  width: 55px;
+  height: 2px;
+
+  margin: 24px 0;
+
+  background: var(--saffron);
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.sai-hero {
+  position: relative;
+
+  min-height: 320px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+
+  background:
+    linear-gradient(
+      135deg,
+      var(--deep-saffron) 0%,
+      var(--saffron) 55%,
+      #E6A04A 100%
+    );
+
+  color: var(--white);
+}
+
+.sai-hero::before {
+  content: "ॐ";
+
+  position: absolute;
+
+  left: 50%;
+  top: 50%;
+
+  transform: translate(-50%, -50%);
+
+  color: rgba(255, 255, 255, 0.08);
+
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 230px;
+
+  pointer-events: none;
+}
+
+.sai-hero::after {
+  content: "";
+
+  position: absolute;
+
+  width: 160px;
+  height: 2px;
+
+  left: 50%;
+  bottom: 0;
+
+  transform: translateX(-50%);
+
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.sai-hero-content {
+  position: relative;
+  z-index: 2;
+
+  width: min(1180px, calc(100% - 50px));
+
+  margin: 0 auto;
+
+  text-align: center;
+}
+
+.sai-hero-content > p {
+  margin: 0 0 14px;
+
+  color: rgba(255, 255, 255, 0.92);
+
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 5px;
+}
+
+.sai-hero h1 {
+  margin: 0;
+
+  color: var(--white);
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: clamp(44px, 6vw, 62px);
+  font-weight: 400;
+  line-height: 1.15;
+}
+
+.sai-hero h1::after {
+  content: "";
+
+  display: block;
+
+  width: 50px;
+  height: 2px;
+
+  margin: 22px auto 0;
+
+  background: var(--white);
+}
+
+.sai-breadcrumb {
+  margin-top: 20px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  gap: 10px;
+
+  color: rgba(255, 255, 255, 0.82);
+
+  font-size: 14px;
+}
+
+.sai-breadcrumb a {
+  color: var(--white);
+  text-decoration: none;
+}
+
+.sai-breadcrumb a:hover {
+  text-decoration: underline;
+}
+
+.sai-breadcrumb span {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+
+/* =========================================================
+   INTRODUCTION
+========================================================= */
+
+.sai-intro {
+  padding: 100px 0;
+
+  background: var(--white);
+}
+
+.sai-intro-grid {
+  display: grid;
+
+  grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+
+  gap: 75px;
+
+  align-items: center;
+}
+
+
+/* =========================================================
+   INTRO IMAGE
+========================================================= */
+
+.sai-image {
+  position: relative;
+
+  width: 100%;
+  max-width: 520px;
+
+  margin: 0 auto;
+
+  padding: 8px;
+
+  background: var(--white);
+
+  border: 1px solid var(--gold);
+}
+
+.sai-image::before {
+  display: none;
+}
+
+.sai-image-placeholder {
+  position: relative;
+
+  width: 100%;
+  min-height: 500px;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+
+  background: var(--white);
+
+  border: none;
+
+  text-align: center;
+}
+
+.sai-image-placeholder img {
+  display: block;
+
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+
+  object-fit: contain;
+  object-position: center;
+}
+
+.sai-image-placeholder span {
+  display: block;
+
+  color: var(--saffron);
+
+  font-size: 80px;
+  line-height: 1;
+}
+
+.sai-image-placeholder p {
+  margin: 22px 0 0;
+
+  color: var(--brown);
+
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+
+/* =========================================================
+   INTRO CONTENT
+========================================================= */
+
+.sai-intro-content {
+  width: 100%;
+  max-width: 620px;
+}
+
+.sai-intro-content h2 {
+  margin: 0;
+
+  color: var(--deep-brown);
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: clamp(38px, 4vw, 48px);
+
+  font-weight: 400;
+
+  line-height: 1.2;
+}
+
+.sai-intro-content h2 span {
+  display: block;
+
+  color: var(--saffron);
+}
+
+.sai-intro-content > p:not(.sai-label) {
+  margin: 0 0 16px;
+
+  color: var(--text);
+
+  font-size: 16px;
+  line-height: 1.85;
+}
+
+
+/* =========================================================
+   INTRO QUOTE
+========================================================= */
+
+.sai-intro-quote {
+  margin-top: 30px;
+
+  padding: 22px 25px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 18px;
+
+  background: var(--soft-saffron);
+
+  border-left: 3px solid var(--saffron);
+}
+
+.sai-intro-quote > span {
+  flex-shrink: 0;
+
+  color: var(--gold);
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: 52px;
+  line-height: 1;
+}
+
+.sai-intro-quote strong {
+  display: block;
+
+  color: var(--deep-saffron);
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: 22px;
+  font-weight: 400;
+}
+
+.sai-intro-quote p {
+  margin: 5px 0 0;
+
+  color: var(--muted-text);
+
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+
+/* =========================================================
+   SECTION HEADING
+========================================================= */
+
+.sai-section-heading {
+  width: 100%;
+  max-width: 720px;
+
+  margin: 0 auto 60px;
+
+  text-align: center;
+}
+
+.sai-section-heading h2 {
+  margin: 8px 0 16px;
+
+  color: var(--deep-brown);
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: clamp(36px, 4vw, 44px);
+
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+.sai-section-heading > p:last-child {
+  margin: 0;
+
+  color: var(--muted-text);
+
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+
+/* =========================================================
+   HISTORY
+========================================================= */
+
+.sai-history {
+  padding: 95px 0;
+
+  background: var(--soft-saffron);
+
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+
+/* =========================================================
+   HISTORY TIMELINE
+========================================================= */
+
+.history-timeline {
+  position: relative;
+
+  width: 100%;
+  max-width: 900px;
+
+  margin: 0 auto;
+}
+
+.history-timeline::before {
+  content: "";
+
+  position: absolute;
+
+  left: 31px;
+
+  top: 25px;
+  bottom: 25px;
+
+  width: 1px;
+
+  background: var(--gold);
+}
+
+.history-item {
+  position: relative;
+
+  display: grid;
+
+  grid-template-columns: 64px minmax(0, 1fr);
+
+  gap: 35px;
+
+  padding-bottom: 55px;
+}
+
+.history-item:last-child {
+  padding-bottom: 0;
+}
+
+.history-marker {
+  position: relative;
+
+  z-index: 2;
+
+  width: 64px;
+  height: 64px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  background: var(--saffron);
+
+  border: 5px solid var(--soft-saffron);
+
+  border-radius: 50%;
+
+  color: var(--white);
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: 15px;
+}
+
+.history-content {
+  min-width: 0;
+
+  padding-top: 5px;
+}
+
+.history-small {
+  margin: 0 0 8px;
+
+  color: var(--saffron);
+
+  font-size: 11px;
+  font-weight: 700;
+
+  letter-spacing: 3px;
+}
+
+.history-content h3 {
+  margin: 0 0 14px;
+
+  color: var(--deep-brown);
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: 27px;
+
+  font-weight: 400;
+
+  line-height: 1.25;
+}
+
+.history-content > p:not(.history-small) {
+  margin: 0 0 12px;
+
+  color: var(--text);
+
+  font-size: 15px;
+
+  line-height: 1.8;
+}
+
+.history-content > p:last-child {
+  margin-bottom: 0;
+}
+
+
+/* =========================================================
+   TEACHINGS
+========================================================= */
+
+.teachings-section {
+  padding: 95px 0;
+
+  background: var(--white);
+}
+
+.teachings-grid {
+  display: grid;
+
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+
+  gap: 22px;
+}
+
+.teaching-card {
+  min-width: 0;
+
+  padding: 38px 24px 35px;
+
+  background: var(--soft-saffron);
+
+  border: 1px solid var(--border);
+
+  text-align: center;
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.teaching-card:hover {
+  transform: translateY(-4px);
+
+  border-color: var(--gold);
+
+  box-shadow:
+    0 14px 32px rgba(107, 68, 42, 0.08);
+}
+
+.teaching-icon {
+  width: 68px;
+  height: 68px;
+
+  margin: 0 auto 20px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  background: var(--saffron);
+
+  border-radius: 50%;
+
+  color: var(--white);
+
+  font-size: 26px;
+  line-height: 1;
+}
+
+.teaching-card h3 {
+  margin: 0 0 5px;
+
+  color: var(--deep-brown);
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: 23px;
+
+  font-weight: 400;
+}
+
+.teaching-card > span {
+  display: block;
+
+  margin-bottom: 15px;
+
+  color: var(--saffron);
+
+  font-size: 11px;
+
+  font-weight: 700;
+
+  letter-spacing: 2px;
+
+  text-transform: uppercase;
+}
+
+.teaching-card p {
+  margin: 0;
+
+  color: var(--muted-text);
+
+  font-size: 14px;
+
+  line-height: 1.8;
+}
+
+
+/* =========================================================
+   UNITY
+========================================================= */
+
+.unity-section {
+  position: relative;
+
+  padding: 100px 0;
+
+  overflow: hidden;
+
+  background:
+    linear-gradient(
+      135deg,
+      var(--deep-saffron) 0%,
+      var(--saffron) 55%,
+      #E6A04A 100%
+    );
+
+  color: var(--white);
+}
+
+.unity-section::before {
+  content: "ॐ";
+
+  position: absolute;
+
+  left: -80px;
+  top: -100px;
+
+  color: rgba(255, 255, 255, 0.06);
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: 260px;
+
+  pointer-events: none;
+}
+
+.unity-section::after {
+  content: "";
+
+  position: absolute;
+
+  right: -120px;
+  bottom: -170px;
+
+  width: 350px;
+  height: 350px;
+
+  border: 1px solid rgba(255, 255, 255, 0.14);
+
+  border-radius: 50%;
+}
+
+.unity-content {
+  position: relative;
+
+  z-index: 2;
+
+  text-align: center;
+}
+
+.unity-content > p:first-child {
+  margin: 0 0 12px;
+
+  color: rgba(255, 255, 255, 0.88);
+
+  font-size: 12px;
+
+  font-weight: 700;
+
+  letter-spacing: 4px;
+}
+
+.unity-content h2 {
+  margin: 0;
+
+  color: var(--white);
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: clamp(42px, 5vw, 54px);
+
+  font-weight: 400;
+
+  line-height: 1.2;
+}
+
+.unity-line {
+  width: 55px;
+  height: 2px;
+
+  margin: 25px auto;
+
+  background: var(--white);
+}
+
+.unity-description {
+  width: 100%;
+  max-width: 760px;
+
+  margin: 0 auto;
+
+  color: rgba(255, 255, 255, 0.92);
+
+  font-size: 16px;
+
+  line-height: 1.85;
+}
+
+
+/* =========================================================
+   SHRADDHA & SABURI
+========================================================= */
+
+.faith-section {
+  padding: 90px 0;
+
+  background: var(--soft-saffron);
+
+  text-align: center;
+
+  border-bottom: 1px solid var(--border);
+}
+
+.faith-grid {
+  width: min(760px, calc(100% - 50px));
+
+  margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns: minmax(0, 1fr) 90px minmax(0, 1fr);
+
+  align-items: center;
+
+  gap: 50px;
+}
+
+.faith-item {
+  text-align: center;
+}
+
+.faith-item > span {
+  display: block;
+
+  color: var(--saffron);
+
+  font-size: 25px;
+
+  line-height: 1.3;
+}
+
+.faith-item h3 {
+  margin: 10px 0 5px;
+
+  color: var(--deep-brown);
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: 34px;
+
+  font-weight: 400;
+
+  line-height: 1.2;
+}
+
+.faith-item p {
+  margin: 0;
+
+  color: var(--muted-text);
+
+  font-size: 13px;
+
+  letter-spacing: 3px;
+
+  text-transform: uppercase;
+}
+
+.faith-symbol {
+  width: 78px;
+  height: 78px;
+
+  margin: 0 auto;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid var(--gold);
+
+  border-radius: 50%;
+
+  color: var(--saffron);
+
+  font-size: 34px;
+
+  line-height: 1;
+}
+
+.faith-message {
+  width: min(650px, calc(100% - 50px));
+
+  margin: 40px auto 0;
+
+  color: var(--muted-text);
+
+  font-size: 15px;
+
+  line-height: 1.8;
+
+  text-align: center;
+}
+
+
+/* =========================================================
+   CTA
+========================================================= */
+
+.sai-cta {
+  padding: 75px 0;
+
+  background: var(--white);
+}
+
+.sai-cta-inner {
+  width: min(1180px, calc(100% - 50px));
+
+  margin: 0 auto;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 60px;
+}
+
+.sai-cta-inner > div:first-child {
+  flex: 1;
+
+  max-width: 700px;
+}
+
+.sai-cta .sai-label {
+  margin: 0 0 10px;
+
+  color: var(--saffron);
+
+  font-size: 12px;
+
+  font-weight: 700;
+
+  letter-spacing: 3px;
+}
+
+.sai-cta h2 {
+  margin: 8px 0 12px;
+
+  color: var(--deep-brown);
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: 36px;
+
+  font-weight: 400;
+
+  line-height: 1.25;
+}
+
+.sai-cta-inner > div:first-child > p:last-child {
+  margin: 0;
+
+  color: var(--muted-text);
+
+  font-size: 15px;
+
+  line-height: 1.75;
+}
+
+.sai-cta-buttons {
+  flex-shrink: 0;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+}
+
+.sai-primary-btn,
+.sai-outline-btn {
+  min-width: 125px;
+
+  padding: 13px 23px;
+
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid var(--saffron);
+
+  box-sizing: border-box;
+
+  text-decoration: none;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  transition:
+    background 0.25s ease,
+    color 0.25s ease,
+    border-color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.sai-primary-btn {
+  background: var(--saffron);
+
+  border-color: var(--saffron);
+
+  color: var(--white);
+}
+
+.sai-primary-btn:hover {
+  background: var(--deep-saffron);
+
+  border-color: var(--deep-saffron);
+
+  transform: translateY(-2px);
+}
+
+.sai-outline-btn {
+  background: var(--white);
+
+  border-color: var(--gold);
+
+  color: var(--deep-saffron);
+}
+
+.sai-outline-btn:hover {
+  background: var(--soft-saffron);
+
+  border-color: var(--saffron);
+
+  transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+  .sai-container {
+    width: min(100% - 40px, 720px);
+  }
+
+  .sai-intro {
+    padding: 80px 0;
+  }
+
+  .sai-intro-grid {
+    grid-template-columns: 1fr;
+
+    gap: 50px;
+  }
+
+  .sai-image {
+    max-width: 600px;
+  }
+
+  .sai-intro-content {
+    max-width: 720px;
+  }
+
+  .teachings-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .sai-cta-inner {
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 30px;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+  .sai-container {
+    width: calc(100% - 32px);
+  }
+
+  /* HERO */
+
+  .sai-hero {
+    min-height: 270px;
+
+    padding: 60px 0;
+  }
+
+  .sai-hero::before {
+    font-size: 170px;
+  }
+
+  .sai-hero-content {
+    width: calc(100% - 32px);
+  }
+
+  .sai-hero-content > p {
+    font-size: 10px;
+
+    letter-spacing: 3px;
+  }
+
+  .sai-hero h1 {
+    font-size: 40px;
+  }
+
+  .sai-breadcrumb {
+    font-size: 13px;
+  }
+
+
+  /* INTRO */
+
+  .sai-intro {
+    padding: 70px 0;
+  }
+
+  .sai-intro-grid {
+    gap: 40px;
+  }
+
+  .sai-image {
+    padding: 7px;
+  }
+
+  .sai-image-placeholder {
+    min-height: 400px;
+  }
+
+  .sai-intro-content h2 {
+    font-size: 34px;
+  }
+
+  .sai-intro-content > p:not(.sai-label) {
+    font-size: 15px;
+
+    line-height: 1.8;
+  }
+
+  .sai-intro-quote {
+    padding: 20px;
+
+    gap: 14px;
+  }
+
+  .sai-intro-quote > span {
+    font-size: 42px;
+  }
+
+  .sai-intro-quote strong {
+    font-size: 19px;
+  }
+
+
+  /* HISTORY */
+
+  .sai-history {
+    padding: 70px 0;
+  }
+
+  .sai-section-heading {
+    margin-bottom: 45px;
+  }
+
+  .sai-section-heading h2 {
+    font-size: 32px;
+  }
+
+  .history-timeline {
+    width: 100%;
+  }
+
+  .history-timeline::before {
+    left: 24px;
+
+    top: 20px;
+    bottom: 20px;
+  }
+
+  .history-item {
+    grid-template-columns: 50px minmax(0, 1fr);
+
+    gap: 20px;
+
+    padding-bottom: 40px;
+  }
+
+  .history-marker {
+    width: 50px;
+    height: 50px;
+
+    border-width: 4px;
+
+    font-size: 12px;
+  }
+
+  .history-content {
+    padding-top: 3px;
+  }
+
+  .history-content h3 {
+    font-size: 23px;
+  }
+
+  .history-content > p:not(.history-small) {
+    font-size: 14px;
+
+    line-height: 1.75;
+  }
+
+
+  /* TEACHINGS */
+
+  .teachings-section {
+    padding: 70px 0;
+  }
+
+  .teachings-grid {
+    grid-template-columns: 1fr;
+
+    gap: 18px;
+  }
+
+  .teaching-card {
+    padding: 32px 22px;
+  }
+
+
+  /* UNITY */
+
+  .unity-section {
+    padding: 75px 0;
+  }
+
+  .unity-content > p:first-child {
+    font-size: 10px;
+
+    letter-spacing: 3px;
+  }
+
+  .unity-content h2 {
+    font-size: 38px;
+  }
+
+  .unity-description {
+    font-size: 15px;
+  }
+
+
+  /* FAITH */
+
+  .faith-section {
+    padding: 70px 0;
+  }
+
+  .faith-grid {
+    width: calc(100% - 32px);
+
+    grid-template-columns: 1fr;
+
+    gap: 25px;
+  }
+
+  .faith-symbol {
+    width: 60px;
+    height: 60px;
+
+    font-size: 26px;
+
+    order: 2;
+  }
+
+  .faith-item:first-child {
+    order: 1;
+  }
+
+  .faith-item:last-child {
+    order: 3;
+  }
+
+  .faith-item h3 {
+    font-size: 28px;
+  }
+
+  .faith-message {
+    width: calc(100% - 32px);
+
+    margin-top: 35px;
+
+    font-size: 14px;
+  }
+
+
+  /* CTA */
+
+  .sai-cta {
+    padding: 65px 0;
+  }
+
+  .sai-cta-inner {
+    width: calc(100% - 32px);
+
+    align-items: stretch;
+
+    gap: 28px;
+  }
+
+  .sai-cta h2 {
+    font-size: 32px;
+  }
+
+  .sai-cta-buttons {
+    width: 100%;
+
+    flex-direction: column;
+
+    align-items: stretch;
+
+    gap: 10px;
+  }
+
+  .sai-primary-btn,
+  .sai-outline-btn {
+    width: 100%;
+  }
+
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+========================================================= */
+
+@media (max-width: 400px) {
+
+  .sai-hero h1 {
+    font-size: 34px;
+  }
+
+  .sai-intro-content h2 {
+    font-size: 31px;
+  }
+
+  .sai-section-heading h2 {
+    font-size: 30px;
+  }
+
+  .unity-content h2 {
+    font-size: 34px;
+  }
+
+  .sai-cta h2 {
+    font-size: 29px;
+  }
+
+}
