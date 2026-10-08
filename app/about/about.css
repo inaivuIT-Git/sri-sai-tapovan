@@ -1,1073 +1,1217 @@
-/* =====================================================
-   SRI SAI TAPOVAN SPIRITUAL TRUST
-   ABOUT PAGE
-   SAFFRON + WHITE + GOLD + WARM BROWN
-===================================================== */
+/* =========================================================
+   SRI SAI TAPOVAN — ABOUT US
+   Premium Spiritual / Satsang Visual Language
+========================================================= */
+
+:root {
+  --saffron: #d9822b;
+  --deep-saffron: #b85c16;
+  --dark-saffron: #91440f;
+
+  --gold: #b58a3a;
+  --light-gold: #e4c98e;
+
+  --brown: #6b442a;
+  --deep-brown: #402719;
+
+  --text: #443932;
+  --muted: #766960;
+
+  --white: #ffffff;
+  --cream: #fffaf3;
+  --soft-cream: #fdf5e9;
+
+  --border: #dcc9aa;
+}
 
 
-/* =====================================================
-   COMMON
-===================================================== */
+/* =========================================================
+   RESET
+========================================================= */
 
 .about-page {
-  background: #ffffff;
-  color: #3f3530;
+  width: 100%;
+  overflow: hidden;
+
+  color: var(--text);
+  background: var(--white);
 }
 
-.about-container {
-  width: min(1180px, calc(100% - 50px));
-  margin: 0 auto;
+.about-page *,
+.about-page *::before,
+.about-page *::after {
+  box-sizing: border-box;
 }
 
-.about-label {
-  margin: 0 0 10px;
-  color: #d9822b;
-  font-size: 12px;
-  font-weight: 700;
-  letter-spacing: 3px;
-  text-transform: uppercase;
+.about-page img {
+  display: block;
+  width: 100%;
 }
 
-.about-line {
-  width: 55px;
-  height: 2px;
-  margin: 25px 0;
-  background: #d9822b;
+.about-page h1,
+.about-page h2,
+.about-page h3,
+.about-page p {
+  margin-top: 0;
 }
-
-
 /* =====================================================
-   PAGE HERO
+   ABOUT HERO
 ===================================================== */
 
 .about-hero {
-  min-height: 320px;
   position: relative;
-  overflow: hidden;
+  width: 100%;
+  height: 500px;
+  min-height: 500px;
 
   display: flex;
   align-items: center;
+  justify-content: center;
 
-  background: linear-gradient(
-    135deg,
-    #b85c16 0%,
-    #d9822b 55%,
-    #e6a04a 100%
-  );
-
-  color: #ffffff;
-  border-bottom: 1px solid #b58a3a;
+  overflow: hidden;
 }
 
 
-/* SUBTLE OM */
+/* -----------------------------------------------------
+   IMAGE
+----------------------------------------------------- */
 
-.about-hero::before {
-  content: "ॐ";
-
+.about-hero-image {
   position: absolute;
+  inset: 0;
 
-  left: 50%;
-  top: 50%;
-
-  transform: translate(-50%, -50%);
-
-  color: rgba(255, 255, 255, 0.08);
-
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: 230px;
-
-  pointer-events: none;
+  background:
+    url("/images/about/gallery-1.jpeg")
+    center center / cover no-repeat;
 }
 
 
-/* GOLD / WHITE BOTTOM DECORATION */
+/* -----------------------------------------------------
+   OVERLAY
+----------------------------------------------------- */
 
-.about-hero::after {
-  content: "";
-
+.about-hero-overlay {
   position: absolute;
+  inset: 0;
+  z-index: 1;
 
-  width: 160px;
-  height: 2px;
-
-  left: 50%;
-  bottom: 0;
-
-  transform: translateX(-50%);
-
-  background: #ffffff;
+  background:
+    linear-gradient(
+      rgba(55, 25, 8, 0.68),
+      rgba(55, 25, 8, 0.68)
+    );
 }
 
 
-/* HERO CONTENT */
+/* -----------------------------------------------------
+   CONTENT
+----------------------------------------------------- */
 
 .about-hero-content {
   position: relative;
   z-index: 2;
 
-  width: min(1180px, calc(100% - 50px));
-  margin: auto;
+  width: min(1050px, calc(100% - 40px));
+
+  margin: 0 auto;
 
   text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 
-/* WHO WE ARE */
+/* -----------------------------------------------------
+   TRUST NAME
+----------------------------------------------------- */
 
-.about-hero-content > p {
-  margin: 0 0 14px;
+.about-hero-eyebrow {
+  display: block;
 
-  color: #fff5e8;
+  margin: 0 0 16px;
 
-  font-size: 12px;
-  font-weight: 700;
-  letter-spacing: 5px;
+  color: #e4c98e;
+
+  font-family:
+    Georgia,
+    "Noto Serif Tamil",
+    serif;
+
+  font-size: 28px;
+  font-weight: 500;
+
+  line-height: 1.3;
+  letter-spacing: 1px;
 }
 
 
-/* MAIN TITLE */
+/* -----------------------------------------------------
+   TITLE
+----------------------------------------------------- */
 
 .about-hero h1 {
   margin: 0;
 
   color: #ffffff;
 
-  font-family: Georgia, "Times New Roman", serif;
+  font-family:
+    Georgia,
+    "Noto Serif Tamil",
+    serif;
 
-  font-size: clamp(44px, 6vw, 62px);
+  font-size: clamp(42px, 5vw, 68px);
 
-  font-weight: 400;
-  line-height: 1.15;
-}
-
-
-/* TITLE LINE */
-
-.about-hero h1::after {
-  content: "";
-
-  display: block;
-
-  width: 50px;
-  height: 2px;
-
-  margin: 22px auto 0;
-
-  background: #ffffff;
-}
-
-
-/* BREADCRUMB */
-
-.about-breadcrumb {
-  margin-top: 20px;
-
-  display: flex;
-
-  justify-content: center;
-  align-items: center;
-
-  gap: 10px;
-
-  color: #fff5e8;
-
-  font-size: 14px;
-}
-
-.about-breadcrumb a {
-  color: #ffffff;
-  text-decoration: none;
-  transition: color 0.2s ease;
-}
-
-.about-breadcrumb a:hover {
-  color: #fff5e8;
-}
-
-
-/* =====================================================
-   INTRODUCTION
-===================================================== */
-
-.about-intro {
-  padding: 100px 0;
-  background: #ffffff;
-}
-
-
-/* INTRO GRID */
-
-.about-intro-grid {
-  display: grid;
-
-  grid-template-columns: minmax(400px, 520px) 1fr;
-
-  align-items: start;
-
-  gap: 80px;
-}
-
-
-
-/* =====================================================
-   ABOUT INTRO IMAGE
-   Same clean treatment as Home page
-===================================================== */
-
-.about-image {
-  position: relative;
-
-  width: 100%;
-  max-width: 520px;
-
-  margin: -6px auto 0;
-  padding: 8px;
-
-  box-sizing: border-box;
-
-  background: #ffffff;
-
-  border: 1px solid #b58a3a;
-
-  z-index: 2;
-}
-
-
-/* REMOVE DECORATIVE OFFSET FRAME */
-
-.about-image::before {
-  display: none;
-}
-
-
-/* =====================================================
-   IMAGE FRAME
-===================================================== */
-
-.about-image-placeholder {
-  position: relative;
-
-  width: 100%;
-
-  box-sizing: border-box;
-
-  overflow: hidden;
-
-  background: #ffffff;
-
-  border: none;
-
-  line-height: 0;
-}
-
-
-/* =====================================================
-   ACTUAL IMAGE
-===================================================== */
-
-.about-image-placeholder img {
-  display: block;
-
-  width: 100%;
-  height: auto;
-
-  max-width: 100%;
-
-  object-fit: contain;
-
-  object-position: center;
-}
-
-
-/* =====================================================
-   OLD PLACEHOLDER CONTENT
-===================================================== */
-
-.about-image-placeholder span {
-  display: block;
-
-  color: #d9822b;
-
-  font-size: 90px;
-
-  line-height: 1;
-}
-
-.about-image-placeholder p {
-  margin: 20px 0 0;
-
-  color: #746963;
-
-  font-size: 14px;
   font-weight: 500;
 
-  letter-spacing: 0.5px;
-}
-
-
-/* =====================================================
-   INTRO CONTENT
-===================================================== */
-
-.about-content h2,
-.activities-content h2 {
-  margin: 0;
-
-  max-width: 650px;
-
-  color: #6b442a;
-
-  font-family: Georgia, "Times New Roman", serif;
-
-  font-size: 43px;
-
-  line-height: 1.25;
-
-  font-weight: 400;
-}
-
-
-/* HIGHLIGHT TEXT */
-
-.about-content h2 span {
-  display: block;
-  color: #b85c16;
-}
-
-
-/* INTRO PARAGRAPHS */
-
-.about-content > p:not(.about-label) {
-  color: #746963;
-
-  font-size: 16px;
-  line-height: 1.9;
-}
-
-
-/* =====================================================
-   QUOTE
-===================================================== */
-
-.about-quote {
-  margin-top: 30px;
-
-  padding: 25px 28px;
-
-  display: flex;
-
-  gap: 18px;
-
-  background: #fff5e8;
-
-  border-left: 3px solid #d9822b;
-}
-
-.about-quote span {
-  color: #d9822b;
-
-  font-family: Georgia, "Times New Roman", serif;
-
-  font-size: 50px;
-  line-height: 35px;
-}
-
-.about-quote p {
-  margin: 0;
-
-  color: #6b442a;
-
-  font-family: Georgia, "Times New Roman", serif;
-
-  font-size: 19px;
-  line-height: 1.6;
-
-  font-style: italic;
-}
-
-
-/* =====================================================
-   SECTION HEADINGS
-===================================================== */
-
-.about-section-heading {
-  max-width: 700px;
-
-  margin: 0 auto 55px;
+  line-height: 1.18;
 
   text-align: center;
 }
 
-.about-section-heading h2 {
-  margin: 10px 0 15px;
 
-  color: #6b442a;
+/* -----------------------------------------------------
+   LINE
+----------------------------------------------------- */
 
-  font-family: Georgia, "Times New Roman", serif;
+.about-hero-line {
+  width: 75px;
+  height: 1px;
 
-  font-size: 42px;
+  margin: 22px auto 18px;
 
-  font-weight: 400;
-}
-
-.about-section-heading > p:last-child {
-  color: #746963;
-  line-height: 1.8;
+  background: #e4c98e;
 }
 
 
-/* =====================================================
-   VISION & MISSION
-===================================================== */
+/* -----------------------------------------------------
+   SUBTITLE
+----------------------------------------------------- */
 
-.vision-section {
-  padding: 95px 0;
-  background: #fff5e8;
-}
-
-.vision-grid {
-  display: grid;
-
-  grid-template-columns: repeat(2, 1fr);
-
-  gap: 28px;
-}
-
-.vision-card {
-  position: relative;
-
-  overflow: hidden;
-
-  padding: 50px;
-
-  background: #ffffff;
-
-  border: 1px solid #e8ded4;
-
-  box-shadow:
-    0 12px 35px rgba(82, 52, 40, 0.06);
-
-  transition:
-    transform 0.25s ease,
-    box-shadow 0.25s ease;
-}
-
-.vision-card::before {
-  content: "";
-
-  position: absolute;
-
-  left: 0;
-  top: 0;
-
-  width: 100%;
-  height: 3px;
-
-  background: #d9822b;
-}
-
-.vision-card:hover {
-  transform: translateY(-5px);
-
-  box-shadow:
-    0 18px 45px rgba(82, 52, 40, 0.11);
-}
-
-
-/* LARGE BACKGROUND NUMBER */
-
-.vision-number {
-  position: absolute;
-
-  top: -15px;
-  right: 20px;
-
-  color: #fff5e8;
-
-  font-family: Georgia, "Times New Roman", serif;
-
-  font-size: 100px;
-}
-
-.vision-icon {
-  position: relative;
-  z-index: 2;
-
-  margin-bottom: 22px;
-
-  color: #b58a3a;
-
-  font-size: 40px;
-}
-
-.vision-card h3 {
-  position: relative;
-
-  margin: 0 0 15px;
-
-  color: #6b442a;
-
-  font-family: Georgia, "Times New Roman", serif;
-
-  font-size: 28px;
-
-  font-weight: 400;
-}
-
-.vision-card p {
-  position: relative;
-
+.about-hero-subtitle {
   margin: 0;
 
-  color: #746963;
+  color: rgba(255, 255, 255, 0.9);
+
+  font-family:
+    Georgia,
+    "Noto Serif Tamil",
+    serif;
+
+  font-size: 15px;
 
   line-height: 1.8;
-}
-
-
-/* =====================================================
-   CORE VALUES
-===================================================== */
-
-.core-values {
-  padding: 95px 0;
-  background: #ffffff;
-}
-
-.core-values-grid {
-  display: grid;
-
-  grid-template-columns: repeat(4, 1fr);
-}
-
-.core-value {
-  padding: 15px 30px 35px;
 
   text-align: center;
-
-  border-right: 1px solid #e8ded4;
-}
-
-.core-value:last-child {
-  border-right: 0;
 }
 
 
-/* ICON */
 
-.core-value-icon {
-  width: 74px;
-  height: 74px;
-
-  margin: 0 auto 22px;
-
-  border: 1px solid #b58a3a;
-
-  border-radius: 50%;
-
-  display: flex;
-
-  align-items: center;
-  justify-content: center;
-
-  color: #b85c16;
-
-  background: #fff5e8;
-
-  font-size: 29px;
-
-  transition:
-    background 0.25s ease,
-    color 0.25s ease,
-    transform 0.25s ease;
-}
-
-.core-value:hover .core-value-icon {
-  background: #d9822b;
-
-  border-color: #d9822b;
-
-  color: #ffffff;
-
-  transform: translateY(-4px);
-}
-
-.core-value h3 {
-  margin: 0 0 12px;
-
-  color: #6b442a;
-
-  font-family: Georgia, "Times New Roman", serif;
-
-  font-size: 23px;
-
-  font-weight: 400;
-}
-
-.core-value p {
-  margin: 0;
-
-  color: #746963;
-
-  font-size: 14px;
-
-  line-height: 1.8;
-}
 
 
 /* =====================================================
-   ACTIVITIES
+   MOBILE
 ===================================================== */
 
-.activities-section {
-  padding: 100px 0;
-  background: #ffffff;
-}
+@media (max-width: 768px) {
 
-.activities-grid {
-  display: grid;
+  .about-hero {
+    height: 520px;
+    min-height: 520px;
+  }
 
-  grid-template-columns: 1.1fr 0.9fr;
+  .about-hero-content {
+    width: calc(100% - 30px);
+  }
 
-  gap: 80px;
+  .about-hero-eyebrow {
+    margin-bottom: 12px;
+    font-size: 22px;
+    letter-spacing: 0.5px;
+  }
 
-  align-items: start;
-}
+  .about-hero h1 {
+    font-size: 38px;
+    line-height: 1.2;
+  }
 
-.activities-content > p:not(.about-label) {
-  color: #746963;
-  line-height: 1.8;
-}
+  .about-hero-line {
+    margin: 18px auto 16px;
+  }
+
+  .about-hero-subtitle {
+    font-size: 13px;
+    line-height: 1.7;
+  }
+
+  .about-hero-om {
+    margin-top: 16px;
+    font-size: 32px;
+  }
 
 
-/* =====================================================
-   ACTIVITY LIST
-===================================================== */
-
-.activity-list {
-  margin-top: 35px;
-}
-
-.activity-item {
-  display: flex;
-
-  gap: 22px;
-
-  padding: 20px 0;
-
-  border-bottom: 1px solid #e8ded4;
-}
-
-.activity-item > span {
-  min-width: 28px;
-
-  color: #d9822b;
-
-  font-family: Georgia, "Times New Roman", serif;
-
-  font-size: 18px;
-
-  font-weight: 600;
-}
-
-.activity-item h3 {
-  margin: 0 0 7px;
-
-  color: #6b442a;
-
-  font-family: Georgia, "Times New Roman", serif;
-
-  font-size: 20px;
-
-  font-weight: 400;
-}
-
-.activity-item p {
-  margin: 0;
-
-  color: #746963;
-
-  line-height: 1.6;
 }
 
 
-/* =====================================================
-   ACTIVITIES IMAGE
-   Same clean style as Home page
-===================================================== */
 
-.activities-image {
-  position: relative;
 
-  width: 100%;
-  max-width: 520px;
+
+
+/* =========================================================
+   COMMON STORY SECTIONS
+========================================================= */
+
+.about-story-section {
+  padding: 72px 0;
+
+  background: var(--white);
+}
+
+.about-intro-section {
+  background: var(--white);
+}
+
+.salem-shirdi-section {
+  background: var(--cream);
+}
+
+.service-section {
+  background: var(--white);
+}
+
+.about-story-container {
+  width: min(1180px, calc(100% - 50px));
 
   margin: 0 auto;
-  padding: 8px;
 
-  box-sizing: border-box;
+  display: grid;
 
-  background: #ffffff;
+  grid-template-columns: 1fr 1fr;
 
-  border: 1px solid #b58a3a;
+  align-items: center;
 
-  z-index: 2;
+  gap: 55px;
+}
+
+.about-story-content {
+  min-width: 0;
+}
+
+.about-section-number {
+  display: inline-block;
+
+  margin-bottom: 9px;
+
+  color: var(--saffron);
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: 16px;
+}
+
+.about-section-eyebrow {
+  margin-bottom: 8px;
+
+  color: var(--dark-saffron);
+
+  font-size: 10px;
+
+  font-weight: 800;
+
+  letter-spacing: 2.3px;
+
+  text-transform: uppercase;
 }
 
 
-/* =====================================================
-   REMOVE OFFSET FRAME
-===================================================== */
+.about-story-content h2 {
+  margin-bottom: 18px;
 
-.activities-image::after {
-  display: none;
+  color: var(--deep-brown);
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: clamp(34px, 4vw, 50px);
+
+  font-weight: 500;
+
+  line-height: 1.22;
+}
+
+.about-story-content > p {
+  margin-bottom: 14px;
+
+  font-size: 15px;
+
+  line-height: 1.78;
+  color: #000;
 }
 
 
-/* =====================================================
-   IMAGE
-===================================================== */
+/* =========================================================
+   HIGHLIGHT
+========================================================= */
 
-.activities-placeholder {
-  width: 100%;
+.about-highlight {
+  margin-top: 20px;
 
-  overflow: hidden;
+  padding: 16px 20px;
 
-  background: #ffffff;
+  border-left: 3px solid var(--saffron);
 
-  line-height: 0;
+  background: var(--soft-cream);
+
+  color: var(--deep-brown);
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: 15px;
+
+  line-height: 1.7;
 }
 
 
-/* ACTUAL IMAGE */
+/* =========================================================
+   STORY IMAGES
+========================================================= */
 
-.activities-placeholder img {
-  display: block;
-
-  width: 100%;
-  height: auto;
-
-  max-width: 100%;
-
-  object-fit: contain;
-  object-position: center;
-}
-
-
-/* =====================================================
-   OLD PLACEHOLDER CONTENT
-===================================================== */
-
-.activities-placeholder span {
-  color: #d9822b;
-  font-size: 70px;
-}
-
-.activities-placeholder p {
-  margin-top: 18px;
-
-  color: #746963;
-
-  font-size: 14px;
-}
-
-
-
-/* =====================================================
-   SHRADDHA & SABURI
-===================================================== */
-
-.shraddha-section {
+.about-story-image {
   position: relative;
 
   overflow: hidden;
 
-  padding: 100px 0;
+  border: 1px solid var(--gold);
 
-  background: linear-gradient(
-    135deg,
-    #b85c16 0%,
-    #d9822b 55%,
-    #e6a04a 100%
-  );
+  background: var(--cream);
+}
 
-  color: #ffffff;
+.about-story-image::after {
+  content: "";
+
+  position: absolute;
+
+  inset: 9px;
+
+  border: 1px solid rgba(255, 255, 255, 0.55);
+
+  pointer-events: none;
+}
+
+.about-story-image img {
+  aspect-ratio: 4 / 3;
+
+  object-fit: cover;
+
+  transition: transform 0.6s ease;
+}
+
+.about-story-image:hover img {
+  transform: scale(1.02);
 }
 
 
-/* SUBTLE LIGHT EFFECT */
+/* =========================================================
+   02 — SPIRITUAL JOURNEY
+========================================================= */
 
-.shraddha-section::before {
-  content: "";
+.journey-section {
+  position: relative;
 
+  padding: 76px 0;
+
+  overflow: hidden;
+
+  color: var(--white);
+
+  background: var(--deep-saffron);
+}
+
+.journey-background {
+  position: absolute;
+
+  inset: 0;
+
+  background-image:
+    url("/images/about/gallery-1.jpeg");
+
+  background-size: cover;
+
+  background-position: center;
+}
+
+.journey-overlay {
   position: absolute;
 
   inset: 0;
 
   background:
-    radial-gradient(
-      circle at 50% 50%,
-      rgba(255, 255, 255, 0.10),
-      transparent 55%
+    linear-gradient(
+      135deg,
+      rgba(67, 28, 7, 0.94),
+      rgba(153, 66, 10, 0.87)
     );
-
-  pointer-events: none;
 }
 
-
-/* LARGE OM */
-
-.shraddha-decoration {
-  position: absolute;
-
-  right: -30px;
-  top: -80px;
-
-  color: rgba(255, 255, 255, 0.05);
-
-  font-size: 330px;
-
-  line-height: 1;
-
-  pointer-events: none;
-}
-
-.shraddha-content {
+.journey-container {
   position: relative;
 
   z-index: 2;
 
+  width: min(950px, calc(100% - 50px));
+
+  margin: 0 auto;
+}
+
+.journey-heading {
+  max-width: 700px;
+
+  margin: 0 auto 45px;
+
   text-align: center;
 }
 
-.shraddha-content > p:first-child {
-  color: #fff5e8;
-
-  font-size: 12px;
-
-  letter-spacing: 4px;
+.journey-heading .about-section-number,
+.journey-heading .about-section-eyebrow {
+  color: rgba(255, 255, 255, 0.9);
 }
 
-.shraddha-content h2 {
-  margin: 12px 0 45px;
+.journey-heading h2 {
+  margin: 0 0 13px;
 
-  color: #ffffff;
+  color: var(--white);
 
   font-family: Georgia, "Times New Roman", serif;
 
-  font-size: 45px;
+  font-size: clamp(38px, 5vw, 58px);
 
-  font-weight: 400;
+  font-weight: 500;
+
+  line-height: 1.18;
+}
+
+.journey-heading > p:last-child {
+  max-width: 650px;
+
+  margin: 0 auto;
+
+  color: rgba(255, 255, 255, 0.82);
+
+  font-size: 14px;
+
+  line-height: 1.75;
 }
 
 
-/* SHRADDHA / SABURI */
+/* =========================================================
+   JOURNEY TIMELINE
+========================================================= */
 
-.shraddha-words {
+.journey-timeline {
+  position: relative;
+
+  max-width: 780px;
+
+  margin: 0 auto;
+}
+
+.journey-timeline::before {
+  content: "";
+
+  position: absolute;
+
+  left: 27px;
+
+  top: 20px;
+  bottom: 20px;
+
+  width: 1px;
+
+  background:
+    linear-gradient(
+      180deg,
+      transparent,
+      rgba(228, 201, 142, 0.7) 10%,
+      rgba(228, 201, 142, 0.7) 90%,
+      transparent
+    );
+}
+
+.journey-step {
+  position: relative;
+
+  display: grid;
+
+  grid-template-columns: 55px 1fr;
+
+  gap: 25px;
+
+  padding-bottom: 29px;
+}
+
+.journey-step:last-child {
+  padding-bottom: 0;
+}
+
+.journey-step-number {
+  position: relative;
+
+  z-index: 2;
+
+  width: 55px;
+  height: 55px;
+
   display: flex;
 
-  justify-content: center;
   align-items: center;
+  justify-content: center;
 
-  gap: 60px;
+  border: 1px solid var(--light-gold);
+
+  border-radius: 50%;
+
+  background: rgba(145, 68, 15, 0.95);
+
+  color: var(--light-gold);
+
+  font-size: 11px;
+
+  box-shadow:
+    0 0 0 7px rgba(228, 201, 142, 0.06);
 }
 
-.shraddha-words > div:not(.shraddha-divider) {
-  display: flex;
-
-  flex-direction: column;
+.journey-step-content {
+  padding-top: 3px;
 }
 
-.shraddha-words strong {
-  color: #ffffff;
+.journey-step-content > span {
+  display: block;
 
-  font-family: Georgia, "Times New Roman", serif;
+  margin-bottom: 5px;
 
-  font-size: 36px;
+  color: rgba(255, 255, 255, 0.55);
 
-  font-weight: 400;
-}
+  font-size: 9px;
 
-.shraddha-words span {
-  margin-top: 8px;
+  font-weight: 700;
 
-  color: #fff5e8;
-
-  font-size: 13px;
-
-  letter-spacing: 3px;
+  letter-spacing: 1.8px;
 
   text-transform: uppercase;
 }
 
-.shraddha-divider {
-  width: 1px;
-  height: 70px;
+.journey-step-content h3 {
+  margin-bottom: 6px;
 
-  background: rgba(255, 255, 255, 0.4);
+  color: var(--white);
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: 24px;
+
+  font-weight: 500;
+
+  line-height: 1.3;
 }
 
-.shraddha-description {
+.journey-step-content p {
+  max-width: 610px;
+
+  margin: 0;
+
+  color: rgba(255, 255, 255, 0.78);
+
+  font-size: 13px;
+
+  line-height: 1.7;
+}
+
+.journey-step-content strong {
+  color: var(--light-gold);
+
+  font-weight: 600;
+}
+
+
+/* =========================================================
+   04 — PURPOSE
+========================================================= */
+
+.purpose-section {
+  padding: 72px 0;
+
+  background:
+    linear-gradient(
+      180deg,
+      var(--cream),
+      var(--white)
+    );
+}
+
+.purpose-container {
+  width: min(1100px, calc(100% - 50px));
+
+  margin: 0 auto;
+}
+
+.purpose-heading {
+  max-width: 750px;
+
+  margin: 0 auto 42px;
+
+  text-align: center;
+}
+
+.purpose-heading h2 {
+  margin: 0 0 15px;
+
+  color: var(--deep-brown);
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: clamp(38px, 5vw, 56px);
+
+  font-weight: 500;
+
+  line-height: 1.2;
+}
+
+.purpose-heading > p:last-child {
+  max-width: 680px;
+
+  margin: 0 auto;
+
+  color: var(--muted);
+
+  font-size: 14px;
+
+  line-height: 1.75;
+}
+
+
+/* =========================================================
+   PURPOSE GRID
+========================================================= */
+
+.purpose-grid {
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  border-top: 1px solid var(--border);
+
+  border-bottom: 1px solid var(--border);
+}
+
+.purpose-item {
+  min-height: 220px;
+
+  padding: 25px 22px;
+
+  text-align: center;
+
+  border-right: 1px solid var(--border);
+}
+
+.purpose-item:last-child {
+  border-right: none;
+}
+
+.purpose-icon {
+  width: 62px;
+  height: 62px;
+
+  margin: 0 auto 16px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid var(--gold);
+
+  border-radius: 50%;
+
+  color: var(--dark-saffron);
+
+  font-size: 25px;
+}
+
+.purpose-item h3 {
+  margin-bottom: 8px;
+
+  color: var(--deep-brown);
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: 22px;
+
+  font-weight: 500;
+}
+
+.purpose-item p {
+  max-width: 190px;
+
+  margin: 0 auto;
+
+  color: var(--muted);
+
+  font-size: 12px;
+
+  line-height: 1.7;
+}
+
+
+/* =========================================================
+   05 — VISION
+========================================================= */
+
+.vision-section {
+  position: relative;
+
+  min-height: 560px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+
+  color: var(--white);
+
+  text-align: center;
+}
+
+.vision-image {
+  position: absolute;
+
+  inset: 0;
+
+  background-image:
+    url("/images/gallery/gallery-5.jpeg");
+
+  background-size: cover;
+
+  background-position: center;
+}
+
+.vision-overlay {
+  position: absolute;
+
+  inset: 0;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(67, 28, 7, 0.92),
+      rgba(184, 92, 22, 0.78)
+    );
+}
+
+.vision-content {
+  position: relative;
+
+  z-index: 2;
+
+  width: min(850px, calc(100% - 40px));
+
+  margin: 0 auto;
+}
+
+.vision-content .about-section-number,
+.vision-content .about-section-eyebrow {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.vision-content h2 {
+  margin: 0 0 20px;
+
+  color: var(--white);
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: clamp(42px, 6vw, 68px);
+
+  font-weight: 500;
+
+  line-height: 1.17;
+}
+
+.vision-line {
+  width: 70px;
+  height: 1px;
+
+  margin: 0 auto 23px;
+
+  background: var(--light-gold);
+}
+
+.vision-content > p {
+  max-width: 680px;
+
+  margin: 0 auto;
+
+  color: rgba(255, 255, 255, 0.88);
+
+  font-size: 15px;
+
+  line-height: 1.85;
+}
+
+.vision-values {
+  display: flex;
+
+  justify-content: center;
+
+  flex-wrap: wrap;
+
+  gap: 8px;
+
+  margin-top: 28px;
+}
+
+.vision-values span {
+  padding: 9px 17px;
+
+  border: 1px solid rgba(255, 255, 255, 0.38);
+
+  color: var(--white);
+
+  font-size: 11px;
+}
+
+
+/* =========================================================
+   06 — SERVICE
+========================================================= */
+
+.service-image-grid {
+  position: relative;
+
+  min-height: 440px;
+}
+
+.service-image-main {
+  position: absolute;
+
+  left: 0;
+  top: 0;
+
+  width: 82%;
+
+  overflow: hidden;
+
+  border: 1px solid var(--gold);
+}
+
+.service-image-main img {
+  aspect-ratio: 4 / 3;
+
+  object-fit: cover;
+}
+
+.service-image-small {
+  position: absolute;
+
+  right: 0;
+  bottom: 0;
+
+  width: 43%;
+
+  overflow: hidden;
+
+  border: 7px solid var(--white);
+  outline: 1px solid var(--gold);
+}
+
+.service-image-small img {
+  aspect-ratio: 1 / 1;
+
+  object-fit: cover;
+}
+
+.service-quote {
+  margin-top: 22px;
+
+  padding: 18px 20px;
+
+  border-top: 1px solid var(--gold);
+
+  border-bottom: 1px solid var(--border);
+
+  text-align: center;
+}
+
+.service-quote > span {
+  display: block;
+
+  color: var(--gold);
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: 38px;
+
+  line-height: 0.6;
+}
+
+.service-quote p {
+  margin: 8px 0 0;
+
+  color: var(--dark-saffron);
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: 20px;
+
+  font-style: italic;
+}
+
+
+/* =========================================================
+   07 — GURUPADAM
+========================================================= */
+
+.gurupadam-section {
+  position: relative;
+
+  min-height: 560px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+
+  color: var(--white);
+
+  text-align: center;
+}
+
+.gurupadam-background {
+  position: absolute;
+
+  inset: 0;
+
+  background-image:
+    url("/images/gallery/gallery-8.jpeg");
+
+  background-size: cover;
+
+  background-position: center;
+}
+
+.gurupadam-overlay {
+  position: absolute;
+
+  inset: 0;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(74, 30, 7, 0.94),
+      rgba(169, 72, 13, 0.80)
+    );
+}
+
+.gurupadam-content {
+  position: relative;
+
+  z-index: 2;
+
+  width: min(820px, calc(100% - 40px));
+
+  margin: 0 auto;
+}
+
+.gurupadam-content .about-section-number,
+.gurupadam-content .about-section-eyebrow {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.gurupadam-content h2 {
+  margin: 0 0 12px;
+
+  color: var(--white);
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: clamp(48px, 6vw, 74px);
+
+  font-weight: 500;
+
+  line-height: 1.05;
+}
+
+.gurupadam-om {
+  margin-bottom: 20px;
+
+  color: var(--light-gold);
+
+  font-size: 36px;
+}
+
+.gurupadam-content > p {
   max-width: 700px;
 
-  margin: 45px auto 0;
+  margin: 0 auto 14px;
 
-  color: #fff5e8;
+  color: rgba(255, 255, 255, 0.88);
+
+  font-size: 15px;
 
   line-height: 1.8;
 }
 
+.gurupadam-emphasis {
+  margin-top: 25px !important;
 
-/* =====================================================
-   CTA
-===================================================== */
-
-.about-cta {
-  padding: 75px 0;
-
-  background: #fff5e8;
-
-  border-top: 1px solid #e8ded4;
-}
-
-.about-cta-inner {
-  display: flex;
-
-  align-items: center;
-
-  justify-content: space-between;
-
-  gap: 40px;
-}
-
-.about-cta h2 {
-  margin: 8px 0 12px;
-
-  color: #6b442a;
+  color: var(--white) !important;
 
   font-family: Georgia, "Times New Roman", serif;
 
-  font-size: 35px;
+  font-size: 21px !important;
 
-  font-weight: 400;
+  font-style: italic;
+
+  line-height: 1.7 !important;
 }
 
-.about-cta-inner > div:first-child > p:last-child {
-  margin: 0;
 
-  color: #746963;
-}
 
 
 /* =====================================================
-   BUTTONS
+   ABOUT — FINAL SPIRITUAL SECTION
 ===================================================== */
 
-.about-cta-buttons {
-  display: flex;
-
-  gap: 12px;
-
-  flex-shrink: 0;
+.about-final-section {
+  position: relative;
+  background: var(--white);
+  padding: 72px 20px 58px;
+  text-align: center;
 }
 
-.about-primary-btn,
-.about-outline-btn {
-  display: inline-block;
+.about-final-container {
+  width: min(1100px, 100%);
+  margin: 0 auto;
+}
 
-  padding: 14px 26px;
+/* OM */
 
-  text-decoration: none;
+.about-final-om {
+  margin-bottom: 18px;
+  color: var(--gold);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 38px;
+  line-height: 1;
+}
 
-  font-size: 14px;
+/* EYEBROW */
 
+.about-final-eyebrow {
+  margin: 0 0 18px;
+  color: var(--deep-saffron);
+  font-family: Georgia, "Noto Serif Tamil", serif;
+  font-size: 13px;
   font-weight: 600;
+  letter-spacing: 2px;
+}
+
+/* MAIN TITLE */
+
+.about-final-title {
+  max-width: 850px;
+  margin: 0 auto;
+
+  color: var(--deep-brown);
+
+  font-family: Georgia, "Noto Serif Tamil", serif;
+  font-size: clamp(34px, 4.2vw, 54px);
+  font-weight: 500;
+  line-height: 1.35;
+}
+
+/* MESSAGE */
+
+.about-final-message {
+  margin-top: 28px;
+}
+
+.about-final-message p {
+  margin: 0 0 7px;
+
+  color: var(--muted);
+
+  font-family: Georgia, "Noto Serif Tamil", serif;
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+.about-final-message p:last-child {
+  margin-bottom: 0;
+}
+
+/* SABKA MALIK EK */
+
+.about-final-quote {
+  margin-top: 20px;
+
+  color: var(--deep-saffron);
+
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 27px;
+  font-weight: 500;
+}
+
+/* DIVIDER */
+
+.about-final-divider {
+  width: 100%;
+  height: 1px;
+
+  margin: 28px auto 22px;
+
+  background: var(--light-gold);
+}
+
+/* BUTTONS */
+
+.about-final-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 32px;
+}
+
+.about-final-links a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-width: 150px;
+  padding: 10px 20px;
+
+  border: 1px solid var(--gold);
+
+  color: var(--brown);
+  background: transparent;
+
+  font-family: Georgia, "Noto Serif Tamil", serif;
+  font-size: 13px;
+  text-decoration: none;
 
   transition:
     background 0.25s ease,
     color 0.25s ease,
-    border-color 0.25s ease,
-    transform 0.25s ease;
+    border-color 0.25s ease;
 }
 
-
-/* PRIMARY */
-
-.about-primary-btn {
-  background: #d9822b;
-
-  border: 1px solid #d9822b;
-
-  color: #ffffff;
-}
-
-.about-primary-btn:hover {
-  background: #b85c16;
-
-  border-color: #b85c16;
-
-  transform: translateY(-2px);
-}
-
-
-/* OUTLINE */
-
-.about-outline-btn {
-  background: transparent;
-
-  border: 1px solid #b58a3a;
-
-  color: #6b442a;
-}
-
-.about-outline-btn:hover {
-  background: #b58a3a;
-
-  border-color: #b58a3a;
-
-  color: #ffffff;
-
-  transform: translateY(-2px);
-}
-
-
-/* =====================================================
-   TABLET
-===================================================== */
-
-@media (max-width: 900px) {
-
-  .about-intro-grid,
-  .activities-grid {
-    grid-template-columns: 1fr;
-    gap: 50px;
-  }
-
-  .vision-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .core-values-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .core-value {
-    margin-bottom: 30px;
-    border-right: 0;
-  }
-
-  .about-cta-inner {
-    align-items: flex-start;
-    flex-direction: column;
-  }
-
-  .about-image,
-  .activities-image {
-    width: 100%;
-    max-width: 600px;
-    margin: auto;
-  }
+.about-final-links a:hover {
+  background: var(--deep-saffron);
+  border-color: var(--deep-saffron);
+  color: var(--white);
 }
 
 
@@ -1077,144 +1221,377 @@
 
 @media (max-width: 600px) {
 
-  .about-container {
-    width: min(100% - 32px, 1180px);
+  .about-final-section {
+    padding: 58px 18px 45px;
+  }
+
+  .about-final-om {
+    font-size: 32px;
+    margin-bottom: 15px;
+  }
+
+  .about-final-eyebrow {
+    font-size: 12px;
+    margin-bottom: 15px;
+  }
+
+  .about-final-title {
+    font-size: 31px;
+    line-height: 1.4;
+  }
+
+  .about-final-message {
+    margin-top: 24px;
+  }
+
+  .about-final-message p {
+    font-size: 14px;
+    line-height: 1.65;
+  }
+
+  .about-final-quote {
+    margin-top: 18px;
+    font-size: 24px;
+  }
+
+  .about-final-divider {
+    margin: 25px auto 20px;
+  }
+
+  .about-final-links {
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+
+  .about-final-links a {
+    min-width: 140px;
+    padding: 9px 15px;
+    font-size: 12px;
+  }
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+  .about-story-container {
+    grid-template-columns: 1fr;
+
+    gap: 35px;
+  }
+
+  .about-story-image {
+    order: 1;
+  }
+
+  .about-story-content {
+    order: 2;
   }
 
 
-  /* HERO */
+  /* Purpose */
+
+  .purpose-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .purpose-item:nth-child(2) {
+    border-right: none;
+  }
+
+  .purpose-item:nth-child(3),
+  .purpose-item:nth-child(4) {
+    border-top: 1px solid var(--border);
+  }
+
+
+  /* Service */
+
+  .service-image-grid {
+    min-height: 500px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+  /* Hero */
 
   .about-hero {
-    min-height: 270px;
+    min-height: 430px;
   }
 
-  .about-hero::before {
-    font-size: 170px;
+  .about-hero-eyebrow {
+    font-size: 10px;
+
+    letter-spacing: 2.5px;
   }
 
-  .about-hero-content {
-    width: calc(100% - 32px);
+  .about-hero h1 {
+    font-size: 48px;
   }
 
-
-  /* SECTIONS */
-
-  .about-intro,
-  .vision-section,
-  .core-values,
-  .activities-section {
-    padding: 70px 0;
+  .about-hero-subtitle {
+    font-size: 15px;
   }
 
 
-  /* HEADINGS */
+  /* Story */
 
-  .about-content h2,
-  .activities-content h2,
-  .about-section-heading h2 {
-    font-size: 32px;
+  .about-story-section {
+    padding: 52px 0;
+  }
+
+  .about-story-container {
+    width: min(100% - 30px, 1180px);
+
+    gap: 30px;
+  }
+
+  .about-story-content h2 {
+    font-size: 34px;
+
+    margin-bottom: 15px;
+  }
+
+  .about-story-content > p {
+    margin-bottom: 12px;
+
+    font-size: 14px;
+
+    line-height: 1.75;
+  }
+
+  .about-highlight {
+    margin-top: 16px;
+
+    padding: 14px 17px;
+
+    font-size: 14px;
   }
 
 
-  /* INTRO IMAGE */
+  /* Journey */
 
-  .about-image {
-    max-width: 100%;
-    margin: 0 auto;
-    padding: 8px;
+  .journey-section {
+    padding: 58px 0;
   }
 
-  .about-image-placeholder img {
-    width: 100%;
-    height: auto;
-    max-height: none;
+  .journey-container {
+    width: min(100% - 30px, 950px);
+  }
+
+  .journey-heading {
+    margin-bottom: 34px;
+  }
+
+  .journey-heading h2 {
+    font-size: 40px;
+  }
+
+  .journey-heading > p:last-child {
+    font-size: 13px;
+
+    line-height: 1.7;
+  }
+
+  .journey-timeline::before {
+    left: 23px;
+  }
+
+  .journey-step {
+    grid-template-columns: 47px 1fr;
+
+    gap: 17px;
+
+    padding-bottom: 25px;
+  }
+
+  .journey-step-number {
+    width: 47px;
+    height: 47px;
+
+    font-size: 10px;
+  }
+
+  .journey-step-content h3 {
+    font-size: 21px;
+  }
+
+  .journey-step-content p {
+    font-size: 12px;
+
+    line-height: 1.7;
   }
 
 
-  /* MOBILE INTRO FRAME */
+  /* Purpose */
 
-  .about-image::before {
-    top: 10px;
-    left: -8px;
-
-    width: 100%;
-    height: 100%;
+  .purpose-section {
+    padding: 55px 0;
   }
 
-
-  /* ACTIVITIES IMAGE */
-
-  .activities-image::after {
-    top: -8px;
-    right: -8px;
-
-    width: 100%;
-    height: 100%;
+  .purpose-container {
+    width: min(100% - 30px, 1100px);
   }
 
-  .activities-placeholder {
-    min-height: 380px;
+  .purpose-heading {
+    margin-bottom: 30px;
   }
 
+  .purpose-heading h2 {
+    font-size: 38px;
+  }
 
-  /* CORE VALUES */
+  .purpose-heading > p:last-child {
+    font-size: 13px;
 
-  .core-values-grid {
+    line-height: 1.7;
+  }
+
+  .purpose-grid {
     grid-template-columns: 1fr;
   }
 
+  .purpose-item,
+  .purpose-item:nth-child(2),
+  .purpose-item:nth-child(3),
+  .purpose-item:nth-child(4) {
+    min-height: auto;
 
-  /* VISION */
+    padding: 22px 18px;
 
-  .vision-card {
-    padding: 35px 25px;
+    border-right: none;
+
+    border-top: 1px solid var(--border);
   }
 
-  .vision-number {
-    font-size: 75px;
-  }
-
-
-  /* SHRADDHA */
-
-  .shraddha-section {
-    padding: 75px 0;
-  }
-
-  .shraddha-content h2 {
-    font-size: 35px;
-  }
-
-  .shraddha-words {
-    gap: 25px;
-  }
-
-  .shraddha-words strong {
-    font-size: 27px;
-  }
-
-  .shraddha-divider {
-    height: 55px;
+  .purpose-item:first-child {
+    border-top: none;
   }
 
 
-  /* CTA */
+  /* Vision */
 
-  .about-cta {
-    padding: 60px 0;
+  .vision-section {
+    min-height: 500px;
   }
 
-  .about-cta h2 {
-    font-size: 30px;
+  .vision-content {
+    width: min(100% - 30px, 850px);
   }
 
-  .about-cta-buttons {
-    width: 100%;
+  .vision-content h2 {
+    font-size: 42px;
+  }
+
+  .vision-content > p {
+    font-size: 13px;
+
+    line-height: 1.75;
+  }
+
+  .vision-values {
+    margin-top: 22px;
+  }
+
+  .vision-values span {
+    padding: 8px 13px;
+  }
+
+
+  /* Service */
+
+  .service-image-grid {
+    min-height: 370px;
+  }
+
+  .service-image-main {
+    width: 88%;
+  }
+
+  .service-image-small {
+    width: 45%;
+
+    border-width: 5px;
+  }
+
+  .service-quote {
+    margin-top: 18px;
+
+    padding: 15px 16px;
+  }
+
+  .service-quote p {
+    font-size: 18px;
+  }
+
+
+  /* Gurupadam */
+
+  .gurupadam-section {
+    min-height: 500px;
+  }
+
+  .gurupadam-content {
+    width: min(100% - 30px, 820px);
+  }
+
+  .gurupadam-content h2 {
+    font-size: 48px;
+  }
+
+  .gurupadam-content > p {
+    font-size: 13px;
+
+    line-height: 1.75;
+  }
+
+  .gurupadam-emphasis {
+    font-size: 19px !important;
+  }
+
+
+  /* Final */
+
+  .about-final {
+    padding: 48px 18px;
+  }
+
+  .about-final h2 {
+    font-size: 34px;
+  }
+
+  .about-final > p:not(.about-final-eyebrow) {
+    font-size: 17px;
+
+    line-height: 1.7;
+  }
+
+  .about-final-links {
     flex-direction: column;
   }
 
-  .about-primary-btn,
-  .about-outline-btn {
-    text-align: center;
+  .about-final-links a {
+    width: 100%;
+  }
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .about-story-image img,
+  .about-final-links a {
+    transition: none;
   }
 }

@@ -1,0 +1,2198 @@
+/* =========================================================
+   SRI SAI TAPOVAN — SATSANG
+   Compact Premium Spiritual Design
+========================================================= */
+
+:root {
+  --saffron: #d9822b;
+  --deep-saffron: #b85c16;
+  --dark-saffron: #91440f;
+
+  --gold: #b58a3a;
+  --light-gold: #e4c98e;
+
+  --brown: #6b442a;
+  --deep-brown: #402719;
+
+  --text: #443932;
+  --muted: #766960;
+
+  --white: #ffffff;
+  --cream: #fffaf3;
+  --soft-cream: #fdf5e9;
+
+  --border: #dcc9aa;
+}
+
+
+/* =========================================================
+   RESET
+========================================================= */
+
+.satsang-page {
+  width: 100%;
+  overflow: hidden;
+
+  color: var(--text);
+  background: var(--white);
+}
+
+.satsang-page *,
+.satsang-page *::before,
+.satsang-page *::after {
+  box-sizing: border-box;
+}
+
+.satsang-page img {
+  display: block;
+  width: 100%;
+}
+
+.satsang-page p,
+.satsang-page h1,
+.satsang-page h2,
+.satsang-page h3 {
+  margin-top: 0;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+/* =====================================================
+   SATSANG HERO
+===================================================== */
+
+.satsang-hero {
+  position: relative;
+
+  width: 100%;
+  height: 500px;
+  min-height: 500px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+
+  background:
+    url("/images/gallery/gallery-1.jpeg")
+    center center / cover no-repeat;
+
+  color: var(--white);
+}
+
+
+/* -----------------------------------------------------
+   OVERLAY
+----------------------------------------------------- */
+
+.satsang-hero-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+
+  background:
+    linear-gradient(
+      rgba(55, 25, 8, 0.68),
+      rgba(55, 25, 8, 0.68)
+    );
+}
+
+
+/* -----------------------------------------------------
+   CONTENT
+----------------------------------------------------- */
+
+.satsang-hero-content {
+  position: relative;
+  z-index: 2;
+
+  width: min(1050px, calc(100% - 40px));
+
+  margin: 0 auto;
+
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+
+/* -----------------------------------------------------
+   TRUST NAME
+----------------------------------------------------- */
+
+.satsang-hero .hero-eyebrow {
+  display: block;
+
+  margin: 0 0 16px;
+
+  color: var(--light-gold);
+
+  font-family:
+    Georgia,
+    "Noto Serif Tamil",
+    serif;
+
+  font-size: 28px;
+  font-weight: 500;
+
+  line-height: 1.3;
+  letter-spacing: 1px;
+}
+
+
+/* -----------------------------------------------------
+   TITLE
+----------------------------------------------------- */
+
+.satsang-hero h1 {
+  margin: 0;
+
+  color: var(--white);
+
+  font-family:
+    Georgia,
+    "Noto Serif Tamil",
+    serif;
+
+  font-size: clamp(42px, 5vw, 68px);
+
+  font-weight: 500;
+
+  line-height: 1.18;
+
+  text-align: center;
+}
+
+
+/* -----------------------------------------------------
+   LINE
+----------------------------------------------------- */
+
+.satsang-hero .hero-line {
+  width: 75px;
+  height: 1px;
+
+  margin: 22px auto 18px;
+
+  background: var(--light-gold);
+}
+
+
+/* -----------------------------------------------------
+   SUBTITLE
+----------------------------------------------------- */
+
+.satsang-hero .hero-subtitle {
+  margin: 0;
+
+  color: rgba(255, 255, 255, 0.9);
+
+  font-family:
+    Georgia,
+    "Noto Serif Tamil",
+    serif;
+
+  font-size: 15px;
+
+  line-height: 1.8;
+
+  text-align: center;
+
+  letter-spacing: 0;
+}
+
+
+/* -----------------------------------------------------
+   OM
+----------------------------------------------------- */
+
+.satsang-hero .hero-om {
+  margin-top: 18px;
+
+  color: var(--light-gold);
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 38px;
+
+  line-height: 1;
+}
+
+
+/* -----------------------------------------------------
+   BREADCRUMB
+----------------------------------------------------- */
+
+.satsang-hero .hero-breadcrumb {
+  margin: 12px 0 0;
+
+  color: rgba(255, 255, 255, 0.65);
+
+  font-size: 12px;
+
+  letter-spacing: 1px;
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 768px) {
+
+  .satsang-hero {
+    height: 520px;
+    min-height: 520px;
+  }
+
+  .satsang-hero-content {
+    width: calc(100% - 30px);
+  }
+
+  .satsang-hero .hero-eyebrow {
+    margin-bottom: 12px;
+
+    font-size: 22px;
+
+    letter-spacing: 0.5px;
+  }
+
+  .satsang-hero h1 {
+    font-size: 38px;
+    line-height: 1.2;
+  }
+
+  .satsang-hero .hero-line {
+    margin: 18px auto 16px;
+  }
+
+  .satsang-hero .hero-subtitle {
+    font-size: 13px;
+    line-height: 1.7;
+  }
+
+
+}
+
+
+/* =========================================================
+   COMMON STORY SECTIONS
+========================================================= */
+
+.story-section {
+  padding: 72px 0;
+
+  background: var(--white);
+}
+
+.reverse-story {
+  background: var(--cream);
+}
+
+.story-container {
+  width: min(1180px, calc(100% - 50px));
+
+  margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  align-items: center;
+
+  gap: 55px;
+}
+
+.section-number {
+  display: inline-block;
+
+  margin-bottom: 9px;
+
+  color: var(--saffron);
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: 16px;
+}
+
+.section-eyebrow {
+  margin-bottom: 8px;
+
+  color: var(--dark-saffron);
+
+  font-size: 10px;
+
+  font-weight: 800;
+
+  letter-spacing: 2.3px;
+
+  text-transform: uppercase;
+}
+
+.story-content h2 {
+  margin-bottom: 18px;
+
+  color: var(--deep-brown);
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: clamp(33px, 4vw, 50px);
+
+  font-weight: 500;
+
+  line-height: 1.22;
+}
+
+.story-content > p {
+  margin-bottom: 14px;
+
+  font-size: 15px;
+
+  line-height: 1.78;
+}
+
+.story-highlight {
+  margin-top: 20px;
+
+  padding: 15px 19px;
+
+  border-left: 3px solid var(--saffron);
+
+  background: var(--soft-cream);
+
+  color: var(--deep-brown);
+
+  font-size: 14px !important;
+
+  line-height: 1.7 !important;
+}
+
+
+/* =========================================================
+   IMAGES
+========================================================= */
+
+.story-image {
+  position: relative;
+
+  overflow: hidden;
+
+  border: 1px solid var(--gold);
+
+  background: var(--cream);
+}
+
+.story-image::after {
+  content: "";
+
+  position: absolute;
+  inset: 9px;
+
+  border: 1px solid rgba(255, 255, 255, 0.55);
+
+  pointer-events: none;
+}
+
+.story-image img {
+  aspect-ratio: 4 / 3;
+
+  object-fit: cover;
+
+  transition: transform 0.6s ease;
+}
+
+.story-image:hover img {
+  transform: scale(1.02);
+}
+
+.large-image img {
+  aspect-ratio: 3 / 4;
+}
+
+
+/* =========================================================
+   01 — MEANING
+========================================================= */
+
+.meaning-inline {
+  display: flex;
+
+  align-items: center;
+
+  gap: 15px;
+
+  margin: 24px 0;
+}
+
+.meaning-inline > div {
+  min-width: 135px;
+
+  padding: 15px 18px;
+
+  border-top: 2px solid var(--gold);
+
+  border-bottom: 1px solid var(--border);
+
+  text-align: center;
+}
+
+.meaning-inline strong {
+  display: block;
+
+  color: var(--dark-saffron);
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: 25px;
+
+  font-weight: 500;
+}
+
+.meaning-inline span {
+  display: block;
+
+  margin-top: 4px;
+
+  color: var(--muted);
+
+  font-size: 11px;
+}
+
+.meaning-inline b {
+  color: var(--gold);
+
+  font-size: 23px;
+}
+
+
+/* =========================================================
+   02 — FAITH
+========================================================= */
+
+.faith-pair {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 14px;
+
+  margin: 22px 0;
+}
+
+.faith-pair > div {
+  padding: 17px 19px;
+
+  border: 1px solid var(--border);
+
+  background: var(--white);
+}
+
+.faith-pair span {
+  display: block;
+
+  margin-bottom: 7px;
+
+  color: var(--gold);
+
+  font-size: 10px;
+}
+
+.faith-pair strong {
+  display: block;
+
+  margin-bottom: 6px;
+
+  color: var(--deep-brown);
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: 22px;
+
+  font-weight: 500;
+}
+
+.faith-pair p {
+  margin: 0;
+
+  color: var(--muted);
+
+  font-size: 12px;
+
+  line-height: 1.65;
+}
+
+
+/* =========================================================
+   03 — FOUR PILLARS
+========================================================= */
+
+.pillars-section {
+  padding: 65px 0 68px;
+
+  background:
+    linear-gradient(
+      135deg,
+      var(--deep-saffron),
+      var(--saffron)
+    );
+
+  color: var(--white);
+}
+
+.pillars-container {
+  width: min(1120px, calc(100% - 50px));
+
+  margin: 0 auto;
+}
+
+.pillars-heading {
+  max-width: 740px;
+
+  margin: 0 auto 32px;
+
+  text-align: center;
+}
+
+.pillars-heading .section-number {
+  color: rgba(255, 255, 255, 0.9);
+
+  margin-bottom: 6px;
+}
+
+.pillars-heading .section-eyebrow {
+  color: rgba(255, 255, 255, 0.85);
+
+  margin-bottom: 6px;
+}
+
+.pillars-heading h2 {
+  margin: 0 0 9px;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: clamp(33px, 4.2vw, 48px);
+
+  font-weight: 500;
+
+  line-height: 1.2;
+}
+
+.pillars-heading > p:last-child {
+  margin: 0;
+
+  font-size: 13px;
+
+  line-height: 1.7;
+
+  opacity: 0.82;
+}
+
+.pillar-grid {
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  border-top: 1px solid rgba(255, 255, 255, 0.28);
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.28);
+}
+
+.pillar-item {
+  min-height: 205px;
+
+  padding: 22px 25px 25px;
+
+  text-align: center;
+
+  border-right: 1px solid rgba(255, 255, 255, 0.22);
+}
+
+.pillar-item:last-child {
+  border-right: none;
+}
+
+.pillar-top {
+  position: relative;
+
+  width: 64px;
+  height: 64px;
+
+  margin: 0 auto 13px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid rgba(255, 255, 255, 0.55);
+
+  border-radius: 50%;
+}
+
+.pillar-number {
+  position: absolute;
+
+  right: -5px;
+  top: -5px;
+
+  width: 19px;
+  height: 19px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  background: var(--gold);
+
+  color: var(--white);
+
+  border-radius: 50%;
+
+  font-size: 8px;
+}
+
+.pillar-symbol {
+  font-size: 25px;
+
+  line-height: 1;
+}
+
+.pillar-item h3 {
+  margin: 0 0 7px;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: 23px;
+
+  font-weight: 500;
+}
+
+.pillar-item p {
+  max-width: 190px;
+
+  margin: 0 auto;
+
+  font-size: 12px;
+
+  line-height: 1.65;
+
+  opacity: 0.86;
+}
+
+
+/* =========================================================
+   04 — MEDITATION
+========================================================= */
+
+.meditation-section {
+  background: var(--cream);
+}
+
+
+/* =========================================================
+   HEART TO HEART
+========================================================= */
+
+.heart-box {
+  position: relative;
+
+  margin-top: 25px;
+
+  padding: 30px 28px 25px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #fffaf2,
+      #fff4e3
+    );
+
+  border-top: 1px solid var(--gold);
+
+  border-bottom: 1px solid var(--gold);
+
+  text-align: center;
+}
+
+.heart-quote-mark {
+  display: block;
+
+  margin-bottom: 3px;
+
+  color: var(--gold);
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: 52px;
+
+  line-height: 0.7;
+}
+
+.heart-box blockquote {
+  max-width: 620px;
+
+  margin: 0 auto;
+
+  color: var(--deep-brown);
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: clamp(21px, 2.4vw, 27px);
+
+  font-style: italic;
+
+  font-weight: 400;
+
+  line-height: 1.7;
+
+  letter-spacing: 0.2px;
+}
+
+.heart-divider {
+  width: 50px;
+  height: 1px;
+
+  margin: 18px auto 14px;
+
+  background: var(--gold);
+}
+
+.heart-box strong {
+  display: block;
+
+  color: var(--dark-saffron);
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: 20px;
+
+  font-style: italic;
+
+  font-weight: 500;
+}
+
+
+/* =========================================================
+   05 — INNER TRANSFORMATION
+========================================================= */
+
+.transformation-section {
+  position: relative;
+
+  min-height: auto;
+
+  padding: 68px 0 62px;
+
+  overflow: hidden;
+
+  color: var(--white);
+
+  background: var(--deep-saffron);
+}
+
+.transformation-image {
+  position: absolute;
+
+  inset: 0;
+
+  background-image:
+    url("/images/gallery/gallery-6.jpeg");
+
+  background-size: cover;
+
+  background-position: center;
+}
+
+.transformation-overlay {
+  position: absolute;
+
+  inset: 0;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(83, 35, 8, 0.88),
+      rgba(142, 62, 12, 0.82)
+    );
+}
+
+.transformation-container {
+  position: relative;
+
+  z-index: 2;
+
+  width: min(900px, calc(100% - 50px));
+
+  margin: 0 auto;
+}
+
+
+/* Heading */
+
+.transformation-heading {
+  max-width: 700px;
+
+  margin: 0 auto 32px;
+
+  text-align: center;
+}
+
+.transformation-heading .section-number,
+.transformation-heading .section-eyebrow {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.transformation-heading h2 {
+  margin: 0 0 12px;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: clamp(40px, 5.5vw, 60px);
+
+  font-weight: 500;
+
+  line-height: 1.15;
+}
+
+.transformation-heading > p:last-child {
+  max-width: 650px;
+
+  margin: 0 auto;
+
+  font-size: 14px;
+
+  line-height: 1.65;
+
+  opacity: 0.86;
+}
+
+
+/* Labels */
+
+.transformation-intro {
+  display: grid;
+
+  grid-template-columns: 1fr 80px 1fr;
+
+  align-items: center;
+
+  max-width: 700px;
+
+  margin: 0 auto 2px;
+
+  color: rgba(255, 255, 255, 0.55);
+
+  font-size: 9px;
+
+  font-weight: 700;
+
+  letter-spacing: 1.8px;
+
+  text-transform: uppercase;
+
+  text-align: center;
+}
+
+.transformation-line {
+  height: 1px;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 255, 255, 0.4),
+      transparent
+    );
+}
+
+
+/* Transformation rows */
+
+.transformation-list {
+  max-width: 700px;
+
+  margin: 0 auto;
+}
+
+.transformation-row {
+  display: grid;
+
+  grid-template-columns: 1fr 80px 1fr;
+
+  align-items: center;
+
+  min-height: 68px;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.change-before {
+  padding-right: 25px;
+
+  color: rgba(255, 255, 255, 0.62);
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: 21px;
+
+  text-align: right;
+}
+
+.change-arrow {
+  position: relative;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+}
+
+.change-arrow span {
+  position: absolute;
+
+  width: 7px;
+  height: 7px;
+
+  left: 50%;
+  top: 50%;
+
+  transform: translate(-50%, -50%);
+
+  border: 1px solid var(--light-gold);
+
+  border-radius: 50%;
+
+  background: var(--deep-saffron);
+
+  box-shadow:
+    0 0 0 4px rgba(228, 201, 142, 0.07),
+    0 0 14px rgba(228, 201, 142, 0.35);
+}
+
+.change-arrow::before {
+  content: "";
+
+  position: absolute;
+
+  width: 1px;
+
+  height: 100%;
+
+  left: 50%;
+  top: 0;
+
+  transform: translateX(-50%);
+
+  background:
+    linear-gradient(
+      180deg,
+      transparent,
+      rgba(228, 201, 142, 0.35),
+      transparent
+    );
+}
+
+.change-arrow::after {
+  content: "→";
+
+  position: relative;
+
+  z-index: 2;
+
+  color: var(--light-gold);
+
+  font-size: 19px;
+}
+
+.change-after {
+  padding-left: 25px;
+
+  color: var(--white);
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: 23px;
+
+  font-weight: 500;
+
+  text-align: left;
+
+  text-shadow:
+    0 0 18px rgba(255, 224, 160, 0.15);
+}
+
+
+/* Guru's Grace */
+
+.grace-message {
+  max-width: 700px;
+
+  margin: 28px auto 0;
+
+  padding-top: 22px;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+
+  display: grid;
+
+  grid-template-columns: 55px 1fr;
+
+  gap: 20px;
+
+  align-items: center;
+}
+
+.grace-symbol {
+  color: var(--light-gold);
+
+  font-size: 34px;
+
+  text-align: center;
+}
+
+.grace-message .section-eyebrow {
+  margin-bottom: 5px;
+
+  color: rgba(255, 255, 255, 0.65);
+}
+
+.grace-message h3 {
+  margin: 0;
+
+  color: var(--white);
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: 21px;
+
+  font-weight: 500;
+
+  line-height: 1.4;
+}
+
+.transformation-ending {
+  margin: 20px 0 0;
+
+  color: var(--white);
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: 19px;
+
+  font-style: italic;
+
+  text-align: center;
+}
+
+
+/* =========================================================
+   06 — SEVA
+========================================================= */
+
+.seva-section {
+  background: var(--white);
+}
+
+.seva-list {
+  margin: 22px 0;
+}
+
+.seva-list p {
+  margin: 0;
+
+  padding: 10px 0;
+
+  border-bottom: 1px solid #eadfce;
+
+  color: var(--deep-brown);
+
+  font-size: 14px !important;
+
+  line-height: 1.65 !important;
+}
+
+
+/* =========================================================
+   07 — ORDINARY → DIVINE
+========================================================= */
+
+.divine-section {
+  position: relative;
+
+  min-height: auto;
+
+  padding: 72px 0;
+
+  overflow: hidden;
+
+  color: var(--white);
+
+  background: var(--deep-saffron);
+}
+
+.divine-image {
+  position: absolute;
+
+  inset: 0;
+
+  background-image:
+    url("/images/gallery/gallery-4.jpeg");
+
+  background-size: cover;
+
+  background-position: center;
+}
+
+.divine-overlay {
+  position: absolute;
+
+  inset: 0;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(67, 28, 7, 0.91),
+      rgba(159, 70, 12, 0.82)
+    );
+}
+
+.divine-container {
+  position: relative;
+
+  z-index: 2;
+
+  width: min(1050px, calc(100% - 50px));
+
+  margin: 0 auto;
+}
+
+
+/* Heading */
+
+.divine-heading {
+  max-width: 760px;
+
+  margin: 0 auto 45px;
+
+  text-align: center;
+}
+
+.divine-heading .section-number,
+.divine-heading .section-eyebrow {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.divine-heading h2 {
+  margin: 0 0 18px;
+
+  color: var(--white);
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: clamp(42px, 5.5vw, 64px);
+
+  font-weight: 500;
+
+  line-height: 1.18;
+}
+
+.divine-divider {
+  width: 70px;
+  height: 1px;
+
+  margin: 0 auto 22px;
+
+  background: var(--light-gold);
+}
+
+.divine-heading p {
+  max-width: 700px;
+
+  margin: 0 auto 10px;
+
+  color: rgba(255, 255, 255, 0.88);
+
+  font-size: 14px;
+
+  line-height: 1.75;
+}
+
+
+/* Journey */
+
+.divine-journey {
+  position: relative;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  max-width: 1000px;
+
+  margin: 0 auto;
+
+  padding: 25px 0;
+}
+
+.divine-journey::before {
+  content: "";
+
+  position: absolute;
+
+  left: 40px;
+  right: 40px;
+
+  top: 50%;
+
+  height: 1px;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      rgba(228, 201, 142, 0.75),
+      transparent
+    );
+}
+
+.journey-item {
+  position: relative;
+
+  z-index: 2;
+
+  width: 135px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+}
+
+.journey-item::before {
+  content: "";
+
+  width: 13px;
+  height: 13px;
+
+  margin-bottom: 13px;
+
+  border: 1px solid var(--light-gold);
+
+  border-radius: 50%;
+
+  background: var(--deep-saffron);
+
+  box-shadow:
+    0 0 0 6px rgba(228, 201, 142, 0.07),
+    0 0 18px rgba(228, 201, 142, 0.25);
+}
+
+.journey-context {
+  margin-bottom: 5px;
+
+  color: rgba(255, 255, 255, 0.62);
+
+  font-size: 10px;
+
+  letter-spacing: 1px;
+}
+
+.journey-item strong {
+  color: var(--white);
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: 22px;
+
+  font-weight: 500;
+}
+
+.journey-connector {
+  position: relative;
+
+  z-index: 2;
+
+  width: 35px;
+
+  display: flex;
+
+  justify-content: center;
+}
+
+.journey-connector span {
+  width: 28px;
+  height: 1px;
+
+  background: rgba(228, 201, 142, 0.5);
+}
+
+
+/* Divine ending */
+
+.divine-ending {
+  max-width: 720px;
+
+  margin: 45px auto 0;
+
+  padding-top: 22px;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+
+  text-align: center;
+}
+
+.divine-ending p {
+  margin-bottom: 12px;
+
+  color: rgba(255, 255, 255, 0.86);
+
+  font-size: 14px;
+
+  line-height: 1.75;
+}
+
+.divine-ending strong {
+  color: var(--white);
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: 23px;
+
+  font-weight: 500;
+}
+
+
+/* =========================================================
+   08 — SMALL SATSANG
+========================================================= */
+
+.small-satsang-section {
+  padding: 72px 0;
+
+  background: var(--white);
+}
+
+.small-satsang-container {
+  width: min(1180px, calc(100% - 50px));
+
+  margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns: 0.9fr 1.1fr;
+
+  gap: 55px;
+
+  align-items: center;
+}
+
+.small-satsang-image {
+  overflow: hidden;
+
+  border: 1px solid var(--gold);
+}
+
+.small-satsang-image img {
+  aspect-ratio: 4 / 5;
+
+  object-fit: cover;
+}
+
+.small-satsang-content h2 {
+  margin-bottom: 18px;
+
+  color: var(--deep-brown);
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: clamp(34px, 4vw, 48px);
+
+  font-weight: 500;
+
+  line-height: 1.25;
+}
+
+.small-satsang-content > p {
+  margin-bottom: 14px;
+
+  font-size: 15px;
+
+  line-height: 1.75;
+}
+
+.small-points {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 8px;
+
+  margin: 22px 0;
+}
+
+.small-points span {
+  padding: 11px 13px;
+
+  background: var(--soft-cream);
+
+  border-left: 2px solid var(--gold);
+
+  color: var(--deep-brown);
+
+  font-size: 12px;
+
+  line-height: 1.6;
+}
+
+.small-highlight {
+  color: var(--dark-saffron);
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: 18px !important;
+}
+
+
+/* =========================================================
+   09 — INVITATION
+========================================================= */
+
+.invitation-section {
+  position: relative;
+
+  min-height: 520px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+
+  color: var(--white);
+
+  text-align: center;
+}
+
+.invitation-image {
+  position: absolute;
+
+  inset: 0;
+
+  background-image:
+    url("/images/gallery/gallery-8.jpeg");
+
+  background-size: cover;
+
+  background-position: center;
+}
+
+.invitation-overlay {
+  position: absolute;
+
+  inset: 0;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(117, 48, 8, 0.88),
+      rgba(185, 92, 22, 0.72)
+    );
+}
+
+.invitation-content {
+  position: relative;
+
+  z-index: 2;
+
+  width: min(800px, calc(100% - 40px));
+}
+
+.invitation-content .section-number,
+.invitation-content .section-eyebrow {
+  color: var(--white);
+}
+
+.invitation-content h2 {
+  margin-bottom: 16px;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: clamp(46px, 6vw, 70px);
+
+  font-weight: 500;
+}
+
+.invitation-om {
+  margin-bottom: 18px;
+
+  font-size: 35px;
+}
+
+.invitation-content > p {
+  margin-bottom: 14px;
+
+  font-size: 15px;
+
+  line-height: 1.8;
+}
+
+.invitation-emphasis {
+  margin-top: 22px;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: 22px !important;
+}
+
+.invitation-values {
+  display: flex;
+
+  justify-content: center;
+
+  flex-wrap: wrap;
+
+  gap: 8px;
+
+  margin-top: 25px;
+}
+
+.invitation-values span {
+  padding: 8px 15px;
+
+  border: 1px solid rgba(255, 255, 255, 0.4);
+
+  font-size: 12px;
+}
+
+
+/* =========================================================
+   FINAL
+========================================================= */
+
+.satsang-final {
+  padding: 55px 20px;
+
+  background: var(--white);
+
+  text-align: center;
+}
+
+.final-om {
+  margin-bottom: 18px;
+
+  color: var(--gold);
+
+  font-size: 40px;
+}
+
+.satsang-final p {
+  margin-bottom: 18px;
+
+  color: var(--deep-brown);
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: 20px;
+
+  line-height: 1.75;
+}
+
+.satsang-final strong {
+  display: block;
+
+  margin-bottom: 25px;
+
+  color: var(--dark-saffron);
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: 25px;
+
+  font-weight: 500;
+}
+
+.final-links {
+  display: flex;
+
+  justify-content: center;
+
+  gap: 10px;
+}
+
+.final-links a {
+  padding: 10px 20px;
+
+  border: 1px solid var(--gold);
+
+  color: var(--dark-saffron);
+
+  text-decoration: none;
+
+  font-size: 12px;
+
+  transition: 0.25s ease;
+}
+
+.final-links a:hover {
+  background: var(--saffron);
+
+  color: var(--white);
+
+  border-color: var(--saffron);
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+  .story-container,
+  .small-satsang-container {
+    grid-template-columns: 1fr;
+
+    gap: 35px;
+  }
+
+  .story-image {
+    order: 1;
+  }
+
+  .story-content {
+    order: 2;
+  }
+
+  .reverse-story .story-image {
+    order: 1;
+  }
+
+  .reverse-story .story-content {
+    order: 2;
+  }
+
+
+  /* Four pillars */
+
+  .pillar-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .pillar-item:nth-child(2) {
+    border-right: none;
+  }
+
+  .pillar-item:nth-child(3),
+  .pillar-item:nth-child(4) {
+    border-top: 1px solid rgba(255, 255, 255, 0.22);
+  }
+
+
+  /* Divine */
+
+  .divine-journey {
+    flex-wrap: wrap;
+
+    gap: 28px 0;
+
+    padding: 18px 0;
+  }
+
+  .divine-journey::before {
+    display: none;
+  }
+
+  .journey-connector {
+    width: 25px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+  .story-section {
+    padding: 52px 0;
+  }
+
+  .story-container,
+  .small-satsang-container,
+  .pillars-container,
+  .transformation-container,
+  .divine-container {
+    width: min(100% - 30px, 1180px);
+  }
+
+  .story-container {
+    gap: 30px;
+  }
+
+
+  /* Hero */
+
+  .satsang-hero {
+    min-height: 430px;
+  }
+  .satsang-hero-line {
+  width: 90px;
+  height: 2px;
+  background: var(--light-gold);
+  margin: 24px auto;
+}
+
+  .hero-eyebrow {
+    font-size: 10px;
+
+    letter-spacing: 2.5px;
+  }
+
+  .satsang-hero h1 {
+    font-size: 48px;
+  }
+
+  .hero-subtitle {
+    font-size: 15px;
+  }
+
+
+  /* Story */
+
+  .story-content h2 {
+    font-size: 33px;
+
+    margin-bottom: 15px;
+  }
+
+  .story-content > p {
+    margin-bottom: 12px;
+
+    font-size: 14px;
+
+    line-height: 1.75;
+  }
+
+  .story-highlight {
+    margin-top: 16px;
+
+    padding: 14px 17px;
+  }
+
+
+  /* Meaning */
+
+  .meaning-inline {
+    gap: 8px;
+
+    margin: 20px 0;
+  }
+
+  .meaning-inline > div {
+    min-width: 0;
+
+    flex: 1;
+
+    padding: 13px 7px;
+  }
+
+  .meaning-inline strong {
+    font-size: 21px;
+  }
+
+  .meaning-inline b {
+    font-size: 19px;
+  }
+
+
+  /* Faith */
+
+  .faith-pair {
+    grid-template-columns: 1fr;
+
+    margin: 18px 0;
+  }
+
+
+  /* Four Pillars */
+
+  .pillars-section {
+    padding: 52px 0;
+  }
+
+  .pillars-heading {
+    margin-bottom: 25px;
+  }
+
+  .pillars-heading h2 {
+    font-size: 31px;
+  }
+
+  .pillar-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .pillar-item,
+  .pillar-item:nth-child(2),
+  .pillar-item:nth-child(3),
+  .pillar-item:nth-child(4) {
+    min-height: auto;
+
+    padding: 21px 18px;
+
+    border-right: none;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.22);
+  }
+
+  .pillar-item:first-child {
+    border-top: none;
+  }
+
+
+  /* Heart */
+
+  .heart-box {
+    margin-top: 20px;
+
+    padding: 26px 18px 22px;
+  }
+
+  .heart-quote-mark {
+    font-size: 46px;
+  }
+
+  .heart-box blockquote {
+    font-size: 19px;
+
+    line-height: 1.7;
+  }
+
+  .heart-box strong {
+    font-size: 18px;
+  }
+
+
+  /* Transformation */
+
+  .transformation-section {
+    padding: 55px 0 50px;
+  }
+
+  .transformation-heading {
+    margin-bottom: 25px;
+  }
+
+  .transformation-heading h2 {
+    font-size: 40px;
+  }
+
+  .transformation-heading > p:last-child {
+    font-size: 13px;
+
+    line-height: 1.7;
+  }
+
+  .transformation-intro {
+    display: none;
+  }
+
+  .transformation-row {
+    display: grid;
+
+    grid-template-columns: 1fr;
+
+    min-height: auto;
+
+    padding: 12px 0;
+
+    gap: 3px;
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+
+    text-align: center;
+  }
+
+  .change-before {
+    padding: 0;
+
+    font-size: 20px;
+
+    text-align: center;
+  }
+
+  .change-arrow {
+    height: 18px;
+  }
+
+  .change-arrow::before {
+    width: 1px;
+
+    height: 100%;
+
+    left: 50%;
+    top: 0;
+
+    transform: translateX(-50%);
+
+    background:
+      linear-gradient(
+        180deg,
+        transparent,
+        rgba(228, 201, 142, 0.35),
+        transparent
+      );
+  }
+
+  .change-arrow::after {
+    content: "↓";
+
+    font-size: 17px;
+  }
+
+  .change-arrow span {
+    left: 50%;
+
+    top: 50%;
+  }
+
+  .change-after {
+    padding: 0;
+
+    font-size: 23px;
+
+    text-align: center;
+  }
+
+  .grace-message {
+    grid-template-columns: 1fr;
+
+    gap: 8px;
+
+    margin-top: 24px;
+
+    padding-top: 18px;
+
+    text-align: center;
+  }
+
+  .grace-symbol {
+    font-size: 32px;
+  }
+
+  .grace-message h3 {
+    font-size: 20px;
+  }
+
+  .transformation-ending {
+    margin-top: 18px;
+
+    font-size: 18px;
+  }
+
+
+  /* Seva */
+
+  .seva-list {
+    margin: 18px 0;
+  }
+
+  .seva-list p {
+    padding: 9px 0;
+  }
+
+
+  /* Divine */
+
+  .divine-section {
+    padding: 58px 0;
+  }
+
+  .divine-heading {
+    margin-bottom: 35px;
+  }
+
+  .divine-heading h2 {
+    font-size: 40px;
+  }
+
+  .divine-heading p {
+    font-size: 13px;
+
+    line-height: 1.7;
+  }
+
+  .divine-journey {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 0;
+
+    padding: 0;
+  }
+
+  .divine-journey::before {
+    display: block;
+
+    left: 50%;
+
+    right: auto;
+
+    top: 0;
+    bottom: 0;
+
+    width: 1px;
+    height: auto;
+
+    background:
+      linear-gradient(
+        180deg,
+        transparent,
+        rgba(228, 201, 142, 0.7),
+        transparent
+      );
+
+    transform: translateX(-50%);
+  }
+
+  .journey-item {
+    width: 100%;
+
+    min-height: 92px;
+
+    padding: 10px 0;
+  }
+
+  .journey-item::before {
+    width: 11px;
+    height: 11px;
+
+    margin-bottom: 8px;
+  }
+
+  .journey-context {
+    font-size: 9px;
+  }
+
+  .journey-item strong {
+    font-size: 23px;
+  }
+
+  .journey-connector {
+    display: none;
+  }
+
+  .divine-ending {
+    margin-top: 38px;
+
+    padding-top: 18px;
+  }
+
+  .divine-ending p {
+    font-size: 13px;
+
+    line-height: 1.7;
+  }
+
+  .divine-ending strong {
+    font-size: 20px;
+  }
+
+
+  /* Small Satsang */
+
+  .small-satsang-section {
+    padding: 55px 0;
+  }
+
+  .small-satsang-container {
+    gap: 30px;
+  }
+
+  .small-satsang-content h2 {
+    font-size: 34px;
+  }
+
+  .small-satsang-content > p {
+    font-size: 14px;
+
+    line-height: 1.75;
+  }
+
+  .small-points {
+    grid-template-columns: 1fr;
+
+    margin: 18px 0;
+  }
+
+
+  /* Invitation */
+
+  .invitation-section {
+    min-height: 480px;
+  }
+
+  .invitation-content h2 {
+    font-size: 47px;
+  }
+
+  .invitation-content > p {
+    font-size: 14px;
+
+    line-height: 1.75;
+  }
+
+
+  /* Final */
+
+  .satsang-final {
+    padding: 45px 18px;
+  }
+
+  .satsang-final p {
+    font-size: 18px;
+
+    line-height: 1.7;
+  }
+
+  .final-links {
+    flex-direction: column;
+  }
+
+  .final-links a {
+    width: 100%;
+  }
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .story-image img,
+  .final-links a {
+    transition: none;
+  }
+}

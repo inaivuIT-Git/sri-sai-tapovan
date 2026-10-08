@@ -1,14 +1,7 @@
 /* =====================================================
-   SRI SAI TAPOVAN SPIRITUAL TRUST
+   SRI SAI TAPOVAN
    HOME PAGE
-
-   COLOR THEME:
-   SAFFRON + WHITE + WARM BROWN + GOLD
-
-   NO BEIGE
-   NO MAROON
-   NO GREEN
-===================================================== */
+   ===================================================== */
 
 
 /* =====================================================
@@ -16,645 +9,268 @@
 ===================================================== */
 
 :root {
-  --saffron: #d9822b;
-  --deep-saffron: #b85c16;
+  --home-saffron: #d9822b;
+  --home-deep-saffron: #b85c16;
+  --home-dark-saffron: #91440f;
 
-  --brown: #6b442a;
-  --deep-brown: #4a2d1c;
+  --home-gold: #b58a3a;
+  --home-light-gold: #e4c98e;
 
-  --gold: #b58a3a;
+  --home-brown: #6b442a;
+  --home-deep-brown: #402719;
 
-  --white: #ffffff;
-  --off-white: #fffdfc;
+  --home-text: #443932;
+  --home-muted: #766960;
 
-  --soft-saffron: #fff5e8;
+  --home-white: #ffffff;
+  --home-cream: #fffaf3;
+  --home-soft-cream: #fdf5e9;
 
-  --text: #3f3530;
-  --muted-text: #746963;
-
-  --border: #e8ded4;
+  --home-border: #dcc9aa;
 }
 
 
 /* =====================================================
-   COMMON
+   HOME HERO
 ===================================================== */
 
-.section-container {
-  width: min(1180px, calc(100% - 50px));
-  margin: 0 auto;
-}
-
-
-/* =====================================================
-   HERO
-===================================================== */
-
-.hero {
-  min-height: 675px;
-
+.home-hero {
   position: relative;
-  overflow: hidden;
-
-  background:
-    linear-gradient(
-      100deg,
-      rgba(169, 77, 22, 0.96) 0%,
-      rgba(178, 82, 25, 0.90) 25%,
-      rgba(190, 94, 40, 0.72) 43%,
-      rgba(199, 108, 60, 0.48) 60%,
-      rgba(202, 121, 82, 0.25) 75%,
-      rgba(200, 130, 98, 0.12) 100%
-    ),
-    url("/images/hero/sai-baba.jpeg") center / cover no-repeat;
-
-  display: flex;
-  align-items: center;
-}
-
-
-.hero-overlay {
-  display: none;
-}
-
-
-.hero-content {
-  position: relative;
-  z-index: 2;
-
   width: 100%;
-  max-width: 1280px;
+  height: 500px;
+  min-height: 500px;
 
-  margin: 0 auto;
-  padding: 80px 30px;
-
-  color: var(--white);
-}
-
-
-.hero-small {
-  margin: 0 0 18px;
-
-  color: #ffe1b5;
-
-  text-transform: uppercase;
-  letter-spacing: 5px;
-
-  font-size: 13px;
-  font-weight: 600;
-}
-
-
-.hero h1 {
-  max-width: 800px;
-
-  margin: 0;
-
-  color: var(--white);
-
-  font-family: Georgia, "Times New Roman", serif;
-
-  font-size: clamp(52px, 7vw, 82px);
-
-  line-height: 0.98;
-
-  font-weight: 400;
-
-  letter-spacing: -1px;
-}
-
-
-.hero h1 span {
-  display: block;
-
-  margin-top: 20px;
-
-  color: #ffe1b5;
-
-  font-size: 0.53em;
-
-  line-height: 1.1;
-
-  letter-spacing: 4px;
-}
-
-
-.hero-line {
-  width: 85px;
-  height: 2px;
-
-  margin: 32px 0;
-
-  background: #f1bb5e;
-}
-
-
-.hero-description {
-  max-width: 620px;
-
-  margin: 0;
-
-  color: #fff5e9;
-
-  font-size: 17px;
-
-  line-height: 1.85;
-}
-
-
-.hero-buttons {
   display: flex;
-
-  gap: 14px;
-
-  margin-top: 38px;
-}
-
-
-/* =====================================================
-   BUTTONS
-===================================================== */
-
-.primary-btn,
-.secondary-btn {
-  display: inline-flex;
-
   align-items: center;
   justify-content: center;
 
-  min-height: 50px;
+  overflow: hidden;
 
-  padding: 0 27px;
-
-  box-sizing: border-box;
-
-  text-decoration: none;
-
-  font-size: 14px;
-
-  font-weight: 600;
-
-  transition: 0.25s ease;
+  background:
+    url("/images/gallery/gallery-1.jpeg")
+    center center / cover no-repeat;
 }
 
 
-.primary-btn {
-  background: var(--saffron);
+/* -----------------------------------------------------
+   OVERLAY
+----------------------------------------------------- */
 
-  border: 1px solid var(--saffron);
+.home-hero-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
 
-  color: var(--white);
+  background:
+    linear-gradient(
+      rgba(55, 25, 8, 0.68),
+      rgba(55, 25, 8, 0.68)
+    );
 }
 
 
-.primary-btn:hover {
-  background: var(--deep-saffron);
+/* -----------------------------------------------------
+   CONTENT
+----------------------------------------------------- */
 
-  border-color: var(--deep-saffron);
-}
-
-
-.secondary-btn {
-  background: rgba(255, 255, 255, 0.06);
-
-  border: 1px solid rgba(255, 255, 255, 0.75);
-
-  color: var(--white);
-}
-
-
-.secondary-btn:hover {
-  background: var(--white);
-
-  border-color: var(--white);
-
-  color: var(--brown);
-}
-
-
-/* =====================================================
-   SECTION LABEL
-===================================================== */
-
-.section-label {
-  margin: 0 0 12px;
-
-  color: var(--deep-saffron);
-
-  letter-spacing: 3px;
-
-  font-size: 11px;
-
-  font-weight: 700;
-}
-
-
-/* =====================================================
-   WELCOME
-===================================================== */
-
-.welcome-section {
-  padding: 105px 0;
-
-  background: var(--white);
-}
-
-
-.welcome-grid {
-  display: grid;
-
-  grid-template-columns:
-    minmax(360px, 500px)
-    1fr;
-
-  gap: 85px;
-
-  align-items: center;
-}
-
-
-/* =====================================================
-   WELCOME IMAGE
-===================================================== */
-
-.welcome-image {
-  width: 100%;
-}
-
-
-.image-placeholder {
+.home-hero-content {
   position: relative;
+  z-index: 2;
 
-  min-height: 500px;
+  width: min(1050px, calc(100% - 40px));
+  margin: 0 auto;
 
-  padding: 10px;
+  text-align: center;
 
-  box-sizing: border-box;
-
-  background: var(--white);
-
-  border: 1px solid var(--gold);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 
-.image-placeholder img {
+/* -----------------------------------------------------
+   TRUST NAME
+----------------------------------------------------- */
+
+.home-hero-eyebrow {
   display: block;
 
-  width: 100%;
-  height: 478px;
+  margin: 0 0 16px;
 
-  object-fit: cover;
+  color: var(--home-light-gold);
+
+  font-family:
+    Georgia,
+    "Noto Serif Tamil",
+    serif;
+
+  font-size: 28px;
+  font-weight: 500;
+
+  line-height: 1.3;
+
+  letter-spacing: 1px;
 }
 
 
-/* =====================================================
-   WELCOME CONTENT
-===================================================== */
+/* -----------------------------------------------------
+   MAIN TITLE
+----------------------------------------------------- */
 
-.welcome-content h2,
-.section-heading h2,
-.events-header h2 {
-  margin: 10px 0;
+.home-hero h1 {
+  margin: 0;
 
-  color: var(--brown);
+  max-width: 1000px;
 
-  font-family: Georgia, "Times New Roman", serif;
+  color: var(--home-white);
 
-  font-size: 42px;
+  font-family:
+    Georgia,
+    "Noto Serif Tamil",
+    serif;
 
-  line-height: 1.25;
+  font-size: clamp(42px, 5vw, 68px);
 
-  font-weight: 400;
-}
+  font-weight: 500;
 
-
-.small-line {
-  width: 55px;
-  height: 2px;
-
-  margin: 25px 0;
-
-  background: var(--saffron);
-}
-
-
-.welcome-content > p:not(.section-label) {
-  color: var(--muted-text);
-
-  font-size: 16px;
-
-  line-height: 1.9;
-}
-
-
-.text-link {
-  display: inline-block;
-
-  margin-top: 12px;
-
-  color: var(--deep-saffron);
-
-  text-decoration: none;
-
-  font-size: 14px;
-
-  font-weight: 600;
-}
-
-
-.text-link:hover {
-  color: var(--deep-brown);
-}
-
-
-/* =====================================================
-   VALUES
-===================================================== */
-
-.values-section {
-  padding: 100px 0;
-
-  background: var(--soft-saffron);
-}
-
-
-.section-heading {
-  max-width: 700px;
-
-  margin: 0 auto 55px;
+  line-height: 1.18;
 
   text-align: center;
 }
 
 
-.section-heading h2 {
-  margin-top: 8px;
+/* GOLD TITLE LINE */
+
+.home-hero h1 span {
+  color: var(--home-light-gold);
 }
 
 
-.section-heading > p:last-child {
-  margin-top: 18px;
+/* -----------------------------------------------------
+   DIVIDER
+----------------------------------------------------- */
 
-  color: var(--muted-text);
+.home-hero-divider {
+  width: 75px;
+  height: 1px;
+
+  margin: 22px auto 18px;
+
+  background: var(--home-light-gold);
+}
+
+
+/* -----------------------------------------------------
+   DESCRIPTION
+----------------------------------------------------- */
+
+.home-hero-description {
+  margin: 0;
+
+  color: rgba(255, 255, 255, 0.9);
+
+  font-family:
+    Georgia,
+    "Noto Serif Tamil",
+    serif;
 
   font-size: 15px;
 
   line-height: 1.8;
-}
-
-
-/* =====================================================
-   VALUE CARDS
-===================================================== */
-
-.values-grid {
-  display: grid;
-
-  grid-template-columns: repeat(3, 1fr);
-
-  gap: 22px;
-}
-
-
-.value-card {
-  position: relative;
-
-  padding: 45px 32px;
-
-  background: var(--white);
-
-  border: 1px solid var(--border);
 
   text-align: center;
-
-  transition:
-    transform 0.25s ease,
-    box-shadow 0.25s ease;
 }
 
 
-.value-card::before {
-  content: "";
+/* -----------------------------------------------------
+   OM
+----------------------------------------------------- */
 
-  position: absolute;
+.home-hero-om {
+  margin-top: 18px;
 
-  top: 0;
-  left: 50%;
+  color: var(--home-light-gold);
 
-  width: 45px;
-  height: 3px;
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
 
-  transform: translateX(-50%);
+  font-size: 38px;
 
-  background: var(--saffron);
+  line-height: 1;
 }
 
 
-.value-card:hover {
-  transform: translateY(-5px);
+/* -----------------------------------------------------
+   BREADCRUMB
+----------------------------------------------------- */
 
-  box-shadow:
-    0 16px 35px rgba(74, 45, 28, 0.09);
+.home-hero-breadcrumb {
+  margin: 12px 0 0;
+
+  color: rgba(255, 255, 255, 0.65);
+
+  font-size: 12px;
+
+  letter-spacing: 1px;
 }
 
-
-.value-icon {
-  width: 68px;
-  height: 68px;
-
-  margin: 0 auto 20px;
-
-  display: flex;
-
-  align-items: center;
-  justify-content: center;
-
-  border: 1px solid var(--gold);
-
-  border-radius: 50%;
-
-  background: var(--white);
-
-  color: var(--deep-saffron);
-
-  font-size: 29px;
-}
-
-
-.value-card h3 {
-  margin: 0 0 12px;
-
-  color: var(--brown);
-
-  font-family: Georgia, "Times New Roman", serif;
-
-  font-size: 24px;
-
-  font-weight: 400;
-}
-
-
-.value-card p {
-  margin: 0;
-
-  color: var(--muted-text);
-
-  font-size: 14px;
-
-  line-height: 1.75;
-}
 
 
 /* =====================================================
-   EVENTS
+   A MOMENT WITH SAI
+   COMPACT EDITORIAL QUOTE SECTION
 ===================================================== */
 
-.events-section {
-  padding: 100px 0;
+/* =====================================================
+   MOMENT WITH SAI
+===================================================== */
 
-  background: var(--white);
+.home-moment {
+  position: relative;
+  width: 100%;
+
+  padding: 80px 20px;
+
+  background: var(--home-cream);
+
+  text-align: center;
+}
+
+.home-moment-inner {
+  width: min(900px, 100%);
+  margin: 0 auto;
 }
 
 
-.events-header {
-  display: flex;
+/* TITLE */
 
-  justify-content: space-between;
+.home-moment-eyebrow {
+  margin: 0;
 
-  align-items: flex-end;
+  color: var(--home-deep-saffron);
 
-  margin-bottom: 40px;
-}
+  font-family:
+    Georgia,
+    "Noto Serif Tamil",
+    serif;
 
-
-.events-header a {
-  color: var(--deep-saffron);
-
-  text-decoration: none;
-
-  font-size: 14px;
-
+  font-size: 20px;
   font-weight: 600;
 }
 
 
-.events-header a:hover {
-  color: var(--deep-brown);
-}
+/* DIVIDER */
 
+.home-moment-divider {
+  width: 70px;
+  height: 1px;
 
-.events-grid {
-  display: grid;
+  margin: 14px auto 22px;
 
-  grid-template-columns: repeat(3, 1fr);
-
-  gap: 22px;
-}
-
-
-.event-card {
-  display: flex;
-
-  min-height: 145px;
-
-  background: var(--white);
-
-  border: 1px solid var(--border);
-
-  transition:
-    transform 0.25s ease,
-    box-shadow 0.25s ease;
-}
-
-
-.event-card:hover {
-  transform: translateY(-4px);
-
-  box-shadow:
-    0 14px 30px rgba(74, 45, 28, 0.08);
-}
-
-
-.event-date {
-  min-width: 88px;
-
-  padding: 15px;
-
-  box-sizing: border-box;
-
-  background: var(--deep-saffron);
-
-  color: var(--white);
-
-  display: flex;
-
-  flex-direction: column;
-
-  align-items: center;
-
-  justify-content: center;
-}
-
-
-.event-date strong {
-  font-family: Georgia, "Times New Roman", serif;
-
-  font-size: 34px;
-
-  line-height: 1;
-
-  font-weight: 400;
-}
-
-
-.event-date span {
-  margin-top: 7px;
-
-  font-size: 11px;
-
-  letter-spacing: 2px;
-}
-
-
-.event-details {
-  padding: 25px 22px;
-}
-
-
-.event-details > span {
-  color: var(--deep-saffron);
-
-  font-size: 10px;
-
-  font-weight: 700;
-
-  text-transform: uppercase;
-
-  letter-spacing: 1.5px;
-}
-
-
-.event-details h3 {
-  margin: 8px 0;
-
-  color: var(--brown);
-
-  font-family: Georgia, "Times New Roman", serif;
-
-  font-size: 21px;
-
-  line-height: 1.3;
-
-  font-weight: 400;
-}
-
-
-.event-details p {
-  margin: 0;
-
-  color: var(--muted-text);
-
-  font-size: 13px;
+  background: var(--home-gold);
 }
 
 
@@ -662,86 +278,904 @@
    QUOTE
 ===================================================== */
 
-.quote-section {
+.home-moment-quote {
   position: relative;
 
-  padding: 100px 25px;
+  width: 100%;
+  max-width: 760px;
 
-  background: var(--deep-saffron);
+  margin: 0 auto;
 
-  color: var(--white);
+  padding: 32px 55px;
+
+  border-top: 1px solid var(--home-border);
+  border-bottom: 1px solid var(--home-border);
 
   text-align: center;
+}
+
+.home-moment-quote p {
+  margin: 0;
+
+  color: var(--home-deep-brown);
+
+  font-family:
+    Georgia,
+    "Noto Serif Tamil",
+    serif;
+
+  font-size: clamp(32px, 4vw, 48px);
+
+  font-weight: 500;
+  font-style: italic;
+
+  line-height: 1.45;
+}
+
+.home-moment-link {
+  display: inline-flex;
+
+  align-items: center;
+  gap: 8px;
+
+  margin-top: 18px;
+
+  padding-bottom: 5px;
+
+  border-bottom: 1px solid var(--home-gold);
+
+  color: var(--home-deep-saffron);
+
+  font-size: 14px;
+  font-weight: 600;
+
+  text-decoration: none;
+}
+
+
+/* QUOTE MARK */
+
+.home-moment-quote-mark {
+  position: absolute;
+
+  top: 8px;
+  left: 15px;
+
+  color: var(--home-gold);
+
+  font-family: Georgia, serif;
+
+  font-size: 90px;
+  line-height: 1;
+}
+
+.home-moment-quote-mark.closing {
+  top: auto;
+  left: auto;
+
+  right: 15px;
+  bottom: -28px;
+}
+
+
+
+
+/* =====================================================
+   LINK
+===================================================== */
+
+.home-moment-link {
+  display: inline-flex;
+
+  align-items: center;
+  gap: 8px;
+
+  margin-top: 25px;
+
+  padding-bottom: 5px;
+
+  border-bottom: 1px solid var(--home-gold);
+
+  color: var(--home-deep-saffron);
+
+  font-size: 14px;
+  font-weight: 600;
+
+  text-decoration: none;
+}
+
+.home-moment-link span {
+  font-size: 18px;
+}
+
+/* =====================================================
+   INTRO
+===================================================== */
+
+.home-intro {
+  padding: 78px 0;
+  background: var(--home-white);
+}
+
+.home-intro-container {
+  width: min(1120px, calc(100% - 50px));
+
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: 0.95fr 1.05fr;
+
+  gap: 65px;
+
+  align-items: center;
+}
+
+.home-intro-image {
+  position: relative;
+
+  height: 450px;
 
   overflow: hidden;
 }
 
-
-.quote-section::before,
-.quote-section::after {
+.home-intro-image::after {
   content: "";
 
   position: absolute;
+  inset: 15px;
 
-  width: 180px;
-  height: 180px;
+  border: 1px solid rgba(228, 201, 142, 0.7);
 
-  border: 1px solid rgba(255, 255, 255, 0.22);
+  pointer-events: none;
+}
 
-  border-radius: 50%;
+.home-intro-image img {
+  height: 100%;
+  object-fit: cover;
+}
+
+.home-intro-content h2 {
+  margin: 0;
+
+  color: var(--home-deep-brown);
+
+  font-family:
+    Georgia,
+    "Noto Serif Tamil",
+    serif;
+
+  font-size: clamp(34px, 4vw, 50px);
+  font-weight: 500;
+  line-height: 1.3;
+}
+
+.home-intro-content p:not(.home-section-eyebrow) {
+  margin: 0 0 14px;
+
+  color: var(--home-muted);
+
+  font-family:
+    Georgia,
+    "Noto Serif Tamil",
+    serif;
+
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+.home-text-link {
+  display: inline-block;
+
+  margin-top: 8px;
+
+  padding-bottom: 4px;
+
+  color: var(--home-deep-saffron);
+
+  font-size: 12px;
+  font-weight: 700;
+
+  border-bottom: 1px solid var(--home-light-gold);
 }
 
 
-.quote-section::before {
-  left: -90px;
+/* =====================================================
+   SATSANG
+===================================================== */
 
-  top: -90px;
+.home-satsang {
+  padding: 78px 0;
+  background: var(--home-cream);
 }
 
+.home-satsang-heading {
+  width: min(760px, calc(100% - 50px));
 
-.quote-section::after {
-  right: -90px;
+  margin: 0 auto 38px;
 
-  bottom: -90px;
+  text-align: center;
 }
 
+.home-satsang-heading h2 {
+  margin: 0 0 15px;
 
-.quote-symbol {
-  height: 65px;
+  color: var(--home-deep-brown);
 
-  color: #FFE0A8;
+  font-family:
+    Georgia,
+    "Noto Serif Tamil",
+    serif;
 
-  font-family: Georgia, "Times New Roman", serif;
-
-  font-size: 72px;
-
-  line-height: 1;
+  font-size: clamp(36px, 4.5vw, 55px);
+  font-weight: 500;
+  line-height: 1.25;
 }
 
+.home-satsang-heading > p:last-child {
+  margin: 0;
 
-.quote-section blockquote {
-  max-width: 850px;
+  color: var(--home-muted);
 
-  margin: 20px auto;
+  font-family:
+    Georgia,
+    "Noto Serif Tamil",
+    serif;
 
-  color: var(--white);
-
-  font-family: Georgia, "Times New Roman", serif;
-
-  font-size: 30px;
-
-  line-height: 1.6;
-
-  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.8;
 }
 
+.home-satsang-grid {
+  width: min(1120px, calc(100% - 50px));
 
-.quote-section p {
-  margin: 20px 0 0;
+  margin: 0 auto;
 
-  color: rgba(255, 255, 255, 0.85);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+
+  border-top: 1px solid var(--home-border);
+  border-left: 1px solid var(--home-border);
+}
+
+.home-satsang-card {
+  min-height: 225px;
+
+  padding: 26px 23px;
+
+  background: var(--home-white);
+
+  border-right: 1px solid var(--home-border);
+  border-bottom: 1px solid var(--home-border);
+
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease;
+}
+
+.home-satsang-card:hover {
+  transform: translateY(-3px);
+  background: var(--home-soft-cream);
+}
+
+.home-satsang-icon {
+  margin-bottom: 18px;
+
+  color: var(--home-gold);
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 28px;
+}
+
+.home-satsang-card h3 {
+  margin: 0 0 10px;
+
+  color: var(--home-deep-brown);
+
+  font-family:
+    Georgia,
+    "Noto Serif Tamil",
+    serif;
+
+  font-size: 21px;
+  font-weight: 500;
+}
+
+.home-satsang-card p {
+  margin: 0;
+
+  color: var(--home-muted);
+
+  font-family:
+    Georgia,
+    "Noto Serif Tamil",
+    serif;
 
   font-size: 13px;
+  line-height: 1.75;
+}
+
+.home-centered-link {
+  display: flex;
+  justify-content: center;
+
+  margin-top: 28px;
+}
+
+
+/* =====================================================
+   FOUR PILLARS
+===================================================== */
+
+.home-pillars {
+  padding: 74px 0;
+  background: var(--home-white);
+}
+
+.home-pillars-container {
+  width: min(1120px, calc(100% - 50px));
+  margin: 0 auto;
+}
+
+.home-pillars-heading {
+  max-width: 650px;
+  margin-bottom: 34px;
+}
+
+.home-pillars-heading h2 {
+  margin: 0 0 12px;
+
+  color: var(--home-deep-brown);
+
+  font-family:
+    Georgia,
+    "Noto Serif Tamil",
+    serif;
+
+  font-size: clamp(36px, 4vw, 52px);
+  font-weight: 500;
+}
+
+.home-pillars-heading > p:last-child {
+  margin: 0;
+
+  color: var(--home-muted);
+
+  font-family:
+    Georgia,
+    "Noto Serif Tamil",
+    serif;
+
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.home-pillars-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  border-top: 1px solid var(--home-border);
+  border-left: 1px solid var(--home-border);
+}
+
+.home-pillar-card {
+  display: grid;
+  grid-template-columns: 55px 1fr;
+
+  gap: 15px;
+
+  padding: 25px 23px;
+
+  border-right: 1px solid var(--home-border);
+  border-bottom: 1px solid var(--home-border);
+
+  background: var(--home-cream);
+}
+
+.home-pillar-number {
+  color: var(--home-gold);
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 13px;
+  letter-spacing: 1px;
+}
+
+.home-pillar-english {
+  color: var(--home-gold);
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+
+.home-pillar-card h3 {
+  margin: 5px 0 8px;
+
+  color: var(--home-deep-brown);
+
+  font-family:
+    Georgia,
+    "Noto Serif Tamil",
+    serif;
+
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.home-pillar-card p {
+  margin: 0;
+
+  color: var(--home-muted);
+
+  font-family:
+    Georgia,
+    "Noto Serif Tamil",
+    serif;
+
+  font-size: 13px;
+  line-height: 1.75;
+}
+
+
+/* =====================================================
+   ORDINARY TO DIVINE
+===================================================== */
+
+.home-divine {
+  position: relative;
+
+  padding: 78px 0;
+
+  overflow: hidden;
+
+  color: var(--home-white);
+
+  background: var(--home-deep-saffron);
+}
+
+.home-divine-overlay {
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(64, 27, 7, 0.93),
+      rgba(145, 68, 15, 0.80)
+    ),
+    url("/images/gallery/gallery-6.jpeg")
+    center / cover no-repeat;
+}
+
+.home-divine-container {
+  position: relative;
+  z-index: 2;
+
+  width: min(1100px, calc(100% - 50px));
+
+  margin: 0 auto;
+}
+
+.home-divine .home-section-number {
+  color: var(--home-light-gold);
+}
+
+.home-divine .home-section-eyebrow {
+  color: rgba(255, 255, 255, 0.82);
+}
+
+.home-divine h2 {
+  margin: 0 0 16px;
+
+  color: var(--home-white);
+
+  font-family:
+    Georgia,
+    "Noto Serif Tamil",
+    serif;
+
+  font-size: clamp(38px, 5vw, 60px);
+  font-weight: 500;
+  line-height: 1.25;
+}
+
+.home-divine-intro {
+  max-width: 650px;
+
+  margin: 0 0 32px;
+
+  color: rgba(255, 255, 255, 0.75);
+
+  font-family:
+    Georgia,
+    "Noto Serif Tamil",
+    serif;
+
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+.home-divine-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+
+  border-top: 1px solid rgba(228, 201, 142, 0.4);
+  border-bottom: 1px solid rgba(228, 201, 142, 0.4);
+}
+
+.home-divine-item {
+  min-height: 115px;
+
+  padding: 22px 16px;
+
+  border-right: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.home-divine-item:last-child {
+  border-right: none;
+}
+
+.home-divine-item span {
+  display: block;
+
+  margin-bottom: 8px;
+
+  color: rgba(255, 255, 255, 0.6);
+
+  font-family:
+    Georgia,
+    "Noto Serif Tamil",
+    serif;
+
+  font-size: 12px;
+}
+
+.home-divine-item strong {
+  color: var(--home-light-gold);
+
+  font-family:
+    Georgia,
+    "Noto Serif Tamil",
+    serif;
+
+  font-size: 20px;
+  font-weight: 500;
+}
+
+
+/* =====================================================
+   TEACHINGS
+===================================================== */
+
+.home-teachings {
+  padding: 74px 0;
+  background: var(--home-soft-cream);
+}
+
+.home-teachings-container {
+  width: min(1120px, calc(100% - 50px));
+  margin: 0 auto;
+}
+
+.home-teachings-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+
+  gap: 30px;
+
+  margin-bottom: 32px;
+}
+
+.home-teachings-heading h2 {
+  margin: 0;
+
+  color: var(--home-deep-brown);
+
+  font-family:
+    Georgia,
+    "Noto Serif Tamil",
+    serif;
+
+  font-size: clamp(36px, 4vw, 52px);
+  font-weight: 500;
+}
+
+.home-teachings-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 1px;
+
+  background: var(--home-border);
+
+  border: 1px solid var(--home-border);
+}
+
+.home-teaching-card {
+  min-height: 220px;
+
+  padding: 25px 22px;
+
+  background: var(--home-white);
+}
+
+.home-teaching-number {
+  display: block;
+
+  margin-bottom: 18px;
+
+  color: var(--home-gold);
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 13px;
+}
+
+.home-teaching-english {
+  color: var(--home-gold);
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+
+.home-teaching-card h3 {
+  margin: 6px 0 10px;
+
+  color: var(--home-deep-brown);
+
+  font-family:
+    Georgia,
+    "Noto Serif Tamil",
+    serif;
+
+  font-size: 23px;
+  font-weight: 500;
+}
+
+.home-teaching-card p {
+  margin: 0;
+
+  color: var(--home-muted);
+
+  font-family:
+    Georgia,
+    "Noto Serif Tamil",
+    serif;
+
+  font-size: 13px;
+  line-height: 1.75;
+}
+
+
+/* =====================================================
+   LOVE & SERVICE
+===================================================== */
+
+.home-service {
+  position: relative;
+
+  min-height: 500px;
+
+  display: flex;
+  align-items: center;
+
+  overflow: hidden;
+
+  color: var(--home-white);
+}
+
+.home-service-image {
+  position: absolute;
+  inset: 0;
+
+  background:
+    url("/images/gallery/gallery-7.jpeg")
+    center / cover no-repeat;
+}
+
+.home-service-overlay {
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(64, 27, 7, 0.94),
+      rgba(145, 68, 15, 0.68),
+      rgba(145, 68, 15, 0.20)
+    );
+}
+
+.home-service-content {
+  position: relative;
+  z-index: 2;
+
+  width: min(1100px, calc(100% - 50px));
+  max-width: none;
+
+  margin: 0 auto;
+  padding-right: 380px;
+  box-sizing: border-box;
+}
+
+.home-service .home-section-number {
+  color: var(--home-light-gold);
+}
+
+.home-service .home-section-eyebrow {
+  color: rgba(255, 255, 255, 0.82);
+}
+
+.home-service h2 {
+  margin: 0;
+
+  color: var(--home-white);
+
+  font-family:
+    Georgia,
+    "Noto Serif Tamil",
+    serif;
+
+  font-size: clamp(40px, 5vw, 60px);
+  font-weight: 500;
+}
+
+.home-service-line {
+  width: 65px;
+  height: 1px;
+
+  margin: 20px 0;
+
+  background: var(--home-light-gold);
+}
+
+.home-service-content p {
+  margin: 0 0 12px;
+
+  color: rgba(255, 255, 255, 0.78);
+
+  font-family:
+    Georgia,
+    "Noto Serif Tamil",
+    serif;
+
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+.home-service-content .home-service-lead {
+  color: var(--home-white);
+
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+
+/* =====================================================
+   EVENTS
+===================================================== */
+
+.home-events {
+  padding: 72px 0;
+  background: var(--home-white);
+}
+
+.home-events-container {
+  width: min(1000px, calc(100% - 50px));
+  margin: 0 auto;
+}
+
+.home-events-heading {
+  max-width: 700px;
+
+  margin: 0 auto 30px;
+
+  text-align: center;
+}
+
+.home-events-heading h2 {
+  margin: 0 0 12px;
+
+  color: var(--home-deep-brown);
+
+  font-family:
+    Georgia,
+    "Noto Serif Tamil",
+    serif;
+
+  font-size: clamp(36px, 4vw, 50px);
+  font-weight: 500;
+}
+
+.home-events-heading > p:last-child {
+  margin: 0;
+
+  color: var(--home-muted);
+
+  font-family:
+    Georgia,
+    "Noto Serif Tamil",
+    serif;
+
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.home-events-preview {
+  border-top: 1px solid var(--home-border);
+  border-bottom: 1px solid var(--home-border);
+}
+
+.home-event-placeholder {
+  display: flex;
+  align-items: center;
+
+  gap: 22px;
+
+  padding: 25px;
+
+  background: var(--home-cream);
+}
+
+.home-event-placeholder > span {
+  color: var(--home-gold);
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 40px;
+}
+
+.home-event-placeholder strong {
+  display: block;
+
+  margin-bottom: 6px;
+
+  color: var(--home-deep-brown);
+
+  font-family:
+    Georgia,
+    "Noto Serif Tamil",
+    serif;
+
+  font-size: 19px;
+  font-weight: 500;
+}
+
+.home-event-placeholder p {
+  margin: 0;
+
+  color: var(--home-muted);
+
+  font-family:
+    Georgia,
+    "Noto Serif Tamil",
+    serif;
+
+  font-size: 13px;
+  line-height: 1.7;
 }
 
 
@@ -749,74 +1183,469 @@
    GALLERY
 ===================================================== */
 
-/* =====================================================
-   GALLERY PREVIEW
-===================================================== */
-
-.gallery-preview {
-  padding: 100px 0;
-
-  background: #ffffff;
+.home-gallery {
+  padding: 74px 0;
+  background: var(--home-cream);
 }
 
-.gallery-grid {
+.home-gallery-container {
+  width: min(1120px, calc(100% - 50px));
+  margin: 0 auto;
+}
+
+.home-gallery-heading {
+  max-width: 720px;
+
+  margin: 0 auto 34px;
+
+  text-align: center;
+}
+
+.home-gallery-heading h2 {
+  margin: 0 0 12px;
+
+  color: var(--home-deep-brown);
+
+  font-family:
+    Georgia,
+    "Noto Serif Tamil",
+    serif;
+
+  font-size: clamp(36px, 4vw, 50px);
+  font-weight: 500;
+}
+
+.home-gallery-heading > p:last-child {
+  margin: 0;
+
+  color: var(--home-muted);
+
+  font-family:
+    Georgia,
+    "Noto Serif Tamil",
+    serif;
+
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.home-gallery-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 18px;
 
-  align-items: stretch;
+  gap: 16px;
 }
 
-
-
-.gallery-item {
-  width: 100%;
-  height: 360px;
-
+.home-gallery-card {
   overflow: hidden;
 
-  background: #ffffff;
-  border: 1px solid var(--border);
+  background: var(--home-white);
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  border: 1px solid var(--home-border);
 
   transition:
     transform 0.25s ease,
     box-shadow 0.25s ease;
 }
 
-
-.gallery-item img {
-  width: 100%;
-  height: 100%;
-
-  display: block;
-
-  object-fit: contain;
-
-  background: #ffffff;
-
-  transition: transform 0.35s ease;
-}
-
-.gallery-item:hover {
-  transform: translateY(-4px);
+.home-gallery-card:hover {
+  transform: translateY(-3px);
 
   box-shadow:
-    0 12px 30px rgba(74, 45, 28, 0.08);
+    0 10px 22px rgba(64, 39, 25, 0.08);
 }
 
-.gallery-item:hover img {
-  transform: scale(1.02);
+.home-gallery-image {
+  height: 225px;
+  overflow: hidden;
 }
 
-.gallery-button {
-  margin-top: 40px;
+.home-gallery-image img {
+  height: 100%;
+  object-fit: cover;
+
+  transition: transform 0.4s ease;
+}
+
+.home-gallery-card:hover .home-gallery-image img {
+  transform: scale(1.04);
+}
+
+.home-gallery-content {
+  padding: 15px 17px;
+}
+
+.home-gallery-content span {
+  color: var(--home-deep-saffron);
+
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+
+.home-gallery-content h3 {
+  margin: 6px 0 0;
+
+  color: var(--home-deep-brown);
+
+  font-family:
+    Georgia,
+    "Noto Serif Tamil",
+    serif;
+
+  font-size: 18px;
+  font-weight: 500;
+}
+
+
+/* =====================================================
+   SHIRDI JOURNEY
+===================================================== */
+
+.home-shirdi {
+  position: relative;
+
+  padding: 78px 0;
+
+  overflow: hidden;
+
+  color: var(--home-white);
+}
+
+.home-shirdi-image {
+  position: absolute;
+  inset: 0;
+
+  background:
+    url("/images/gallery/gallery-2.jpeg")
+    center / cover no-repeat;
+}
+
+.home-shirdi-overlay {
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(64, 27, 7, 0.94),
+      rgba(145, 68, 15, 0.82)
+    );
+}
+
+.home-shirdi-container {
+  position: relative;
+  z-index: 2;
+
+  width: min(1120px, calc(100% - 50px));
+  margin: 0 auto;
+}
+
+.home-shirdi-heading {
+  max-width: 700px;
+  margin-bottom: 34px;
+}
+
+.home-shirdi .home-section-number {
+  color: var(--home-light-gold);
+}
+
+.home-shirdi .home-section-eyebrow {
+  color: rgba(255, 255, 255, 0.82);
+}
+
+.home-shirdi-heading h2 {
+  margin: 0 0 14px;
+
+  color: var(--home-white);
+
+  font-family:
+    Georgia,
+    "Noto Serif Tamil",
+    serif;
+
+  font-size: clamp(38px, 5vw, 58px);
+  font-weight: 500;
+  line-height: 1.25;
+}
+
+.home-shirdi-heading > p:last-child {
+  margin: 0;
+
+  color: rgba(255, 255, 255, 0.74);
+
+  font-family:
+    Georgia,
+    "Noto Serif Tamil",
+    serif;
+
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.home-shirdi-options {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  border-top: 1px solid rgba(228, 201, 142, 0.45);
+  border-bottom: 1px solid rgba(228, 201, 142, 0.45);
+}
+
+.home-shirdi-option {
+  min-height: 200px;
+
+  padding: 25px 22px;
+
+  border-right: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.home-shirdi-option:last-child {
+  border-right: none;
+}
+
+.home-shirdi-icon {
+  margin-bottom: 14px;
+
+  color: var(--home-light-gold);
+
+  font-size: 25px;
+}
+
+.home-shirdi-option > span {
+  display: block;
+
+  margin-bottom: 7px;
+
+  color: rgba(255, 255, 255, 0.45);
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 12px;
+}
+
+.home-shirdi-option h3 {
+  margin: 0 0 9px;
+
+  color: var(--home-white);
+
+  font-family:
+    Georgia,
+    "Noto Serif Tamil",
+    serif;
+
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.home-shirdi-option p {
+  margin: 0;
+
+  color: rgba(255, 255, 255, 0.68);
+
+  font-family:
+    Georgia,
+    "Noto Serif Tamil",
+    serif;
+
+  font-size: 13px;
+  line-height: 1.75;
+}
+
+
+/* =====================================================
+   ASK SAI
+===================================================== */
+
+.home-ask-sai {
+  padding: 70px 20px;
+
+  background: var(--home-soft-cream);
 
   text-align: center;
 }
+
+.home-ask-sai-inner {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.home-ask-sai h2 {
+  margin: 0 0 14px;
+
+  color: var(--home-deep-brown);
+
+  font-family:
+    Georgia,
+    "Noto Serif Tamil",
+    serif;
+
+  font-size: clamp(36px, 4vw, 52px);
+  font-weight: 500;
+}
+
+.home-ask-sai p:not(.home-section-eyebrow) {
+  max-width: 620px;
+
+  margin: 0 auto 22px;
+
+  color: var(--home-muted);
+
+  font-family:
+    Georgia,
+    "Noto Serif Tamil",
+    serif;
+
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+
+/* =====================================================
+   FINAL
+===================================================== */
+
+.home-final {
+  padding: 68px 20px 55px;
+
+  background: var(--home-white);
+
+  text-align: center;
+}
+
+.home-final-container {
+  width: min(1050px, 100%);
+  margin: 0 auto;
+}
+
+.home-final-om {
+  margin-bottom: 16px;
+
+  color: var(--home-gold);
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 38px;
+  line-height: 1;
+}
+
+.home-final-eyebrow {
+  margin: 0 0 17px;
+
+  color: var(--home-deep-saffron);
+
+  font-family:
+    Georgia,
+    "Noto Serif Tamil",
+    serif;
+
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+
+.home-final h2 {
+  max-width: 850px;
+
+  margin: 0 auto;
+
+  color: var(--home-deep-brown);
+
+  font-family:
+    Georgia,
+    "Noto Serif Tamil",
+    serif;
+
+  font-size: clamp(34px, 4.2vw, 54px);
+  font-weight: 500;
+  line-height: 1.35;
+}
+
+.home-final-message {
+  margin-top: 25px;
+}
+
+.home-final-message p {
+  margin: 0 0 6px;
+
+  color: var(--home-muted);
+
+  font-family:
+    Georgia,
+    "Noto Serif Tamil",
+    serif;
+
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.home-final-quote {
+  margin-top: 19px;
+
+  color: var(--home-deep-saffron);
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 27px;
+}
+
+.home-final-divider {
+  width: 100%;
+  height: 1px;
+
+  margin: 27px auto 21px;
+
+  background: var(--home-light-gold);
+}
+
+.home-final-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  gap: 28px;
+}
+
+.home-final-links a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-width: 150px;
+
+  padding: 10px 20px;
+
+  border: 1px solid var(--home-gold);
+
+  color: var(--home-brown);
+  background: transparent;
+
+  font-family:
+    Georgia,
+    "Noto Serif Tamil",
+    serif;
+
+  font-size: 13px;
+
+  transition:
+    background 0.25s ease,
+    color 0.25s ease;
+}
+
+.home-final-links a:hover {
+  background: var(--home-deep-saffron);
+  border-color: var(--home-deep-saffron);
+  color: var(--home-white);
+}
+
 
 /* =====================================================
    TABLET
@@ -824,41 +1653,47 @@
 
 @media (max-width: 900px) {
 
-  .welcome-grid {
+  .home-intro-container {
     grid-template-columns: 1fr;
-
-    gap: 50px;
+    gap: 38px;
   }
 
-
-  .welcome-image {
-    max-width: 520px;
-
-    margin: 0 auto;
-  }
-
-
-  .values-grid {
-    grid-template-columns: 1fr;
-  }
-
-
-  .events-grid {
-    grid-template-columns: 1fr;
-  }
-
-
- .gallery-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .gallery-item {
+  .home-intro-image {
     height: 400px;
   }
 
+  .home-satsang-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 
-  .events-header {
-    align-items: flex-start;
+  .home-teachings-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .home-divine-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .home-divine-item:nth-child(3) {
+    border-right: none;
+  }
+
+  .home-shirdi-options {
+    grid-template-columns: 1fr;
+  }
+
+  .home-shirdi-option {
+    min-height: auto;
+    border-right: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  }
+
+  .home-shirdi-option:last-child {
+    border-bottom: none;
+  }
+
+  .home-gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
@@ -867,329 +1702,302 @@
    MOBILE
 ===================================================== */
 
-@media (max-width: 600px) {
-
-  .section-container {
-    width: calc(100% - 32px);
-  }
-
+@media (max-width: 768px) {
 
   /* HERO */
 
-  .hero {
-    min-height: 620px;
+  .home-hero {
+    height: 520px;
+    min-height: 520px;
   }
 
-
-  .hero-content {
-    padding: 70px 16px;
+  .home-hero-content {
+    width: calc(100% - 30px);
   }
 
+  .home-hero-eyebrow {
+    margin-bottom: 12px;
 
-  .hero-small {
+    font-size: 22px;
+
+    letter-spacing: 0.5px;
+  }
+
+  .home-hero h1 {
+    font-size: 38px;
+    line-height: 1.2;
+  }
+
+  .home-hero-divider {
+    margin: 18px auto 16px;
+  }
+
+  .home-hero-description {
+    font-size: 13px;
+    line-height: 1.7;
+  }
+
+  .home-hero-om {
+    margin-top: 16px;
+    font-size: 32px;
+  }
+
+  .home-hero-breadcrumb {
+    margin-top: 10px;
     font-size: 11px;
-
-    letter-spacing: 3px;
   }
 
 
-  .hero h1 {
-    font-size: 48px;
+  /* MOMENT */
+
+.home-moment {
+  position: relative;
+  width: 100%;
+
+  padding: 45px 20px 48px;
+
+  background: var(--home-cream);
+
+  text-align: center;
+  overflow: hidden;
+}
+
+  .home-moment::before,
+  .home-moment::after {
+    display: none;
+  }
+
+  .home-moment-inner {
+    width: 100%;
+  }
+
+  .home-moment-symbol {
+    font-size: 38px;
+    margin-bottom: 14px;
+  }
+
+  .home-moment-eyebrow {
+  margin: 0;
+
+  color: var(--home-deep-saffron);
+
+  font-family:
+    Georgia,
+    "Noto Serif Tamil",
+    serif;
+
+  font-size: 18px;
+  font-weight: 600;
+}
+
+  .home-moment-line {
+    margin: 16px auto 24px;
+  }
+
+  .home-moment-quote::before {
+    top: -35px;
+    font-size: 100px;
+  }
+
+  .home-moment-quote p {
+    font-size: 24px;
+    line-height: 1.65;
+  }
+
+  .home-moment-bottom {
+    margin-top: 28px;
+  }
+
+  .home-moment-link {
+    font-size: 13px;
   }
 
 
-  .hero h1 span {
-    font-size: 0.52em;
+  /* INTRO */
 
-    letter-spacing: 2px;
+  .home-intro {
+    padding: 58px 0;
+  }
+
+  .home-intro-container {
+    width: calc(100% - 30px);
+    gap: 30px;
+  }
+
+  .home-intro-image {
+    height: 320px;
+  }
+
+  .home-intro-image::after {
+    inset: 10px;
+  }
+
+  .home-intro-content h2 {
+    font-size: 34px;
   }
 
 
-  .hero-description {
-    font-size: 15px;
+  /* SATSANG */
+
+  .home-satsang {
+    padding: 58px 0;
+  }
+
+  .home-satsang-heading {
+    width: calc(100% - 30px);
+    margin-bottom: 28px;
+  }
+
+  .home-satsang-heading h2 {
+    font-size: 34px;
+  }
+
+  .home-satsang-grid {
+    width: calc(100% - 30px);
+    grid-template-columns: 1fr;
+  }
+
+  .home-satsang-card {
+    min-height: auto;
+    padding: 23px 19px;
   }
 
 
-  .hero-buttons {
-    flex-direction: column;
+  /* PILLARS */
 
-    align-items: flex-start;
+  .home-pillars {
+    padding: 58px 0;
+  }
+
+  .home-pillars-container {
+    width: calc(100% - 30px);
+  }
+
+  .home-pillars-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .home-pillar-card {
+    padding: 23px 18px;
   }
 
 
-  /* SECTIONS */
+  /* DIVINE */
 
-  .welcome-section,
-  .values-section,
-  .events-section,
-  .gallery-preview {
-    padding: 75px 0;
+  .home-divine {
+    padding: 62px 0;
+  }
+
+  .home-divine-container {
+    width: calc(100% - 30px);
+  }
+
+  .home-divine h2 {
+    font-size: 36px;
+  }
+
+  .home-divine-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .home-divine-item {
+    min-height: 100px;
+    padding: 18px 14px;
+  }
+
+  .home-divine-item:nth-child(2),
+  .home-divine-item:nth-child(4) {
+    border-right: none;
+  }
+
+  .home-divine-item:nth-child(3) {
+    border-right: 1px solid rgba(255, 255, 255, 0.15);
   }
 
 
-  .welcome-content h2,
-  .section-heading h2,
-  .events-header h2 {
-    font-size: 33px;
+  /* TEACHINGS */
+
+  .home-teachings {
+    padding: 58px 0;
+  }
+
+  .home-teachings-container {
+    width: calc(100% - 30px);
+  }
+
+  .home-teachings-heading {
+    display: block;
+  }
+
+  .home-teachings-heading h2 {
+    font-size: 34px;
+  }
+
+  .home-teachings-heading .home-text-link {
+    margin-top: 13px;
+  }
+
+  .home-teachings-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .home-teaching-card {
+    min-height: auto;
   }
 
 
-  /* WELCOME IMAGE */
+  /* SERVICE */
 
-  .image-placeholder {
-    min-height: 400px;
+  .home-service {
+    min-height: 520px;
   }
 
+  
 
-  .image-placeholder img {
-    height: 378px;
+.home-service-content .home-section-number,
+.home-service-content .home-section-eyebrow,
+.home-service-content h2,
+.home-service-content p {
+  text-align: left;
+}
+
+  .home-service h2 {
+    font-size: 40px;
+  }
+
+  .home-service-content p {
+    font-size: 14px;
+  }
+
+  .home-service-content .home-service-lead {
+    font-size: 17px;
   }
 
 
   /* EVENTS */
 
-  .events-header {
-    flex-direction: column;
+  .home-events {
+    padding: 58px 0;
+  }
 
+  .home-events-container {
+    width: calc(100% - 30px);
+  }
+
+  .home-events-heading h2 {
+    font-size: 34px;
+  }
+
+  .home-event-placeholder {
     align-items: flex-start;
-
-    gap: 12px;
+    padding: 22px 18px;
   }
 
 
   /* GALLERY */
 
-  .gallery-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .gallery-item {
-    height: auto;
-    min-height: 450px;
-  }
-
-  /* QUOTE */
-
-  .quote-section {
-    padding: 75px 20px;
-  }
-
-
-  .quote-section blockquote {
-    font-size: 24px;
-  }
-
-}
-
-/* =====================================================
-   HOME GALLERY
-===================================================== */
-
-.home-gallery {
-  padding: 100px 0;
-
-  background: var(--white);
-}
-
-.home-gallery-container {
-  width: min(1180px, calc(100% - 50px));
-
-  margin: 0 auto;
-}
-
-.home-gallery-heading {
-  margin-bottom: 45px;
-
-  text-align: center;
-}
-
-.home-gallery-label {
-  margin: 0 0 12px;
-
-  color: var(--deep-saffron);
-
-  font-size: 11px;
-
-  font-weight: 700;
-
-  letter-spacing: 3px;
-}
-
-.home-gallery-heading h2 {
-  margin: 0;
-
-  color: var(--deep-brown);
-
-  font-family: Georgia, "Times New Roman", serif;
-
-  font-size: 46px;
-
-  font-weight: 400;
-}
-
-
-/* =====================================================
-   GRID
-===================================================== */
-
-.home-gallery-grid {
-  display: grid;
-
-  grid-template-columns: repeat(4, 1fr);
-
-  gap: 20px;
-}
-
-
-/* =====================================================
-   CARD
-===================================================== */
-
-.home-gallery-card {
-  background: var(--white);
-
-  border: 1px solid var(--border);
-
-  overflow: hidden;
-
-  transition:
-    transform 0.3s ease,
-    box-shadow 0.3s ease;
-}
-
-.home-gallery-card:hover {
-  transform: translateY(-4px);
-
-  box-shadow:
-    0 14px 30px rgba(74, 45, 28, 0.09);
-}
-
-
-/* =====================================================
-   IMAGE
-===================================================== */
-
-.home-gallery-image {
-  width: 100%;
-
-  aspect-ratio: 4 / 3;
-
-  overflow: hidden;
-
-  background: var(--white);
-}
-
-.home-gallery-image img {
-  display: block;
-
-  width: 100%;
-  height: 100%;
-
-  object-fit: cover;
-
-  transition: transform 0.4s ease;
-}
-
-.home-gallery-card:hover
-.home-gallery-image img {
-  transform: scale(1.03);
-}
-
-
-/* =====================================================
-   CONTENT
-===================================================== */
-
-.home-gallery-content {
-  padding: 18px 20px 21px;
-}
-
-.home-gallery-content p {
-  margin: 0 0 6px;
-
-  color: var(--deep-saffron);
-
-  font-size: 10px;
-
-  font-weight: 700;
-
-  letter-spacing: 1.8px;
-
-  text-transform: uppercase;
-}
-
-.home-gallery-content h3 {
-  margin: 0;
-
-  color: var(--deep-brown);
-
-  font-family: Georgia, "Times New Roman", serif;
-
-  font-size: 21px;
-
-  font-weight: 400;
-}
-
-
-/* =====================================================
-   BUTTON
-===================================================== */
-
-.home-gallery-button {
-  margin-top: 40px;
-
-  text-align: center;
-}
-
-.home-gallery-button a {
-  display: inline-flex;
-
-  align-items: center;
-  justify-content: center;
-
-  padding: 13px 28px;
-
-  background: var(--deep-saffron);
-
-  border: 1px solid var(--deep-saffron);
-
-  color: var(--white);
-
-  font-size: 12px;
-
-  font-weight: 700;
-
-  letter-spacing: 1px;
-
-  text-decoration: none;
-
-  transition: all 0.25s ease;
-}
-
-.home-gallery-button a:hover {
-  background: var(--deep-brown);
-
-  border-color: var(--deep-brown);
-}
-
-
-/* =====================================================
-   HOME GALLERY RESPONSIVE
-===================================================== */
-
-@media (max-width: 900px) {
-
-  .home-gallery-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-}
-
-
-@media (max-width: 600px) {
-
   .home-gallery {
-    padding: 75px 0;
+    padding: 58px 0;
   }
 
   .home-gallery-container {
@@ -1197,11 +2005,132 @@
   }
 
   .home-gallery-heading h2 {
-    font-size: 36px;
+    font-size: 34px;
   }
 
   .home-gallery-grid {
     grid-template-columns: 1fr;
   }
 
+  .home-gallery-image {
+    height: 270px;
+  }
+
+
+  /* SHIRDI */
+
+  .home-shirdi {
+    padding: 62px 0;
+  }
+
+  .home-shirdi-container {
+    width: calc(100% - 30px);
+  }
+
+  .home-shirdi-heading h2 {
+    font-size: 37px;
+  }
+
+  .home-shirdi-options {
+    grid-template-columns: 1fr;
+  }
+
+  .home-shirdi-option {
+    padding: 23px 18px;
+  }
+
+
+  /* ASK SAI */
+
+  .home-ask-sai {
+    padding: 58px 18px;
+  }
+
+  .home-ask-sai h2 {
+    font-size: 35px;
+  }
+
+
+  /* FINAL */
+
+  .home-final {
+    padding: 55px 18px 42px;
+  }
+
+  .home-final-om {
+    font-size: 32px;
+  }
+
+  .home-final h2 {
+    font-size: 31px;
+  }
+
+  .home-final-message {
+    margin-top: 22px;
+  }
+
+  .home-final-message p {
+    font-size: 14px;
+  }
+
+  .home-final-quote {
+    font-size: 24px;
+  }
+
+  .home-final-divider {
+    margin: 24px auto 19px;
+  }
+
+  .home-final-links {
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  .home-final-links a {
+    min-width: 140px;
+    padding: 9px 15px;
+    font-size: 12px;
+  }
+}
+
+
+/* =====================================================
+   VERY SMALL DEVICES
+===================================================== */
+
+@media (max-width: 380px) {
+
+  .home-hero {
+    height: 540px;
+    min-height: 540px;
+  }
+
+  .home-hero h1 {
+    font-size: 38px;
+  }
+
+  .home-hero-eyebrow {
+    font-size: 13px;
+  }
+
+  .home-divine-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .home-divine-item {
+    border-right: none !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  }
+
+  .home-divine-item:last-child {
+    border-bottom: none;
+  }
+
+  .home-moment-right p {
+    font-size: 27px;
+  }
+
+  .home-final h2 {
+    font-size: 28px;
+  }
 }
