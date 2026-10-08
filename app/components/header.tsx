@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import "./header.css";
@@ -16,12 +17,22 @@ const navItems = [
 
 export default function Header() {
   const pathname = usePathname();
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const closeMenu = () => {
+    setMenuOpen(false);
+  };
 
   return (
     <header className="site-header">
       <div className="header-container">
 
-        <Link href="/" className="site-logo">
+        {/* LOGO */}
+        <Link
+          href="/"
+          className="site-logo"
+          onClick={closeMenu}
+        >
           <div className="logo-symbol">ॐ</div>
 
           <div className="logo-text">
@@ -35,6 +46,8 @@ export default function Header() {
           </div>
         </Link>
 
+
+        {/* DESKTOP NAV */}
         <nav className="main-nav">
           {navItems.map((item) => {
             const isActive =
@@ -56,13 +69,50 @@ export default function Header() {
           })}
         </nav>
 
+
+        {/* MOBILE MENU BUTTON */}
         <button
-          className="mobile-menu-button"
-          aria-label="Open menu"
+          type="button"
+          className={`mobile-menu-button ${
+            menuOpen ? "open" : ""
+          }`}
+          onClick={() => setMenuOpen((prev) => !prev)}
+          aria-label={
+            menuOpen ? "Close menu" : "Open menu"
+          }
+          aria-expanded={menuOpen}
         >
-          ☰
+          {menuOpen ? "✕" : "☰"}
         </button>
 
+      </div>
+
+
+      {/* MOBILE NAV */}
+      <div
+        className={`mobile-nav ${
+          menuOpen ? "mobile-nav-open" : ""
+        }`}
+      >
+        {navItems.map((item) => {
+          const isActive =
+            item.href === "/"
+              ? pathname === "/"
+              : pathname.startsWith(item.href);
+
+          return (
+            <Link
+              key={item.href}
+              href={item.href}
+              className={`mobile-nav-link ${
+                isActive ? "active" : ""
+              }`}
+              onClick={closeMenu}
+            >
+              {item.label}
+            </Link>
+          );
+        })}
       </div>
     </header>
   );
