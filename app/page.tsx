@@ -18,7 +18,7 @@ const activities = [
     icon: "♨",
     title: "ஆரத்தி & பூஜை",
     text: "நம்பிக்கையுடனும் பக்தியுடனும் ஆரத்தி மற்றும் சிறப்பு பூஜைகளில் கலந்து கொள்வோம்.",
-    href: "/calendar",
+    href: "/satsang",
   },
   {
     icon: "▤",
@@ -205,7 +205,7 @@ export default function Home() {
           <div className="home-section-intro-copy">
             <p className="home-eyebrow">நிகழ்வுகள் & செயல்பாடுகள்</p>
             <h2>சத்சங்கத்தில்<br />நாம் செய்வது</h2>
-            <Link href="/calendar" className="home-round-link" aria-label="நிகழ்வுகள் காலண்டரைப் பார்க்க">↗</Link>
+            <Link href="/satsang" className="home-round-link" aria-label="நிகழ்வுகள் காலண்டரைப் பார்க்க">↗</Link>
           </div>
         </div>
 
