@@ -14,7 +14,7 @@ export default function SatsangPage() {
   <div className="satsang-hero-content">
 
     <p className="hero-eyebrow">
-      ஸ்ரீ சாய் தபோவனம்
+      சாய் சத்சங் @ குருபாதம்
     </p>
 
     <h1>சத்சங்கம்</h1>
@@ -40,10 +40,7 @@ export default function SatsangPage() {
         <div className="story-container">
 
           <div className="story-content">
-
-            <span className="section-number">01</span>
-
-            <p className="section-eyebrow">
+<p className="section-eyebrow">
               உண்மையை நோக்கிய இணைவு
             </p>
 
@@ -95,7 +92,7 @@ export default function SatsangPage() {
           <div className="story-image">
             <img
               src="/images/gallery/gallery-1.jpeg"
-              alt="Sri Sai Tapovan spiritual surroundings"
+              alt="சாய் சத்சங் @ குருபாதத்தின் ஆன்மிகச் சூழல்"
             />
           </div>
 
@@ -112,15 +109,12 @@ export default function SatsangPage() {
           <div className="story-image">
             <img
               src="/images/gallery/gallery-3.jpeg"
-              alt="Sai Baba devotional worship"
+              alt="சாயிபாபாவின் பக்தி வழிபாடு"
             />
           </div>
 
           <div className="story-content">
-
-            <span className="section-number">02</span>
-
-            <p className="section-eyebrow">
+<p className="section-eyebrow">
               ஒரு பூஜையைத் தாண்டி
             </p>
 
@@ -150,9 +144,7 @@ export default function SatsangPage() {
             <div className="faith-pair">
 
               <div>
-                <span>01</span>
-
-                <strong>நம்பிக்கை</strong>
+<strong>நம்பிக்கை</strong>
 
                 <p>
                   குருவின் அருளில் முழு நம்பிக்கை.
@@ -160,9 +152,7 @@ export default function SatsangPage() {
               </div>
 
               <div>
-                <span>02</span>
-
-                <strong>பொறுமை</strong>
+<strong>பொறுமை</strong>
 
                 <p>
                   எல்லாம் அதற்குரிய நேரத்தில்
@@ -191,11 +181,8 @@ export default function SatsangPage() {
         <div className="pillars-container">
 
           <div className="pillars-heading">
-
-            <span className="section-number">03</span>
-
-            <p className="section-eyebrow">
-              சாய் தபோவனத்தின் ஆன்மிகப் பாதை
+<p className="section-eyebrow">
+              சாய் சத்சங் @ குருபாதத்தின் ஆன்மிகப் பாதை
             </p>
 
             <h2>
@@ -215,8 +202,7 @@ export default function SatsangPage() {
             <div className="pillar-item">
 
               <div className="pillar-top">
-                <span className="pillar-number">01</span>
-                <span className="pillar-symbol">🙏</span>
+<span className="pillar-symbol">🙏</span>
               </div>
 
               <h3>நம்பிக்கை</h3>
@@ -232,8 +218,7 @@ export default function SatsangPage() {
             <div className="pillar-item">
 
               <div className="pillar-top">
-                <span className="pillar-number">02</span>
-                <span className="pillar-symbol">✦</span>
+<span className="pillar-symbol">✦</span>
               </div>
 
               <h3>பொறுமை</h3>
@@ -250,8 +235,7 @@ export default function SatsangPage() {
             <div className="pillar-item">
 
               <div className="pillar-top">
-                <span className="pillar-number">03</span>
-                <span className="pillar-symbol">♡</span>
+<span className="pillar-symbol">♡</span>
               </div>
 
               <h3>அன்பு</h3>
@@ -267,8 +251,7 @@ export default function SatsangPage() {
             <div className="pillar-item">
 
               <div className="pillar-top">
-                <span className="pillar-number">04</span>
-                <span className="pillar-symbol">ॐ</span>
+<span className="pillar-symbol">ॐ</span>
               </div>
 
               <h3>சரணாகதி</h3>
@@ -298,17 +281,14 @@ export default function SatsangPage() {
 
             <img
               src="/images/gallery/gallery-5.jpeg"
-              alt="Meditation and spiritual reflection"
+              alt="தியானமும் ஆன்மிகச் சிந்தனையும்"
             />
 
           </div>
 
 
           <div className="story-content">
-
-            <span className="section-number">04</span>
-
-            <p className="section-eyebrow">
+<p className="section-eyebrow">
               இதயத்திலிருந்து இதயத்திற்கு
             </p>
 
@@ -319,7 +299,7 @@ export default function SatsangPage() {
             </h2>
 
             <p>
-              சாய் தபோவனத்தில் தியானம் என்பது
+              சாய் சத்சங் @ குருபாதத்தில் தியானம் என்பது
               கட்டாயமான ஒரு முறையல்ல.
             </p>
 
@@ -365,167 +345,63 @@ export default function SatsangPage() {
       </section>
 
 
-      {/* =====================================================
-          05 — INNER TRANSFORMATION
-      ===================================================== */}
+      {/* INNER TRANSFORMATION — compact editorial section */}
       <section className="transformation-section">
-
-        <div className="transformation-image" />
-
-        <div className="transformation-overlay" />
-
         <div className="transformation-container">
-
           <div className="transformation-heading">
-
-            <span className="section-number">
-              05
-            </span>
-
-            <p className="section-eyebrow">
-              சத்சங்கத்தின் ஆழமான பயணம்
-            </p>
-
-            <h2>
-              உள்ளத்தின் மாற்றம்
-            </h2>
-
+            <p className="section-eyebrow">சத்சங்கத்தின் ஆழமான பயணம்</p>
+            <h2>உள்ளத்தின் மாற்றம்</h2>
             <p>
               சத்சங்கம் நம்மை வெளியில் இருந்து மாற்றுவதில்லை.
               அது நம்மை உள்ளிருந்து மாற்றும் ஒரு பயணம்.
             </p>
-
           </div>
 
-
-          <div className="transformation-intro">
-
+          <div className="transformation-intro" aria-hidden="true">
             <span>முன்பு</span>
-
             <span className="transformation-line" />
-
             <span>மாற்றம்</span>
-
           </div>
-
 
           <div className="transformation-list">
-
             <div className="transformation-row">
-
-              <div className="change-before">
-                கோபம்
-              </div>
-
-              <div className="change-arrow">
-                <span />
-              </div>
-
-              <div className="change-after">
-                பொறுமை
-              </div>
-
+              <div className="change-before">கோபம்</div>
+              <div className="change-arrow"><span /></div>
+              <div className="change-after">பொறுமை</div>
             </div>
-
-
             <div className="transformation-row">
-
-              <div className="change-before">
-                பொறாமை
-              </div>
-
-              <div className="change-arrow">
-                <span />
-              </div>
-
-              <div className="change-after">
-                மகிழ்ச்சி
-              </div>
-
+              <div className="change-before">பொறாமை</div>
+              <div className="change-arrow"><span /></div>
+              <div className="change-after">மகிழ்ச்சி</div>
             </div>
-
-
             <div className="transformation-row">
-
-              <div className="change-before">
-                பயம்
-              </div>
-
-              <div className="change-arrow">
-                <span />
-              </div>
-
-              <div className="change-after">
-                நம்பிக்கை
-              </div>
-
+              <div className="change-before">பயம்</div>
+              <div className="change-arrow"><span /></div>
+              <div className="change-after">நம்பிக்கை</div>
             </div>
-
-
             <div className="transformation-row">
-
-              <div className="change-before">
-                காயம்
-              </div>
-
-              <div className="change-arrow">
-                <span />
-              </div>
-
-              <div className="change-after">
-                மன்னிப்பு
-              </div>
-
+              <div className="change-before">காயம்</div>
+              <div className="change-arrow"><span /></div>
+              <div className="change-after">மன்னிப்பு</div>
             </div>
-
-
             <div className="transformation-row">
-
-              <div className="change-before">
-                தனிமை
-              </div>
-
-              <div className="change-arrow">
-                <span />
-              </div>
-
-              <div className="change-after">
-                தெய்வீகத் தொடர்பு
-              </div>
-
+              <div className="change-before">தனிமை</div>
+              <div className="change-arrow"><span /></div>
+              <div className="change-after">தெய்வீகத் தொடர்பு</div>
             </div>
-
           </div>
-
 
           <div className="grace-message">
-
-            <div className="grace-symbol">
-              ॐ
-            </div>
-
+            <div className="grace-symbol" aria-hidden="true">ॐ</div>
             <div>
-
-              <p className="section-eyebrow">
-                குருவின் அருள்
-              </p>
-
-              <h3>
-                நமக்குள் ஏற்கனவே இருக்கும்
-                <br />
-                ஒளியை நமக்கே காட்டுகிறது.
-              </h3>
-
+              <p className="section-eyebrow">குருவின் அருள்</p>
+              <h3>நமக்குள் ஏற்கனவே இருக்கும் ஒளியை நமக்கே காட்டுகிறது.</h3>
             </div>
-
           </div>
 
-
           <p className="transformation-ending">
-            குணங்கள் மாறும்போது,
-            வாழ்க்கையும் மாறத் தொடங்குகிறது.
+            குணங்கள் மாறும்போது, வாழ்க்கையும் மாறத் தொடங்குகிறது.
           </p>
-
         </div>
       </section>
 
@@ -538,10 +414,7 @@ export default function SatsangPage() {
         <div className="story-container">
 
           <div className="story-content">
-
-            <span className="section-number">06</span>
-
-            <p className="section-eyebrow">
+<p className="section-eyebrow">
               அன்பும் சேவையும்
             </p>
 
@@ -581,7 +454,7 @@ export default function SatsangPage() {
 
             <p className="story-highlight">
               வாழ்க்கையையே ஒரு தியானமாக மாற்றும்
-              பாதையை சாய் தபோவனம் நினைவூட்டுகிறது.
+              பாதையை சாய் சத்சங் @ குருபாதம் நினைவூட்டுகிறது.
             </p>
 
           </div>
@@ -591,7 +464,7 @@ export default function SatsangPage() {
 
             <img
               src="/images/gallery/gallery-7.jpeg"
-              alt="Devotional service at Sai Tapovan"
+              alt="சாய் சத்சங் @ குருபாதத்தில் பக்திச் சேவை"
             />
 
           </div>
@@ -600,129 +473,70 @@ export default function SatsangPage() {
       </section>
 
 
-      {/* =====================================================
-          07 — ORDINARY TO DIVINE
-      ===================================================== */}
+      {/* ORDINARY TO DIVINE — editorial split section */}
       <section className="divine-section">
-
-        <div className="divine-image" />
-
-        <div className="divine-overlay" />
-
         <div className="divine-container">
-
-          <div className="divine-heading">
-
-            <span className="section-number">
-              07
-            </span>
-
-            <p className="section-eyebrow">
-              வாழ்க்கையின் உண்மையான மாற்றம்
-            </p>
-
-            <h2>
-              சாதாரண வாழ்க்கையிலிருந்து
-              <br />
-              தெய்வீக வாழ்க்கை
-            </h2>
-
-            <div className="divine-divider" />
-
-            <p>
-              சாய் தபோவனம் உலக வாழ்க்கையை விட்டுவிட்டு
-              ஓடுவதற்கான இடம் அல்ல.
-            </p>
-
-            <p>
-              மாறாக, உலக வாழ்க்கைக்குள் இருந்தபடியே
-              அதை தெய்வீகமாக வாழ கற்றுக்கொள்ளும் இடம்.
-            </p>
-
+          <div className="divine-photo">
+            <img
+              src="/images/gallery/gallery-4.jpeg"
+              alt="சாய் சத்சங்கத்தின் அமைதியான ஆன்மிகச் சூழல்"
+            />
           </div>
 
-
-          <div className="divine-journey">
-
-            <div className="journey-item">
-              <span className="journey-context">
-                குடும்பத்தில்
-              </span>
-              <strong>அன்பு</strong>
+          <div className="divine-content">
+            <div className="divine-heading">
+              <p className="section-eyebrow">வாழ்க்கையின் உண்மையான மாற்றம்</p>
+              <h2>
+                சாதாரண வாழ்க்கையிலிருந்து
+                <br />
+                தெய்வீக வாழ்க்கை
+              </h2>
+              <div className="divine-divider" />
+              <p>
+                சாய் சத்சங் @ குருபாதம் உலக வாழ்க்கையை விட்டுவிட்டு
+                ஓடுவதற்கான இடம் அல்ல.
+              </p>
+              <p>
+                மாறாக, உலக வாழ்க்கைக்குள் இருந்தபடியே
+                அதை தெய்வீகமாக வாழ கற்றுக்கொள்ளும் இடம்.
+              </p>
             </div>
 
-            <div className="journey-connector">
-              <span />
+            <div className="divine-journey">
+              <div className="journey-item">
+                <span className="journey-context">குடும்பத்தில்</span>
+                <strong>அன்பு</strong>
+              </div>
+              <div className="journey-item">
+                <span className="journey-context">உறவுகளில்</span>
+                <strong>புரிதல்</strong>
+              </div>
+              <div className="journey-item">
+                <span className="journey-context">வாழ்க்கையில்</span>
+                <strong>நன்றி</strong>
+              </div>
+              <div className="journey-item">
+                <span className="journey-context">செயல்களில்</span>
+                <strong>சேவை</strong>
+              </div>
+              <div className="journey-item">
+                <span className="journey-context">மனதில்</span>
+                <strong>நம்பிக்கை</strong>
+              </div>
+              <div className="journey-item">
+                <span className="journey-context">வாழ்வில்</span>
+                <strong>பொறுமை</strong>
+              </div>
             </div>
 
-            <div className="journey-item">
-              <span className="journey-context">
-                உறவுகளில்
-              </span>
-              <strong>புரிதல்</strong>
+            <div className="divine-ending">
+              <p>
+                சத்சங்கத்தில் கிடைக்கும் அமைதி, சத்சங்கம் முடிந்த பிறகும்
+                நம்முடைய வாழ்க்கையில் தொடர வேண்டும்.
+              </p>
+              <strong>அதுவே உண்மையான சத்சங்கத்தின் பலன்.</strong>
             </div>
-
-            <div className="journey-connector">
-              <span />
-            </div>
-
-            <div className="journey-item">
-              <span className="journey-context">
-                வாழ்க்கையில்
-              </span>
-              <strong>நன்றி</strong>
-            </div>
-
-            <div className="journey-connector">
-              <span />
-            </div>
-
-            <div className="journey-item">
-              <span className="journey-context">
-                செயல்களில்
-              </span>
-              <strong>சேவை</strong>
-            </div>
-
-            <div className="journey-connector">
-              <span />
-            </div>
-
-            <div className="journey-item">
-              <span className="journey-context">
-                மனதில்
-              </span>
-              <strong>நம்பிக்கை</strong>
-            </div>
-
-            <div className="journey-connector">
-              <span />
-            </div>
-
-            <div className="journey-item">
-              <span className="journey-context">
-                வாழ்வில்
-              </span>
-              <strong>பொறுமை</strong>
-            </div>
-
           </div>
-
-
-          <div className="divine-ending">
-
-            <p>
-              சத்சங்கத்தில் கிடைக்கும் அமைதி,
-              சத்சங்கம் முடிந்த பிறகும்
-              நம்முடைய வாழ்க்கையில் தொடர வேண்டும்.
-            </p>
-
-            <strong>
-              அதுவே உண்மையான சத்சங்கத்தின் பலன்.
-            </strong>
-
-          </div>
-
         </div>
       </section>
 
@@ -738,19 +552,14 @@ export default function SatsangPage() {
 
             <img
               src="/images/gallery/gallery-2.jpeg"
-              alt="Satsang gathering"
+              alt="சத்சங்கத்தில் ஒன்றுகூடிய பக்தர்கள்"
             />
 
           </div>
 
 
           <div className="small-satsang-content">
-
-            <span className="section-number">
-              08
-            </span>
-
-            <p className="section-eyebrow">
+<p className="section-eyebrow">
               சிறிய தருணம்
             </p>
 
@@ -804,54 +613,27 @@ export default function SatsangPage() {
       </section>
 
 
-      {/* =====================================================
-          09 — INVITATION
-      ===================================================== */}
+      {/* INVITATION — full-width photographic banner */}
       <section className="invitation-section">
-
-        <div className="invitation-image" />
-
-        <div className="invitation-overlay" />
-
         <div className="invitation-content">
-
-          <span className="section-number">
-            09
-          </span>
-
-          <p className="section-eyebrow">
-            ஒரு அருளான அழைப்பு
-          </p>
-
-          <h2>
-            சாய் தபோவனம்
-          </h2>
-
-          <div className="invitation-om">
-            ॐ
-          </div>
-
+          <p className="section-eyebrow">ஒரு அருளான அழைப்பு</p>
+          <h2>சாய் சத்சங் @ குருபாதம்</h2>
+          <div className="invitation-om" aria-hidden="true">ॐ</div>
           <p>
-            அந்த வகையில், சாய் தபோவனம் ஒரு இடமாக மட்டும் இல்லாமல்,
-            சாதாரண வாழ்க்கையிலிருந்து தெய்வீக வாழ்க்கையை நோக்கி
-            செல்லும் ஓர் அருளான அழைப்பாக இருக்கட்டும்.
+            சாதாரண வாழ்க்கையிலிருந்து தெய்வீக வாழ்க்கையை நோக்கிச் செல்லும்
+            ஓர் அருளான ஆன்மிகப் பயணம்.
           </p>
-
           <p className="invitation-emphasis">
             நம்பிக்கையுடன் இருப்பது போதும்.
             <br />
             பொறுமையுடன் காத்திருப்பது போதும்.
           </p>
-
           <div className="invitation-values">
-
             <span>அமைதி</span>
             <span>அன்பு</span>
             <span>சேவை</span>
             <span>சரணாகதி</span>
-
           </div>
-
         </div>
       </section>
 

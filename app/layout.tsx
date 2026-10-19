@@ -3,7 +3,7 @@ import Header from "./components/header";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Sri Sai Tapovan Spiritual Trust",
+  title: "சாய் சத்சங் @ குருபாதம்",
   description:
     "Sri Sai Tapovan Spiritual Trust – A sacred space dedicated to devotion, spiritual growth, compassionate service and the teachings of Shirdi Sai Baba.",
 };

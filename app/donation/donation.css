@@ -1,0 +1,1436 @@
+/* =====================================================
+   DONATION PAGE
+===================================================== */
+
+.donation-page {
+  --saffron: #d9822b;
+  --deep-saffron: #b85c16;
+  --dark-saffron: #91440f;
+
+  --gold: #b58a3a;
+  --light-gold: #e4c98e;
+
+  --brown: #6b442a;
+  --deep-brown: #402719;
+
+  --text: #443932;
+  --muted: #766960;
+
+  --white: #ffffff;
+  --cream: #fffaf3;
+  --soft-cream: #fdf5e9;
+
+  --border: #dcc9aa;
+
+  width: 100%;
+  overflow: hidden;
+}
+
+
+/* =====================================================
+   COMMON
+===================================================== */
+
+.donation-container {
+  width: min(1120px, calc(100% - 50px));
+  margin: 0 auto;
+}
+
+.donation-number {
+  display: block;
+  margin-bottom: 10px;
+
+  color: var(--gold);
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 13px;
+  letter-spacing: 2px;
+}
+
+.donation-eyebrow {
+  margin: 0 0 12px;
+
+  color: var(--deep-saffron);
+
+  font-family:
+    Georgia,
+    "Noto Serif Tamil",
+    serif;
+
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.donation-small-line {
+  width: 55px;
+  height: 1px;
+
+  margin: 24px 0;
+
+  background: var(--light-gold);
+}
+
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.donation-hero {
+  position: relative;
+
+  width: 100%;
+  height: 500px;
+  min-height: 500px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+}
+
+.donation-hero-image {
+  position: absolute;
+  inset: 0;
+
+  background:
+    url("/images/gallery/gallery-1.jpeg")
+    center center / cover no-repeat;
+}
+
+.donation-hero-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+
+  background:
+    linear-gradient(
+      rgba(55, 25, 8, 0.68),
+      rgba(55, 25, 8, 0.68)
+    );
+}
+
+.donation-hero-content {
+  position: relative;
+  z-index: 2;
+
+  width: min(1050px, calc(100% - 40px));
+
+  margin: 0 auto;
+
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.donation-hero-eyebrow {
+  margin: 0 0 16px;
+
+  color: var(--light-gold);
+
+  font-family:
+    Georgia,
+    "Noto Serif Tamil",
+    serif;
+
+  font-size: 28px;
+  font-weight: 500;
+
+  line-height: 1.3;
+  letter-spacing: 1px;
+}
+
+.donation-hero h1 {
+  margin: 0;
+
+  color: var(--white);
+
+  font-family:
+    Georgia,
+    "Noto Serif Tamil",
+    serif;
+
+  font-size: clamp(42px, 5vw, 68px);
+
+  font-weight: 500;
+  line-height: 1.18;
+}
+
+.donation-hero-line {
+  width: 75px;
+  height: 1px;
+
+  margin: 22px auto 18px;
+
+  background: var(--light-gold);
+}
+
+.donation-hero-subtitle {
+  margin: 0;
+
+  color: rgba(255, 255, 255, 0.9);
+
+  font-family:
+    Georgia,
+    "Noto Serif Tamil",
+    serif;
+
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+.donation-hero-om {
+  margin-top: 18px;
+
+  color: var(--light-gold);
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 38px;
+  line-height: 1;
+}
+
+.donation-hero-breadcrumb {
+  margin: 12px 0 0;
+
+  color: rgba(255, 255, 255, 0.65);
+
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+
+
+/* =====================================================
+   01 — INTRODUCTION
+===================================================== */
+
+.donation-intro {
+  padding: 90px 0;
+
+  background: var(--white);
+}
+
+.donation-intro-grid {
+  display: grid;
+
+  grid-template-columns: 0.75fr 1.25fr;
+
+  gap: 100px;
+
+  align-items: start;
+}
+
+.donation-intro-side {
+  padding-top: 5px;
+}
+
+.donation-intro-side h2 {
+  margin: 0;
+
+  color: var(--deep-brown);
+
+  font-family:
+    Georgia,
+    "Noto Serif Tamil",
+    serif;
+
+  font-size: clamp(42px, 4.5vw, 58px);
+
+  font-weight: 500;
+  line-height: 1.25;
+}
+
+.donation-side-note {
+  max-width: 280px;
+
+  margin: 0;
+
+  color: var(--muted);
+
+  font-family:
+    Georgia,
+    "Noto Serif Tamil",
+    serif;
+
+  font-size: 14px;
+
+  line-height: 1.8;
+}
+
+.donation-intro-content {
+  max-width: 720px;
+}
+
+.donation-intro-content p {
+  margin: 0 0 20px;
+
+  color: var(--text);
+
+  font-family:
+    Georgia,
+    "Noto Serif Tamil",
+    serif;
+
+  font-size: 16px;
+
+  line-height: 1.95;
+}
+
+.donation-intro-content .donation-lead {
+  margin-bottom: 25px;
+
+  color: var(--deep-brown);
+
+  font-size: 22px;
+  font-weight: 600;
+
+  line-height: 1.65;
+}
+
+
+/* =====================================================
+   QUOTE — IMMERSIVE
+===================================================== */
+
+.donation-quote-section {
+  position: relative;
+
+  width: 100%;
+  min-height: 500px;
+
+  display: flex;
+  align-items: center;
+
+  overflow: hidden;
+}
+
+.donation-quote-image {
+  position: absolute;
+  inset: 0;
+
+  background:
+    url("/images/gallery/gallery-3.jpeg")
+    center center / cover no-repeat;
+}
+
+.donation-quote-overlay {
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(55, 25, 8, 0.88),
+      rgba(55, 25, 8, 0.72)
+    );
+}
+
+.donation-quote-section .donation-container {
+  position: relative;
+  z-index: 2;
+}
+
+.donation-quote-content {
+  width: min(820px, 100%);
+
+  padding: 75px 0;
+}
+
+.donation-quote-mark {
+  display: block;
+
+  margin-bottom: 15px;
+
+  color: var(--light-gold);
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 78px;
+
+  line-height: 0.65;
+}
+
+.donation-quote-content blockquote {
+  max-width: 850px;
+
+  margin: 0;
+
+  color: var(--white);
+
+  font-family:
+    Georgia,
+    "Noto Serif Tamil",
+    serif;
+
+  font-size: clamp(24px, 3vw, 34px);
+
+  font-style: italic;
+
+  line-height: 1.7;
+}
+
+.donation-quote-mark.closing {
+  margin-top: 18px;
+  margin-bottom: 0;
+}
+
+.donation-quote-source {
+  margin: 10px 0 0;
+
+  color: var(--light-gold);
+
+  font-family:
+    Georgia,
+    "Noto Serif Tamil",
+    serif;
+
+  font-size: 14px;
+}
+
+
+/* =====================================================
+   02 — MEANING OF DAKSHINA
+===================================================== */
+
+.donation-meaning {
+  padding: 90px 0;
+
+  background: var(--cream);
+}
+
+.donation-meaning-heading {
+  max-width: 720px;
+}
+
+.donation-meaning-heading h2 {
+  margin: 0;
+
+  color: var(--deep-brown);
+
+  font-family:
+    Georgia,
+    "Noto Serif Tamil",
+    serif;
+
+  font-size: clamp(42px, 4.5vw, 60px);
+
+  font-weight: 500;
+
+  line-height: 1.25;
+}
+
+.donation-meaning-intro {
+  max-width: 720px;
+
+  margin: 30px 0 55px;
+text-align: left;
+}
+
+.donation-meaning-intro p {
+  margin: 0;
+
+  color: var(--text);
+
+  font-family:
+    Georgia,
+    "Noto Serif Tamil",
+    serif;
+
+  font-size: 18px;
+
+  line-height: 1.9;
+}
+
+
+/* =====================================================
+   OFFERINGS
+===================================================== */
+
+.donation-offerings {
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.donation-offering {
+  min-height: 235px;
+
+  padding: 30px 25px;
+
+  border-right: 1px solid var(--border);
+}
+
+.donation-offering:last-child {
+  border-right: none;
+}
+
+.donation-offering-number {
+  display: block;
+
+  margin-bottom: 28px;
+
+  color: var(--gold);
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 12px;
+
+  letter-spacing: 1px;
+}
+
+.donation-offering h3 {
+  margin: 0 0 12px;
+
+  color: var(--deep-brown);
+
+  font-family:
+    Georgia,
+    "Noto Serif Tamil",
+    serif;
+
+  font-size: 25px;
+
+  font-weight: 500;
+}
+
+.donation-offering p {
+  max-width: 190px;
+
+  margin: 0;
+
+  color: var(--muted);
+
+  font-family:
+    Georgia,
+    "Noto Serif Tamil",
+    serif;
+
+  font-size: 13px;
+
+  line-height: 1.8;
+}
+
+
+/* =====================================================
+   03 — SHRADDHA / SABURI
+===================================================== */
+
+.donation-faith {
+  position: relative;
+
+  min-height: 540px;
+
+  display: flex;
+  align-items: center;
+
+  overflow: hidden;
+}
+
+.donation-faith-image {
+  position: absolute;
+  inset: 0;
+
+  background:
+    url("/images/gallery/gallery-6.jpeg")
+    center center / cover no-repeat;
+}
+
+.donation-faith-overlay {
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      110deg,
+      rgba(64, 27, 7, 0.94),
+      rgba(145, 68, 15, 0.78)
+    );
+}
+
+.donation-faith .donation-container {
+  position: relative;
+  z-index: 2;
+}
+
+.donation-faith-content {
+  width: min(760px, 100%);
+
+  padding: 85px 0;
+}
+
+.donation-faith .donation-number {
+  color: var(--light-gold);
+}
+
+.donation-faith .donation-eyebrow {
+  color: rgba(255, 255, 255, 0.78);
+}
+
+.donation-faith h2 {
+  margin: 0;
+
+  color: var(--white);
+
+  font-family:
+    Georgia,
+    "Noto Serif Tamil",
+    serif;
+
+  font-size: clamp(58px, 7vw, 88px);
+
+  font-weight: 500;
+
+  line-height: 1.05;
+}
+
+.donation-faith h2 span {
+  color: var(--light-gold);
+}
+
+.donation-faith-line {
+  width: 75px;
+  height: 1px;
+
+  margin: 28px 0;
+
+  background: var(--light-gold);
+}
+
+.donation-faith-content > p:not(.donation-eyebrow) {
+  max-width: 720px;
+
+  margin: 0 0 15px;
+
+  color: rgba(255, 255, 255, 0.84);
+
+  font-family:
+    Georgia,
+    "Noto Serif Tamil",
+    serif;
+
+  font-size: 16px;
+
+  line-height: 1.9;
+}
+
+.donation-faith-content .donation-faith-lead {
+  color: var(--white);
+
+  font-size: 21px;
+
+  font-weight: 500;
+}
+
+.donation-faith-content strong {
+  color: var(--light-gold);
+}
+
+
+/* =====================================================
+   SURRENDER
+===================================================== */
+
+.donation-surrender {
+  padding: 90px 0;
+
+  background: var(--white);
+}
+
+.donation-surrender-grid {
+  display: grid;
+
+  grid-template-columns: 0.85fr 1.15fr;
+
+  gap: 100px;
+
+  align-items: center;
+}
+
+.donation-surrender-heading h2 {
+  margin: 0;
+
+  color: var(--deep-brown);
+
+  font-family:
+    Georgia,
+    "Noto Serif Tamil",
+    serif;
+
+  font-size: clamp(40px, 4.5vw, 58px);
+
+  font-weight: 500;
+
+  line-height: 1.3;
+}
+
+.donation-surrender-content {
+  max-width: 680px;
+}
+
+.donation-surrender-content p {
+  margin: 0 0 22px;
+
+  color: var(--text);
+
+  font-family:
+    Georgia,
+    "Noto Serif Tamil",
+    serif;
+
+  font-size: 17px;
+
+  line-height: 1.95;
+}
+
+
+/* =====================================================
+   INVITATION
+===================================================== */
+
+.donation-invitation {
+  padding: 75px 0;
+
+  background: var(--soft-cream);
+
+  text-align: center;
+}
+
+.donation-invitation-inner {
+  max-width: 800px;
+
+  margin: 0 auto;
+}
+
+.donation-invitation-om {
+  margin-bottom: 18px;
+
+  color: var(--gold);
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 38px;
+}
+
+.donation-invitation-inner > p {
+  margin: 0 0 8px;
+
+  color: var(--muted);
+
+  font-family:
+    Georgia,
+    "Noto Serif Tamil",
+    serif;
+
+  font-size: 16px;
+
+  line-height: 1.8;
+}
+
+.donation-invitation h2 {
+  margin: 0;
+
+  color: var(--deep-saffron);
+
+  font-family:
+    Georgia,
+    "Noto Serif Tamil",
+    serif;
+
+  font-size: clamp(36px, 4vw, 52px);
+
+  font-weight: 500;
+
+  line-height: 1.35;
+}
+
+
+/* =====================================================
+   04 — DONATION DETAILS
+===================================================== */
+
+.donation-details {
+  padding: 90px 0;
+
+  background: var(--white);
+}
+
+.donation-details-heading {
+  margin-bottom: 45px;
+}
+
+.donation-details-heading h2 {
+  margin: 0;
+
+  color: var(--deep-brown);
+
+  font-family:
+    Georgia,
+    "Noto Serif Tamil",
+    serif;
+
+  font-size: clamp(42px, 4.5vw, 58px);
+
+  font-weight: 500;
+
+  line-height: 1.25;
+}
+
+
+/* =====================================================
+   DETAILS GRID
+===================================================== */
+
+.donation-details-grid {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1.2fr)
+    minmax(300px, 0.8fr);
+
+  gap: 80px;
+
+  align-items: center;
+}
+
+
+/* =====================================================
+   TRUST + BANK CARD
+===================================================== */
+
+.donation-bank {
+  padding: 40px;
+
+  background: var(--cream);
+
+  border-top: 2px solid var(--gold);
+}
+
+
+/* =====================================================
+   TRUST INFORMATION
+===================================================== */
+
+.donation-trust-details {
+  margin: 0;
+}
+
+.donation-trust-details h3 {
+  margin: 0 0 22px;
+
+  color: var(--deep-brown);
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 28px;
+
+  font-weight: 500;
+
+  line-height: 1.35;
+}
+
+.donation-trust-details p {
+  margin: 7px 0;
+
+  color: var(--muted);
+
+  font-family:
+    Georgia,
+    "Noto Serif Tamil",
+    serif;
+
+  font-size: 13px;
+
+  line-height: 1.75;
+}
+
+.donation-trust-details .donation-trust-tamil {
+  margin-top: 18px;
+  margin-bottom: 10px;
+
+  color: var(--deep-saffron);
+
+  font-size: 17px;
+
+  font-weight: 600;
+}
+
+.donation-trust-details strong {
+  color: var(--deep-brown);
+}
+
+.donation-trust-details a {
+  color: var(--deep-saffron);
+
+  text-decoration: none;
+}
+
+.donation-trust-details a:hover {
+  text-decoration: underline;
+}
+
+
+/* =====================================================
+   BANK DIVIDER
+===================================================== */
+
+.donation-bank-divider {
+  width: 100%;
+  height: 1px;
+
+  margin: 30px 0;
+
+  background: var(--border);
+}
+
+
+/* =====================================================
+   BANK HEADING
+===================================================== */
+
+.donation-bank-label {
+  margin: 0 0 5px;
+
+  color: var(--deep-saffron);
+
+  font-family:
+    Georgia,
+    "Noto Serif Tamil",
+    serif;
+
+  font-size: 18px;
+
+  font-weight: 600;
+}
+
+
+/* =====================================================
+   BANK ROW
+===================================================== */
+
+.donation-bank-row {
+  display: grid;
+
+  grid-template-columns: 150px minmax(0, 1fr);
+
+  gap: 25px;
+
+  padding: 17px 0;
+
+  border-top: 1px solid var(--border);
+
+  align-items: start;
+}
+
+.donation-bank-row:first-of-type {
+  margin-top: 10px;
+}
+
+.donation-bank-row span {
+  color: var(--muted);
+
+  font-size: 12px;
+
+  line-height: 1.6;
+}
+
+.donation-bank-row strong {
+  color: var(--deep-brown);
+
+  font-size: 13px;
+
+  line-height: 1.6;
+
+  word-break: break-word;
+}
+
+
+/* =====================================================
+   QR
+===================================================== */
+
+.donation-qr {
+  text-align: center;
+}
+
+.donation-qr-heading {
+  margin-bottom: 25px;
+}
+
+.donation-qr-heading p {
+  margin: 0 0 4px;
+
+  color: var(--deep-brown);
+
+  font-family:
+    Georgia,
+    "Noto Serif Tamil",
+    serif;
+
+  font-size: 21px;
+}
+
+.donation-qr-heading span {
+  color: var(--muted);
+
+  font-size: 11px;
+
+  letter-spacing: 1px;
+}
+
+.donation-qr-frame {
+  width: 280px;
+  height: 280px;
+
+  margin: 0 auto;
+
+  padding: 18px;
+
+  background: var(--white);
+
+  border: 1px solid var(--border);
+
+  box-shadow:
+    0 15px 40px rgba(64, 39, 25, 0.1);
+}
+
+.donation-qr-frame img {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: contain;
+}
+
+
+/* =====================================================
+   FINAL
+===================================================== */
+
+.donation-final {
+  padding: 75px 0 70px;
+
+  background: var(--cream);
+
+  text-align: center;
+}
+
+.donation-final-inner {
+  max-width: 800px;
+
+  margin: 0 auto;
+}
+
+.donation-final-om {
+  margin-bottom: 18px;
+
+  color: var(--gold);
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 38px;
+}
+
+.donation-final-inner > p {
+  margin: 0;
+
+  color: var(--muted);
+
+  font-family:
+    Georgia,
+    "Noto Serif Tamil",
+    serif;
+
+  font-size: 16px;
+
+  line-height: 1.8;
+}
+
+.donation-final h2 {
+  margin: 8px 0 0;
+
+  color: var(--deep-brown);
+
+  font-family:
+    Georgia,
+    "Noto Serif Tamil",
+    serif;
+
+  font-size: clamp(38px, 4.5vw, 58px);
+
+  font-weight: 500;
+
+  line-height: 1.3;
+}
+
+.donation-final-line {
+  width: 70px;
+  height: 1px;
+
+  margin: 27px auto 20px;
+
+  background: var(--light-gold);
+}
+
+.donation-final-note {
+  color: var(--deep-saffron) !important;
+
+  font-size: 14px !important;
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 950px) {
+
+  .donation-intro-grid {
+    grid-template-columns: 1fr;
+
+    gap: 45px;
+  }
+
+  .donation-intro-content {
+    max-width: 800px;
+  }
+
+  .donation-meaning-intro {
+    margin-left: 0;
+  }
+
+  .donation-offerings {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .donation-offering:nth-child(2) {
+    border-right: none;
+  }
+
+  .donation-offering:nth-child(-n + 2) {
+    border-bottom: 1px solid var(--border);
+  }
+
+  .donation-surrender-grid {
+    grid-template-columns: 1fr;
+
+    gap: 45px;
+  }
+
+  .donation-details-grid {
+    grid-template-columns: 1fr;
+
+    gap: 55px;
+  }
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 768px) {
+
+  .donation-container {
+    width: calc(100% - 30px);
+  }
+
+
+  /* ===================================================
+     HERO
+  =================================================== */
+
+  .donation-hero {
+    height: 520px;
+    min-height: 520px;
+  }
+
+  .donation-hero-content {
+    width: calc(100% - 30px);
+  }
+
+  .donation-hero-eyebrow {
+    margin-bottom: 12px;
+
+    font-size: 22px;
+
+    letter-spacing: 0.5px;
+  }
+
+  .donation-hero h1 {
+    font-size: 38px;
+  }
+
+  .donation-hero-line {
+    margin: 18px auto 16px;
+  }
+
+  .donation-hero-subtitle {
+    font-size: 13px;
+  }
+
+  .donation-hero-om {
+    margin-top: 16px;
+
+    font-size: 32px;
+  }
+
+  .donation-hero-breadcrumb {
+    margin-top: 10px;
+
+    font-size: 11px;
+  }
+
+
+  /* ===================================================
+     INTRO
+  =================================================== */
+
+  .donation-intro {
+    padding: 60px 0;
+  }
+
+  .donation-intro-side h2 {
+    font-size: 40px;
+  }
+
+  .donation-intro-content .donation-lead {
+    font-size: 19px;
+  }
+
+  .donation-intro-content p {
+    font-size: 14px;
+
+    line-height: 1.85;
+  }
+
+
+  /* ===================================================
+     QUOTE
+  =================================================== */
+
+  .donation-quote-section {
+    min-height: 500px;
+  }
+
+  .donation-quote-content {
+    padding: 65px 0;
+  }
+
+  .donation-quote-mark {
+    font-size: 65px;
+  }
+
+  .donation-quote-content blockquote {
+    font-size: 21px;
+
+    line-height: 1.8;
+  }
+
+
+  /* ===================================================
+     MEANING
+  =================================================== */
+
+  .donation-meaning {
+    padding: 60px 0;
+  }
+
+  .donation-meaning-heading h2 {
+    font-size: 39px;
+  }
+
+  .donation-meaning-intro {
+    margin: 25px 0 40px;
+  }
+
+  .donation-meaning-intro p {
+    font-size: 15px;
+  }
+
+
+  /* ===================================================
+     OFFERINGS
+  =================================================== */
+
+  .donation-offerings {
+    grid-template-columns: 1fr;
+  }
+
+  .donation-offering {
+    min-height: auto;
+
+    padding: 25px 5px;
+
+    border-right: none;
+
+    border-bottom: 1px solid var(--border);
+  }
+
+  .donation-offering:last-child {
+    border-bottom: none;
+  }
+
+  .donation-offering h3 {
+    font-size: 23px;
+  }
+
+
+  /* ===================================================
+     FAITH
+  =================================================== */
+
+  .donation-faith {
+    min-height: 520px;
+  }
+
+  .donation-faith-content {
+    padding: 70px 0;
+  }
+
+  .donation-faith h2 {
+    font-size: 55px;
+  }
+
+  .donation-faith-content .donation-faith-lead {
+    font-size: 18px;
+  }
+
+  .donation-faith-content > p:not(.donation-eyebrow) {
+    font-size: 14px;
+
+    line-height: 1.85;
+  }
+
+
+  /* ===================================================
+     SURRENDER
+  =================================================== */
+
+  .donation-surrender {
+    padding: 60px 0;
+  }
+
+  .donation-surrender-heading h2 {
+    font-size: 40px;
+  }
+
+  .donation-surrender-content p {
+    font-size: 14px;
+
+    line-height: 1.85;
+  }
+
+
+  /* ===================================================
+     INVITATION
+  =================================================== */
+
+  .donation-invitation {
+    padding: 55px 0;
+  }
+
+  .donation-invitation h2 {
+    font-size: 35px;
+  }
+
+
+  /* ===================================================
+     DONATION DETAILS
+  =================================================== */
+
+  .donation-details {
+    padding: 60px 0;
+  }
+
+  .donation-details-heading {
+    margin-bottom: 35px;
+  }
+
+  .donation-details-heading h2 {
+    font-size: 40px;
+  }
+
+  .donation-bank {
+    padding: 28px 20px;
+  }
+
+  .donation-trust-details h3 {
+    font-size: 23px;
+  }
+
+  .donation-trust-details p {
+    font-size: 12px;
+  }
+
+  .donation-trust-details .donation-trust-tamil {
+    font-size: 15px;
+  }
+
+  .donation-bank-label {
+    font-size: 16px;
+  }
+
+  .donation-bank-row {
+    grid-template-columns: 1fr;
+
+    gap: 5px;
+
+    padding: 14px 0;
+  }
+
+  .donation-bank-row span {
+    font-size: 11px;
+  }
+
+  .donation-bank-row strong {
+    font-size: 13px;
+  }
+
+  .donation-qr-frame {
+    width: 250px;
+    height: 250px;
+  }
+
+
+  /* ===================================================
+     FINAL
+  =================================================== */
+
+  .donation-final {
+    padding: 60px 0;
+  }
+
+  .donation-final h2 {
+    font-size: 37px;
+  }
+
+}

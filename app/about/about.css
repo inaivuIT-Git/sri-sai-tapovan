@@ -1,42 +1,29 @@
-/* =========================================================
-   SRI SAI TAPOVAN — ABOUT US
-   Premium Spiritual / Satsang Visual Language
-========================================================= */
-
-:root {
-  --saffron: #d9822b;
-  --deep-saffron: #b85c16;
-  --dark-saffron: #91440f;
-
-  --gold: #b58a3a;
-  --light-gold: #e4c98e;
-
-  --brown: #6b442a;
-  --deep-brown: #402719;
-
-  --text: #443932;
-  --muted: #766960;
-
-  --white: #ffffff;
-  --cream: #fffaf3;
-  --soft-cream: #fdf5e9;
-
-  --border: #dcc9aa;
-}
-
-
-/* =========================================================
-   RESET
-========================================================= */
+/* =====================================================
+   SAI SATSANG @ GURUPADAM — ABOUT PAGE
+   Contemporary editorial design
+===================================================== */
 
 .about-page {
+  --about-saffron: #d9822b;
+  --about-deep-saffron: #b85c16;
+  --about-gold: #e7bc68;
+  --about-light-gold: #f2d99b;
+  --about-ink: #25170f;
+  --about-brown: #402719;
+  --about-text: #40362f;
+  --about-muted: #756960;
+  --about-white: #ffffff;
+  --about-cream: #fffaf3;
+  --about-soft: #f6efe4;
+  --about-line: #e2d5c3;
+
   width: 100%;
   overflow: hidden;
-
-  color: var(--text);
-  background: var(--white);
+  background: var(--about-white);
+  color: var(--about-text);
 }
 
+.about-page,
 .about-page *,
 .about-page *::before,
 .about-page *::after {
@@ -51,1547 +38,1185 @@
 .about-page h1,
 .about-page h2,
 .about-page h3,
-.about-page p {
+.about-page p,
+.about-page blockquote {
   margin-top: 0;
 }
+
+.about-container {
+  width: min(1240px, calc(100% - 72px));
+  margin: 0 auto;
+}
+
+.about-eyebrow {
+  margin-bottom: 16px;
+  color: var(--about-deep-saffron);
+  font-family: Arial, "Noto Sans Tamil", sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.6;
+  letter-spacing: 1.4px;
+}
+
+.about-rule {
+  width: 58px;
+  height: 2px;
+  margin: 24px 0;
+  background: var(--about-saffron);
+}
+
+.about-lead {
+  color: var(--about-brown) !important;
+  font-size: 19px !important;
+  font-weight: 500;
+  line-height: 1.8 !important;
+}
+
 /* =====================================================
-   ABOUT HERO
+   HERO
 ===================================================== */
 
 .about-hero {
   position: relative;
-  width: 100%;
-  height: 500px;
-  min-height: 500px;
-
+  isolation: isolate;
+  min-height: 530px;
   display: flex;
   align-items: center;
-  justify-content: center;
-
   overflow: hidden;
+  color: var(--about-white);
+  background: var(--about-ink);
 }
 
-
-/* -----------------------------------------------------
-   IMAGE
------------------------------------------------------ */
-
-.about-hero-image {
-  position: absolute;
-  inset: 0;
-
-  background:
-    url("/images/about/gallery-1.jpeg")
-    center center / cover no-repeat;
-}
-
-
-/* -----------------------------------------------------
-   OVERLAY
------------------------------------------------------ */
-
+.about-hero-image,
 .about-hero-overlay {
   position: absolute;
   inset: 0;
-  z-index: 1;
-
-  background:
-    linear-gradient(
-      rgba(55, 25, 8, 0.68),
-      rgba(55, 25, 8, 0.68)
-    );
 }
 
+.about-hero-image {
+  z-index: -2;
+  background: url("/images/about/gallery-1.jpeg") center 46% / cover no-repeat;
+  transform: scale(1.015);
+}
 
-/* -----------------------------------------------------
-   CONTENT
------------------------------------------------------ */
+.about-hero-overlay {
+  z-index: -1;
+  background: linear-gradient(90deg, rgba(26, 15, 8, .93) 0%, rgba(26, 15, 8, .75) 48%, rgba(26, 15, 8, .2) 100%);
+}
 
 .about-hero-content {
-  position: relative;
-  z-index: 2;
-
-  width: min(1050px, calc(100% - 40px));
-
+  width: min(1240px, calc(100% - 72px));
   margin: 0 auto;
+  padding: 86px 0 92px;
+}
 
+.about-hero-eyebrow {
+  margin: 0 0 18px;
+  color: var(--about-light-gold);
+  font-family: Georgia, "Noto Serif Tamil", serif;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: .3px;
+}
+
+.about-hero h1 {
+  max-width: 900px;
+  margin: 0;
+  color: var(--about-white);
+  font-family: Georgia, "Noto Serif Tamil", serif;
+  font-size: clamp(48px, 6.5vw, 86px);
+  font-weight: 500;
+  line-height: 1.18;
+  letter-spacing: -.8px;
+}
+
+.about-hero h1 span {
+  color: var(--about-light-gold);
+}
+
+.about-hero-subtitle {
+  max-width: 570px;
+  margin: 23px 0 0;
+  color: rgba(255, 255, 255, .85);
+  font-family: Georgia, "Noto Serif Tamil", serif;
+  font-size: 17px;
+  line-height: 1.8;
+}
+
+.about-hero-actions,
+.about-final-actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 22px;
+  margin-top: 32px;
+}
+
+.about-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 46px;
+  padding: 12px 22px;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  font-family: Arial, "Noto Sans Tamil", sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background .2s ease, color .2s ease, border-color .2s ease, transform .2s ease;
+}
+
+.about-button:hover {
+  transform: translateY(-2px);
+}
+
+.about-button-light {
+  background: var(--about-light-gold);
+  color: var(--about-ink);
+}
+
+.about-button-light:hover {
+  background: #ffe6ae;
+}
+
+.about-text-link {
+  padding: 9px 0;
+  border-bottom: 1px solid rgba(242, 217, 155, .65);
+  color: var(--about-white);
+  font-family: Arial, "Noto Sans Tamil", sans-serif;
+  font-size: 13px;
+  text-decoration: none;
+}
+
+.about-text-link:hover {
+  color: var(--about-light-gold);
+}
+
+.about-hero-caption {
+  position: absolute;
+  right: 36px;
+  bottom: 28px;
+  display: flex;
+  gap: 13px;
+  color: rgba(255, 255, 255, .6);
+  font-family: Arial, sans-serif;
+  font-size: 9px;
+  letter-spacing: 2px;
+}
+
+/* =====================================================
+   INTRO — EDITORIAL SPLIT
+===================================================== */
+
+.about-intro-section {
+  padding: 96px 0;
+  background: var(--about-white);
+}
+
+.about-intro-grid {
+  display: grid;
+  grid-template-columns: minmax(0, .95fr) minmax(0, 1.05fr);
+  gap: clamp(42px, 7vw, 100px);
+  align-items: center;
+}
+
+.about-intro-media {
+  position: relative;
+  min-width: 0;
+  padding: 0 30px 30px 0;
+}
+
+.about-intro-media::after {
+  display: none;
+}
+
+.about-intro-media img {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+}
+
+.about-image-note {
+  position: absolute;
+  right: 14px;
+  bottom: 45px;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  max-width: calc(100% - 35px);
+  padding: 13px 16px;
+  background: rgba(37, 23, 15, .92);
+  color: var(--about-white);
+  font-family: Georgia, "Noto Serif Tamil", serif;
+  font-size: 11px;
+}
+
+.about-image-note-mark {
+  color: var(--about-light-gold);
+  font-family: Georgia, serif;
+  font-size: 22px;
+}
+
+.about-intro-copy h2,
+.about-salem-copy h2,
+.about-service-copy h2 {
+  margin: 0;
+  color: var(--about-ink);
+  font-family: Georgia, "Noto Serif Tamil", serif;
+  font-size: clamp(35px, 4vw, 54px);
+  font-weight: 500;
+  line-height: 1.32;
+  letter-spacing: -.4px;
+}
+
+.about-intro-copy > p:not(.about-eyebrow),
+.about-salem-copy > p:not(.about-eyebrow),
+.about-service-copy > p:not(.about-eyebrow) {
+  margin-bottom: 15px;
+  color: var(--about-muted);
+  font-family: Georgia, "Noto Serif Tamil", serif;
+  font-size: 16px;
+  line-height: 1.95;
+}
+
+.about-intro-copy .about-inline-emphasis {
+  margin: 24px 0 0 !important;
+  padding-left: 18px;
+  border-left: 2px solid var(--about-saffron);
+  color: var(--about-deep-saffron) !important;
+  font-size: 16px !important;
+  font-weight: 500;
+}
+
+/* =====================================================
+   JOURNEY — IMMERSIVE TIMELINE
+===================================================== */
+
+.about-journey-section {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  padding: 94px 0 100px;
+  color: var(--about-white);
+  background: #27160c;
+}
+
+.about-journey-image,
+.about-journey-overlay {
+  position: absolute;
+  inset: 0;
+}
+
+.about-journey-image {
+  z-index: -2;
+  background: url("/images/gallery/gallery-5.jpeg") center / cover no-repeat;
+}
+
+.about-journey-overlay {
+  z-index: -1;
+  background: linear-gradient(110deg, rgba(35, 18, 8, .96), rgba(50, 26, 11, .9) 62%, rgba(87, 39, 10, .76));
+}
+
+.about-journey-heading {
+  max-width: 760px;
+  margin-bottom: 52px;
+}
+
+.about-journey-heading .about-eyebrow {
+  color: var(--about-light-gold);
+}
+
+.about-journey-heading h2 {
+  margin: 0 0 15px;
+  color: var(--about-white);
+  font-family: Georgia, "Noto Serif Tamil", serif;
+  font-size: clamp(37px, 4.8vw, 61px);
+  font-weight: 500;
+  line-height: 1.25;
+}
+
+.about-journey-heading > p:last-child {
+  max-width: 630px;
+  margin: 0;
+  color: rgba(255, 255, 255, .72);
+  font-family: Georgia, "Noto Serif Tamil", serif;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.about-timeline {
+  position: relative;
+  max-width: 870px;
+  margin-left: 8px;
+}
+
+.about-timeline::before {
+  content: "";
+  position: absolute;
+  top: 12px;
+  bottom: 12px;
+  left: 5px;
+  width: 1px;
+  background: linear-gradient(to bottom, transparent, rgba(242, 217, 155, .6) 7%, rgba(242, 217, 155, .6) 93%, transparent);
+}
+
+.about-timeline-item {
+  position: relative;
+  display: grid;
+  grid-template-columns: 24px minmax(0, 1fr);
+  gap: 22px;
+  padding-bottom: 29px;
+}
+
+.about-timeline-item:last-child {
+  padding-bottom: 0;
+}
+
+.about-timeline-marker {
+  position: relative;
+  z-index: 1;
+  width: 11px;
+  height: 11px;
+  margin-top: 6px;
+  border: 1px solid var(--about-light-gold);
+  border-radius: 50%;
+  background: var(--about-deep-saffron);
+  box-shadow: 0 0 0 6px rgba(242, 217, 155, .08);
+}
+
+.about-timeline-copy {
+  max-width: 730px;
+  padding-bottom: 22px;
+  border-bottom: 1px solid rgba(255, 255, 255, .14);
+}
+
+.about-timeline-item:last-child .about-timeline-copy {
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+
+.about-timeline-label {
+  margin-bottom: 6px;
+  color: var(--about-light-gold);
+  font-family: Arial, "Noto Sans Tamil", sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: .7px;
+}
+
+.about-timeline-copy h3 {
+  margin: 0 0 7px;
+  color: var(--about-white);
+  font-family: Georgia, "Noto Serif Tamil", serif;
+  font-size: 23px;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.about-timeline-copy > p:last-child {
+  max-width: 680px;
+  margin: 0;
+  color: rgba(255, 255, 255, .73);
+  font-family: Georgia, "Noto Serif Tamil", serif;
+  font-size: 14px;
+  line-height: 1.85;
+}
+
+/* =====================================================
+   SALEM SHIRDI — LARGE IMAGE / COPY
+===================================================== */
+
+.about-salem-section {
+  padding: 100px 0;
+  background: var(--about-cream);
+}
+
+.about-salem-grid {
+  display: grid;
+  grid-template-columns: minmax(0, .88fr) minmax(0, 1.12fr);
+  gap: clamp(42px, 7vw, 92px);
+  align-items: center;
+}
+
+.about-salem-copy h2 {
+  font-size: clamp(42px, 5vw, 65px);
+}
+
+.about-salem-quote {
+  margin: 27px 0 0;
+  padding: 0 0 0 18px;
+  border-left: 2px solid var(--about-gold);
+  color: var(--about-deep-saffron);
+  font-family: Georgia, "Noto Serif Tamil", serif;
+  font-size: 16px;
+  line-height: 1.85;
+}
+
+.about-salem-media {
+  position: relative;
+  min-width: 0;
+}
+
+.about-salem-media img {
+  width: 100%;
+  aspect-ratio: 5 / 4;
+  object-fit: cover;
+}
+
+.about-media-caption {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  padding: 13px 17px;
+  background: var(--about-light-gold);
+  color: var(--about-ink);
+  font-family: Arial, sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.7px;
+}
+
+/* =====================================================
+   PURPOSE — OPEN EDITORIAL LIST, NOT CARDS
+===================================================== */
+
+.about-purpose-section {
+  padding: 92px 0 96px;
+  background: var(--about-white);
+}
+
+.about-purpose-heading {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(280px, .72fr);
+  gap: 75px;
+  align-items: end;
+  margin-bottom: 47px;
+}
+
+.about-purpose-heading h2 {
+  margin: 0;
+  color: var(--about-ink);
+  font-family: Georgia, "Noto Serif Tamil", serif;
+  font-size: clamp(38px, 4.7vw, 60px);
+  font-weight: 500;
+  line-height: 1.28;
+}
+
+.about-purpose-heading > p {
+  margin: 0 0 5px;
+  color: var(--about-muted);
+  font-family: Georgia, "Noto Serif Tamil", serif;
+  font-size: 15px;
+  line-height: 1.9;
+}
+
+.about-purpose-list {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  border-top: 1px solid var(--about-line);
+  border-bottom: 1px solid var(--about-line);
+}
+
+.about-purpose-item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 27px;
+  min-height: 220px;
+  padding: 26px 24px 30px 0;
+  border-right: 1px solid var(--about-line);
+}
+
+.about-purpose-item + .about-purpose-item {
+  padding-left: 24px;
+}
+
+.about-purpose-item:last-child {
+  border-right: 0;
+}
+
+.about-purpose-symbol {
+  color: var(--about-deep-saffron);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 27px;
+  line-height: 1;
+}
+
+.about-purpose-copy h3 {
+  margin: 0 0 9px;
+  color: var(--about-ink);
+  font-family: Georgia, "Noto Serif Tamil", serif;
+  font-size: 23px;
+  font-weight: 500;
+}
+
+.about-purpose-copy p {
+  margin: 0;
+  color: var(--about-muted);
+  font-family: Georgia, "Noto Serif Tamil", serif;
+  font-size: 14px;
+  line-height: 1.85;
+}
+
+/* =====================================================
+   VISION — IMMERSIVE STATEMENT
+===================================================== */
+
+.about-vision-section {
+  position: relative;
+  isolation: isolate;
+  min-height: 470px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background: var(--about-ink);
+  color: var(--about-white);
+}
+
+.about-vision-image,
+.about-vision-overlay {
+  position: absolute;
+  inset: 0;
+}
+
+.about-vision-image {
+  z-index: -2;
+  background: url("/images/gallery/gallery-5.jpeg") center / cover no-repeat;
+}
+
+.about-vision-overlay {
+  z-index: -1;
+  background: linear-gradient(90deg, rgba(35, 18, 8, .94), rgba(53, 27, 10, .81) 58%, rgba(53, 27, 10, .35));
+}
+
+.about-vision-content {
+  padding-top: 83px;
+  padding-bottom: 83px;
+}
+
+.about-vision-content .about-eyebrow {
+  color: var(--about-light-gold);
+}
+
+.about-vision-content h2 {
+  max-width: 900px;
+  margin: 0;
+  color: var(--about-white);
+  font-family: Georgia, "Noto Serif Tamil", serif;
+  font-size: clamp(43px, 5.8vw, 75px);
+  font-weight: 500;
+  line-height: 1.22;
+}
+
+.about-vision-content h2 span {
+  color: var(--about-light-gold);
+}
+
+.about-vision-rule {
+  width: 61px;
+  height: 2px;
+  margin: 24px 0;
+  background: var(--about-light-gold);
+}
+
+.about-vision-content > p:not(.about-eyebrow) {
+  max-width: 720px;
+  margin: 0;
+  color: rgba(255, 255, 255, .83);
+  font-family: Georgia, "Noto Serif Tamil", serif;
+  font-size: 16px;
+  line-height: 1.9;
+}
+
+.about-vision-values {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+  margin-top: 27px;
+}
+
+.about-vision-values span {
+  padding: 8px 14px;
+  border: 1px solid rgba(242, 217, 155, .45);
+  border-radius: 999px;
+  color: var(--about-white);
+  font-family: Georgia, "Noto Serif Tamil", serif;
+  font-size: 12px;
+}
+
+/* =====================================================
+   SERVICE — ASYMMETRIC IMAGE COMPOSITION
+===================================================== */
+
+.about-service-section {
+  padding: 100px 0;
+  background: var(--about-soft);
+}
+
+.about-service-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, .95fr);
+  align-items: center;
+  gap: clamp(45px, 7vw, 90px);
+}
+
+.about-service-gallery {
+  position: relative;
+  min-height: 470px;
+}
+
+.about-service-image-main {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 82%;
+  overflow: hidden;
+}
+
+.about-service-image-main img {
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+}
+
+.about-service-image-small {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 43%;
+  padding: 8px;
+  background: var(--about-soft);
+}
+
+.about-service-image-small img {
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+}
+
+.about-service-quote {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin: 25px 0 0;
+  padding-top: 18px;
+  border-top: 1px solid var(--about-line);
+}
+
+.about-service-quote > span {
+  color: var(--about-gold);
+  font-family: Georgia, serif;
+  font-size: 44px;
+  line-height: .9;
+}
+
+.about-service-quote p {
+  margin: 0;
+  color: var(--about-deep-saffron);
+  font-family: Georgia, "Noto Serif Tamil", serif;
+  font-size: 18px;
+  line-height: 1.75;
+}
+
+/* =====================================================
+   CURRENT IDENTITY
+===================================================== */
+
+.about-identity-section {
+  position: relative;
+  isolation: isolate;
+  min-height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
   text-align: center;
+  color: var(--about-white);
+  background: var(--about-ink);
+}
 
+.about-identity-image,
+.about-identity-overlay {
+  position: absolute;
+  inset: 0;
+}
+
+.about-identity-image {
+  z-index: -2;
+  background: url("/images/gallery/gallery-8.jpeg") center / cover no-repeat;
+}
+
+.about-identity-overlay {
+  z-index: -1;
+  background: linear-gradient(120deg, rgba(31, 16, 7, .9), rgba(80, 34, 8, .82));
+}
+
+.about-identity-content {
+  max-width: 900px;
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+.about-identity-om {
+  display: block;
+  margin-bottom: 17px;
+  color: var(--about-light-gold);
+  font-family: Georgia, serif;
+  font-size: 34px;
+}
+
+.about-identity-content .about-eyebrow {
+  color: var(--about-light-gold);
+}
+
+.about-identity-content h2 {
+  margin: 0 0 24px;
+  color: var(--about-white);
+  font-family: Georgia, "Noto Serif Tamil", serif;
+  font-size: clamp(48px, 6vw, 78px);
+  font-weight: 500;
+  line-height: 1.14;
+}
+
+.about-identity-content h2 span {
+  color: var(--about-light-gold);
+}
+
+.about-identity-content > p:not(.about-eyebrow) {
+  max-width: 740px;
+  margin: 0 auto 15px;
+  color: rgba(255, 255, 255, .84);
+  font-family: Georgia, "Noto Serif Tamil", serif;
+  font-size: 16px;
+  line-height: 1.9;
+}
+
+.about-identity-content .about-identity-emphasis {
+  margin-top: 27px !important;
+  color: var(--about-light-gold) !important;
+  font-size: 18px !important;
+}
+
+/* =====================================================
+   FINAL CTA
+===================================================== */
+
+.about-final-section {
+  padding: 84px 0 78px;
+  background: var(--about-white);
+  text-align: center;
+}
+
+.about-final-inner {
+  max-width: 1000px;
+}
+
+.about-final-om {
+  display: block;
+  margin-bottom: 15px;
+  color: var(--about-gold);
+  font-family: Georgia, serif;
+  font-size: 34px;
+}
+
+.about-final-inner .about-eyebrow {
+  margin-bottom: 17px;
+}
+
+.about-final-message {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-}
-
-
-/* -----------------------------------------------------
-   TRUST NAME
------------------------------------------------------ */
-
-.about-hero-eyebrow {
-  display: block;
-
-  margin: 0 0 16px;
-
-  color: #e4c98e;
-
-  font-family:
-    Georgia,
-    "Noto Serif Tamil",
-    serif;
-
-  font-size: 28px;
-  font-weight: 500;
-
-  line-height: 1.3;
-  letter-spacing: 1px;
-}
-
-
-/* -----------------------------------------------------
-   TITLE
------------------------------------------------------ */
-
-.about-hero h1 {
-  margin: 0;
-
-  color: #ffffff;
-
-  font-family:
-    Georgia,
-    "Noto Serif Tamil",
-    serif;
-
-  font-size: clamp(42px, 5vw, 68px);
-
-  font-weight: 500;
-
-  line-height: 1.18;
-
-  text-align: center;
-}
-
-
-/* -----------------------------------------------------
-   LINE
------------------------------------------------------ */
-
-.about-hero-line {
-  width: 75px;
-  height: 1px;
-
-  margin: 22px auto 18px;
-
-  background: #e4c98e;
-}
-
-
-/* -----------------------------------------------------
-   SUBTITLE
------------------------------------------------------ */
-
-.about-hero-subtitle {
-  margin: 0;
-
-  color: rgba(255, 255, 255, 0.9);
-
-  font-family:
-    Georgia,
-    "Noto Serif Tamil",
-    serif;
-
-  font-size: 15px;
-
-  line-height: 1.8;
-
-  text-align: center;
-}
-
-
-
-
-
-/* =====================================================
-   MOBILE
-===================================================== */
-
-@media (max-width: 768px) {
-
-  .about-hero {
-    height: 520px;
-    min-height: 520px;
-  }
-
-  .about-hero-content {
-    width: calc(100% - 30px);
-  }
-
-  .about-hero-eyebrow {
-    margin-bottom: 12px;
-    font-size: 22px;
-    letter-spacing: 0.5px;
-  }
-
-  .about-hero h1 {
-    font-size: 38px;
-    line-height: 1.2;
-  }
-
-  .about-hero-line {
-    margin: 18px auto 16px;
-  }
-
-  .about-hero-subtitle {
-    font-size: 13px;
-    line-height: 1.7;
-  }
-
-  .about-hero-om {
-    margin-top: 16px;
-    font-size: 32px;
-  }
-
-
-}
-
-
-
-
-
-
-/* =========================================================
-   COMMON STORY SECTIONS
-========================================================= */
-
-.about-story-section {
-  padding: 72px 0;
-
-  background: var(--white);
-}
-
-.about-intro-section {
-  background: var(--white);
-}
-
-.salem-shirdi-section {
-  background: var(--cream);
-}
-
-.service-section {
-  background: var(--white);
-}
-
-.about-story-container {
-  width: min(1180px, calc(100% - 50px));
-
-  margin: 0 auto;
-
-  display: grid;
-
-  grid-template-columns: 1fr 1fr;
-
-  align-items: center;
-
-  gap: 55px;
-}
-
-.about-story-content {
-  min-width: 0;
-}
-
-.about-section-number {
-  display: inline-block;
-
-  margin-bottom: 9px;
-
-  color: var(--saffron);
-
-  font-family: Georgia, "Times New Roman", serif;
-
-  font-size: 16px;
-}
-
-.about-section-eyebrow {
-  margin-bottom: 8px;
-
-  color: var(--dark-saffron);
-
-  font-size: 10px;
-
-  font-weight: 800;
-
-  letter-spacing: 2.3px;
-
-  text-transform: uppercase;
-}
-
-
-.about-story-content h2 {
-  margin-bottom: 18px;
-
-  color: var(--deep-brown);
-
-  font-family: Georgia, "Times New Roman", serif;
-
-  font-size: clamp(34px, 4vw, 50px);
-
-  font-weight: 500;
-
-  line-height: 1.22;
-}
-
-.about-story-content > p {
-  margin-bottom: 14px;
-
-  font-size: 15px;
-
-  line-height: 1.78;
-  color: #000;
-}
-
-
-/* =========================================================
-   HIGHLIGHT
-========================================================= */
-
-.about-highlight {
-  margin-top: 20px;
-
-  padding: 16px 20px;
-
-  border-left: 3px solid var(--saffron);
-
-  background: var(--soft-cream);
-
-  color: var(--deep-brown);
-
-  font-family: Georgia, "Times New Roman", serif;
-
-  font-size: 15px;
-
-  line-height: 1.7;
-}
-
-
-/* =========================================================
-   STORY IMAGES
-========================================================= */
-
-.about-story-image {
-  position: relative;
-
-  overflow: hidden;
-
-  border: 1px solid var(--gold);
-
-  background: var(--cream);
-}
-
-.about-story-image::after {
-  content: "";
-
-  position: absolute;
-
-  inset: 9px;
-
-  border: 1px solid rgba(255, 255, 255, 0.55);
-
-  pointer-events: none;
-}
-
-.about-story-image img {
-  aspect-ratio: 4 / 3;
-
-  object-fit: cover;
-
-  transition: transform 0.6s ease;
-}
-
-.about-story-image:hover img {
-  transform: scale(1.02);
-}
-
-
-/* =========================================================
-   02 — SPIRITUAL JOURNEY
-========================================================= */
-
-.journey-section {
-  position: relative;
-
-  padding: 76px 0;
-
-  overflow: hidden;
-
-  color: var(--white);
-
-  background: var(--deep-saffron);
-}
-
-.journey-background {
-  position: absolute;
-
-  inset: 0;
-
-  background-image:
-    url("/images/about/gallery-1.jpeg");
-
-  background-size: cover;
-
-  background-position: center;
-}
-
-.journey-overlay {
-  position: absolute;
-
-  inset: 0;
-
-  background:
-    linear-gradient(
-      135deg,
-      rgba(67, 28, 7, 0.94),
-      rgba(153, 66, 10, 0.87)
-    );
-}
-
-.journey-container {
-  position: relative;
-
-  z-index: 2;
-
-  width: min(950px, calc(100% - 50px));
-
-  margin: 0 auto;
-}
-
-.journey-heading {
-  max-width: 700px;
-
-  margin: 0 auto 45px;
-
-  text-align: center;
-}
-
-.journey-heading .about-section-number,
-.journey-heading .about-section-eyebrow {
-  color: rgba(255, 255, 255, 0.9);
-}
-
-.journey-heading h2 {
-  margin: 0 0 13px;
-
-  color: var(--white);
-
-  font-family: Georgia, "Times New Roman", serif;
-
-  font-size: clamp(38px, 5vw, 58px);
-
-  font-weight: 500;
-
-  line-height: 1.18;
-}
-
-.journey-heading > p:last-child {
-  max-width: 650px;
-
-  margin: 0 auto;
-
-  color: rgba(255, 255, 255, 0.82);
-
-  font-size: 14px;
-
-  line-height: 1.75;
-}
-
-
-/* =========================================================
-   JOURNEY TIMELINE
-========================================================= */
-
-.journey-timeline {
-  position: relative;
-
-  max-width: 780px;
-
-  margin: 0 auto;
-}
-
-.journey-timeline::before {
-  content: "";
-
-  position: absolute;
-
-  left: 27px;
-
-  top: 20px;
-  bottom: 20px;
-
-  width: 1px;
-
-  background:
-    linear-gradient(
-      180deg,
-      transparent,
-      rgba(228, 201, 142, 0.7) 10%,
-      rgba(228, 201, 142, 0.7) 90%,
-      transparent
-    );
-}
-
-.journey-step {
-  position: relative;
-
-  display: grid;
-
-  grid-template-columns: 55px 1fr;
-
-  gap: 25px;
-
-  padding-bottom: 29px;
-}
-
-.journey-step:last-child {
-  padding-bottom: 0;
-}
-
-.journey-step-number {
-  position: relative;
-
-  z-index: 2;
-
-  width: 55px;
-  height: 55px;
-
-  display: flex;
-
-  align-items: center;
-  justify-content: center;
-
-  border: 1px solid var(--light-gold);
-
-  border-radius: 50%;
-
-  background: rgba(145, 68, 15, 0.95);
-
-  color: var(--light-gold);
-
-  font-size: 11px;
-
-  box-shadow:
-    0 0 0 7px rgba(228, 201, 142, 0.06);
-}
-
-.journey-step-content {
-  padding-top: 3px;
-}
-
-.journey-step-content > span {
-  display: block;
-
-  margin-bottom: 5px;
-
-  color: rgba(255, 255, 255, 0.55);
-
-  font-size: 9px;
-
-  font-weight: 700;
-
-  letter-spacing: 1.8px;
-
-  text-transform: uppercase;
-}
-
-.journey-step-content h3 {
-  margin-bottom: 6px;
-
-  color: var(--white);
-
-  font-family: Georgia, "Times New Roman", serif;
-
-  font-size: 24px;
-
-  font-weight: 500;
-
-  line-height: 1.3;
-}
-
-.journey-step-content p {
-  max-width: 610px;
-
-  margin: 0;
-
-  color: rgba(255, 255, 255, 0.78);
-
-  font-size: 13px;
-
-  line-height: 1.7;
-}
-
-.journey-step-content strong {
-  color: var(--light-gold);
-
-  font-weight: 600;
-}
-
-
-/* =========================================================
-   04 — PURPOSE
-========================================================= */
-
-.purpose-section {
-  padding: 72px 0;
-
-  background:
-    linear-gradient(
-      180deg,
-      var(--cream),
-      var(--white)
-    );
-}
-
-.purpose-container {
-  width: min(1100px, calc(100% - 50px));
-
-  margin: 0 auto;
-}
-
-.purpose-heading {
-  max-width: 750px;
-
-  margin: 0 auto 42px;
-
-  text-align: center;
-}
-
-.purpose-heading h2 {
-  margin: 0 0 15px;
-
-  color: var(--deep-brown);
-
-  font-family: Georgia, "Times New Roman", serif;
-
-  font-size: clamp(38px, 5vw, 56px);
-
-  font-weight: 500;
-
-  line-height: 1.2;
-}
-
-.purpose-heading > p:last-child {
-  max-width: 680px;
-
-  margin: 0 auto;
-
-  color: var(--muted);
-
-  font-size: 14px;
-
-  line-height: 1.75;
-}
-
-
-/* =========================================================
-   PURPOSE GRID
-========================================================= */
-
-.purpose-grid {
-  display: grid;
-
-  grid-template-columns: repeat(4, 1fr);
-
-  border-top: 1px solid var(--border);
-
-  border-bottom: 1px solid var(--border);
-}
-
-.purpose-item {
-  min-height: 220px;
-
-  padding: 25px 22px;
-
-  text-align: center;
-
-  border-right: 1px solid var(--border);
-}
-
-.purpose-item:last-child {
-  border-right: none;
-}
-
-.purpose-icon {
-  width: 62px;
-  height: 62px;
-
-  margin: 0 auto 16px;
-
-  display: flex;
-
-  align-items: center;
-  justify-content: center;
-
-  border: 1px solid var(--gold);
-
-  border-radius: 50%;
-
-  color: var(--dark-saffron);
-
-  font-size: 25px;
-}
-
-.purpose-item h3 {
-  margin-bottom: 8px;
-
-  color: var(--deep-brown);
-
-  font-family: Georgia, "Times New Roman", serif;
-
-  font-size: 22px;
-
-  font-weight: 500;
-}
-
-.purpose-item p {
-  max-width: 190px;
-
-  margin: 0 auto;
-
-  color: var(--muted);
-
-  font-size: 12px;
-
-  line-height: 1.7;
-}
-
-
-/* =========================================================
-   05 — VISION
-========================================================= */
-
-.vision-section {
-  position: relative;
-
-  min-height: 560px;
-
-  display: flex;
-
-  align-items: center;
-  justify-content: center;
-
-  overflow: hidden;
-
-  color: var(--white);
-
-  text-align: center;
-}
-
-.vision-image {
-  position: absolute;
-
-  inset: 0;
-
-  background-image:
-    url("/images/gallery/gallery-5.jpeg");
-
-  background-size: cover;
-
-  background-position: center;
-}
-
-.vision-overlay {
-  position: absolute;
-
-  inset: 0;
-
-  background:
-    linear-gradient(
-      135deg,
-      rgba(67, 28, 7, 0.92),
-      rgba(184, 92, 22, 0.78)
-    );
-}
-
-.vision-content {
-  position: relative;
-
-  z-index: 2;
-
-  width: min(850px, calc(100% - 40px));
-
-  margin: 0 auto;
-}
-
-.vision-content .about-section-number,
-.vision-content .about-section-eyebrow {
-  color: rgba(255, 255, 255, 0.9);
-}
-
-.vision-content h2 {
-  margin: 0 0 20px;
-
-  color: var(--white);
-
-  font-family: Georgia, "Times New Roman", serif;
-
-  font-size: clamp(42px, 6vw, 68px);
-
-  font-weight: 500;
-
-  line-height: 1.17;
-}
-
-.vision-line {
-  width: 70px;
-  height: 1px;
-
-  margin: 0 auto 23px;
-
-  background: var(--light-gold);
-}
-
-.vision-content > p {
-  max-width: 680px;
-
-  margin: 0 auto;
-
-  color: rgba(255, 255, 255, 0.88);
-
-  font-size: 15px;
-
+  gap: 5px;
+  max-width: 620px;
+  margin: 18px auto 0;
+  color: var(--about-brown);
+  font-family: Georgia, "Noto Serif Tamil", serif;
+  font-size: 18px;
+  font-weight: 400;
   line-height: 1.85;
-}
-
-.vision-values {
-  display: flex;
-
-  justify-content: center;
-
-  flex-wrap: wrap;
-
-  gap: 8px;
-
-  margin-top: 28px;
-}
-
-.vision-values span {
-  padding: 9px 17px;
-
-  border: 1px solid rgba(255, 255, 255, 0.38);
-
-  color: var(--white);
-
-  font-size: 11px;
-}
-
-
-/* =========================================================
-   06 — SERVICE
-========================================================= */
-
-.service-image-grid {
-  position: relative;
-
-  min-height: 440px;
-}
-
-.service-image-main {
-  position: absolute;
-
-  left: 0;
-  top: 0;
-
-  width: 82%;
-
-  overflow: hidden;
-
-  border: 1px solid var(--gold);
-}
-
-.service-image-main img {
-  aspect-ratio: 4 / 3;
-
-  object-fit: cover;
-}
-
-.service-image-small {
-  position: absolute;
-
-  right: 0;
-  bottom: 0;
-
-  width: 43%;
-
-  overflow: hidden;
-
-  border: 7px solid var(--white);
-  outline: 1px solid var(--gold);
-}
-
-.service-image-small img {
-  aspect-ratio: 1 / 1;
-
-  object-fit: cover;
-}
-
-.service-quote {
-  margin-top: 22px;
-
-  padding: 18px 20px;
-
-  border-top: 1px solid var(--gold);
-
-  border-bottom: 1px solid var(--border);
-
   text-align: center;
 }
 
-.service-quote > span {
+.about-final-message span {
   display: block;
-
-  color: var(--gold);
-
-  font-family: Georgia, "Times New Roman", serif;
-
-  font-size: 38px;
-
-  line-height: 0.6;
+  max-width: 100%;
 }
-
-.service-quote p {
-  margin: 8px 0 0;
-
-  color: var(--dark-saffron);
-
-  font-family: Georgia, "Times New Roman", serif;
-
-  font-size: 20px;
-
-  font-style: italic;
-}
-
-
-/* =========================================================
-   07 — GURUPADAM
-========================================================= */
-
-.gurupadam-section {
-  position: relative;
-
-  min-height: 560px;
-
-  display: flex;
-
-  align-items: center;
-  justify-content: center;
-
-  overflow: hidden;
-
-  color: var(--white);
-
-  text-align: center;
-}
-
-.gurupadam-background {
-  position: absolute;
-
-  inset: 0;
-
-  background-image:
-    url("/images/gallery/gallery-8.jpeg");
-
-  background-size: cover;
-
-  background-position: center;
-}
-
-.gurupadam-overlay {
-  position: absolute;
-
-  inset: 0;
-
-  background:
-    linear-gradient(
-      135deg,
-      rgba(74, 30, 7, 0.94),
-      rgba(169, 72, 13, 0.80)
-    );
-}
-
-.gurupadam-content {
-  position: relative;
-
-  z-index: 2;
-
-  width: min(820px, calc(100% - 40px));
-
-  margin: 0 auto;
-}
-
-.gurupadam-content .about-section-number,
-.gurupadam-content .about-section-eyebrow {
-  color: rgba(255, 255, 255, 0.9);
-}
-
-.gurupadam-content h2 {
-  margin: 0 0 12px;
-
-  color: var(--white);
-
-  font-family: Georgia, "Times New Roman", serif;
-
-  font-size: clamp(48px, 6vw, 74px);
-
-  font-weight: 500;
-
-  line-height: 1.05;
-}
-
-.gurupadam-om {
-  margin-bottom: 20px;
-
-  color: var(--light-gold);
-
-  font-size: 36px;
-}
-
-.gurupadam-content > p {
-  max-width: 700px;
-
-  margin: 0 auto 14px;
-
-  color: rgba(255, 255, 255, 0.88);
-
-  font-size: 15px;
-
-  line-height: 1.8;
-}
-
-.gurupadam-emphasis {
-  margin-top: 25px !important;
-
-  color: var(--white) !important;
-
-  font-family: Georgia, "Times New Roman", serif;
-
-  font-size: 21px !important;
-
-  font-style: italic;
-
-  line-height: 1.7 !important;
-}
-
-
-
-
-/* =====================================================
-   ABOUT — FINAL SPIRITUAL SECTION
-===================================================== */
-
-.about-final-section {
-  position: relative;
-  background: var(--white);
-  padding: 72px 20px 58px;
-  text-align: center;
-}
-
-.about-final-container {
-  width: min(1100px, 100%);
-  margin: 0 auto;
-}
-
-/* OM */
-
-.about-final-om {
-  margin-bottom: 18px;
-  color: var(--gold);
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: 38px;
-  line-height: 1;
-}
-
-/* EYEBROW */
-
-.about-final-eyebrow {
-  margin: 0 0 18px;
-  color: var(--deep-saffron);
-  font-family: Georgia, "Noto Serif Tamil", serif;
-  font-size: 13px;
-  font-weight: 600;
-  letter-spacing: 2px;
-}
-
-/* MAIN TITLE */
-
-.about-final-title {
-  max-width: 850px;
-  margin: 0 auto;
-
-  color: var(--deep-brown);
-
-  font-family: Georgia, "Noto Serif Tamil", serif;
-  font-size: clamp(34px, 4.2vw, 54px);
-  font-weight: 500;
-  line-height: 1.35;
-}
-
-/* MESSAGE */
-
-.about-final-message {
-  margin-top: 28px;
-}
-
-.about-final-message p {
-  margin: 0 0 7px;
-
-  color: var(--muted);
-
-  font-family: Georgia, "Noto Serif Tamil", serif;
-  font-size: 16px;
-  line-height: 1.7;
-}
-
-.about-final-message p:last-child {
-  margin-bottom: 0;
-}
-
-/* SABKA MALIK EK */
 
 .about-final-quote {
-  margin-top: 20px;
-
-  color: var(--deep-saffron);
-
+  margin: 24px 0 0;
+  color: var(--about-deep-saffron);
   font-family: Georgia, "Times New Roman", serif;
   font-size: 27px;
   font-weight: 500;
 }
 
-/* DIVIDER */
-
-.about-final-divider {
-  width: 100%;
-  height: 1px;
-
-  margin: 28px auto 22px;
-
-  background: var(--light-gold);
+.about-final-actions {
+  justify-content: center;
+  margin-top: 29px;
 }
 
-/* BUTTONS */
-
-.about-final-links {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 32px;
+.about-button-dark {
+  background: var(--about-deep-saffron);
+  color: var(--about-white);
 }
 
-.about-final-links a {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
+.about-button-dark:hover {
+  background: var(--about-brown);
+}
 
-  min-width: 150px;
-  padding: 10px 20px;
-
-  border: 1px solid var(--gold);
-
-  color: var(--brown);
+.about-button-outline {
+  border-color: var(--about-line);
   background: transparent;
-
-  font-family: Georgia, "Noto Serif Tamil", serif;
-  font-size: 13px;
-  text-decoration: none;
-
-  transition:
-    background 0.25s ease,
-    color 0.25s ease,
-    border-color 0.25s ease;
+  color: var(--about-brown);
 }
 
-.about-final-links a:hover {
-  background: var(--deep-saffron);
-  border-color: var(--deep-saffron);
-  color: var(--white);
+.about-button-outline:hover {
+  border-color: var(--about-deep-saffron);
+  color: var(--about-deep-saffron);
 }
 
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 950px) {
+  .about-container,
+  .about-hero-content {
+    width: calc(100% - 48px);
+  }
+
+  .about-intro-grid,
+  .about-salem-grid,
+  .about-service-grid {
+    gap: 44px;
+  }
+
+  .about-purpose-heading {
+    gap: 35px;
+  }
+
+  .about-purpose-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .about-purpose-item {
+    min-height: 185px;
+    padding: 24px 22px 25px 0;
+    border-bottom: 1px solid var(--about-line);
+  }
+
+  .about-purpose-item + .about-purpose-item {
+    padding-left: 22px;
+  }
+
+  .about-purpose-item:nth-child(2) {
+    border-right: 0;
+  }
+
+  .about-purpose-item:nth-child(3),
+  .about-purpose-item:nth-child(4) {
+    border-bottom: 0;
+  }
+}
 
 /* =====================================================
    MOBILE
 ===================================================== */
 
-@media (max-width: 600px) {
-
-  .about-final-section {
-    padding: 58px 18px 45px;
+@media (max-width: 700px) {
+  .about-container,
+  .about-hero-content {
+    width: calc(100% - 36px);
   }
-
-  .about-final-om {
-    font-size: 32px;
-    margin-bottom: 15px;
-  }
-
-  .about-final-eyebrow {
-    font-size: 12px;
-    margin-bottom: 15px;
-  }
-
-  .about-final-title {
-    font-size: 31px;
-    line-height: 1.4;
-  }
-
-  .about-final-message {
-    margin-top: 24px;
-  }
-
-  .about-final-message p {
-    font-size: 14px;
-    line-height: 1.65;
-  }
-
-  .about-final-quote {
-    margin-top: 18px;
-    font-size: 24px;
-  }
-
-  .about-final-divider {
-    margin: 25px auto 20px;
-  }
-
-  .about-final-links {
-    gap: 12px;
-    flex-wrap: wrap;
-  }
-
-  .about-final-links a {
-    min-width: 140px;
-    padding: 9px 15px;
-    font-size: 12px;
-  }
-}
-
-/* =========================================================
-   TABLET
-========================================================= */
-
-@media (max-width: 900px) {
-
-  .about-story-container {
-    grid-template-columns: 1fr;
-
-    gap: 35px;
-  }
-
-  .about-story-image {
-    order: 1;
-  }
-
-  .about-story-content {
-    order: 2;
-  }
-
-
-  /* Purpose */
-
-  .purpose-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .purpose-item:nth-child(2) {
-    border-right: none;
-  }
-
-  .purpose-item:nth-child(3),
-  .purpose-item:nth-child(4) {
-    border-top: 1px solid var(--border);
-  }
-
-
-  /* Service */
-
-  .service-image-grid {
-    min-height: 500px;
-  }
-}
-
-
-/* =========================================================
-   MOBILE
-========================================================= */
-
-@media (max-width: 600px) {
-
-  /* Hero */
 
   .about-hero {
-    min-height: 430px;
+    min-height: 510px;
+    align-items: flex-end;
+  }
+
+  .about-hero-image {
+    background-position: 58% center;
+  }
+
+  .about-hero-overlay {
+    background: linear-gradient(0deg, rgba(26, 15, 8, .96), rgba(26, 15, 8, .65) 65%, rgba(26, 15, 8, .28));
+  }
+
+  .about-hero-content {
+    padding: 95px 0 80px;
   }
 
   .about-hero-eyebrow {
-    font-size: 10px;
-
-    letter-spacing: 2.5px;
-  }
-
-  .about-hero h1 {
-    font-size: 48px;
-  }
-
-  .about-hero-subtitle {
     font-size: 15px;
   }
 
-
-  /* Story */
-
-  .about-story-section {
-    padding: 52px 0;
+  .about-hero h1 {
+    font-size: clamp(37px, 9vw, 51px);
+    line-height: 1.27;
   }
 
-  .about-story-container {
-    width: min(100% - 30px, 1180px);
-
-    gap: 30px;
-  }
-
-  .about-story-content h2 {
-    font-size: 34px;
-
-    margin-bottom: 15px;
-  }
-
-  .about-story-content > p {
-    margin-bottom: 12px;
-
-    font-size: 14px;
-
-    line-height: 1.75;
-  }
-
-  .about-highlight {
-    margin-top: 16px;
-
-    padding: 14px 17px;
-
+  .about-hero-subtitle {
+    margin-top: 17px;
     font-size: 14px;
   }
 
-
-  /* Journey */
-
-  .journey-section {
-    padding: 58px 0;
-  }
-
-  .journey-container {
-    width: min(100% - 30px, 950px);
-  }
-
-  .journey-heading {
-    margin-bottom: 34px;
-  }
-
-  .journey-heading h2 {
-    font-size: 40px;
-  }
-
-  .journey-heading > p:last-child {
-    font-size: 13px;
-
-    line-height: 1.7;
-  }
-
-  .journey-timeline::before {
-    left: 23px;
-  }
-
-  .journey-step {
-    grid-template-columns: 47px 1fr;
-
+  .about-hero-actions {
     gap: 17px;
-
-    padding-bottom: 25px;
+    margin-top: 25px;
   }
 
-  .journey-step-number {
-    width: 47px;
-    height: 47px;
+  .about-hero-caption {
+    right: 18px;
+    bottom: 15px;
+    font-size: 8px;
+  }
 
+  .about-button {
+    min-height: 43px;
+    padding: 10px 17px;
+    font-size: 12px;
+  }
+
+  .about-intro-section,
+  .about-salem-section,
+  .about-purpose-section,
+  .about-service-section {
+    padding: 60px 0;
+  }
+
+  .about-intro-grid,
+  .about-salem-grid,
+  .about-service-grid,
+  .about-purpose-heading {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .about-intro-media {
+    padding: 0 18px 18px 0;
+  }
+
+  .about-intro-media img {
+    aspect-ratio: 5 / 4;
+  }
+
+  .about-image-note {
+    right: 7px;
+    bottom: 27px;
+    gap: 8px;
+    padding: 10px 12px;
     font-size: 10px;
   }
 
-  .journey-step-content h3 {
-    font-size: 21px;
+  .about-intro-copy h2,
+  .about-salem-copy h2,
+  .about-service-copy h2 {
+    font-size: clamp(32px, 8vw, 43px);
   }
 
-  .journey-step-content p {
-    font-size: 12px;
-
-    line-height: 1.7;
+  .about-intro-copy > p:not(.about-eyebrow),
+  .about-salem-copy > p:not(.about-eyebrow),
+  .about-service-copy > p:not(.about-eyebrow) {
+    font-size: 14px;
+    line-height: 1.9;
   }
 
-
-  /* Purpose */
-
-  .purpose-section {
-    padding: 55px 0;
+  .about-lead {
+    font-size: 17px !important;
   }
 
-  .purpose-container {
-    width: min(100% - 30px, 1100px);
+  .about-journey-section {
+    padding: 65px 0 70px;
   }
 
-  .purpose-heading {
-    margin-bottom: 30px;
+  .about-journey-heading {
+    margin-bottom: 37px;
   }
 
-  .purpose-heading h2 {
+  .about-journey-heading h2 {
     font-size: 38px;
   }
 
-  .purpose-heading > p:last-child {
-    font-size: 13px;
-
-    line-height: 1.7;
+  .about-journey-heading > p:last-child {
+    font-size: 14px;
   }
 
-  .purpose-grid {
+  .about-timeline {
+    margin-left: 2px;
+  }
+
+  .about-timeline-item {
+    grid-template-columns: 17px minmax(0, 1fr);
+    gap: 14px;
+    padding-bottom: 25px;
+  }
+
+  .about-timeline-copy {
+    padding-bottom: 20px;
+  }
+
+  .about-timeline-copy h3 {
+    font-size: 20px;
+  }
+
+  .about-timeline-copy > p:last-child {
+    font-size: 13px;
+    line-height: 1.8;
+  }
+
+  .about-salem-media img {
+    aspect-ratio: 5 / 4;
+  }
+
+  .about-purpose-heading {
+    margin-bottom: 32px;
+  }
+
+  .about-purpose-heading h2 {
+    font-size: 38px;
+  }
+
+  .about-purpose-heading > p {
+    font-size: 14px;
+    line-height: 1.85;
+  }
+
+  .about-purpose-list {
     grid-template-columns: 1fr;
   }
 
-  .purpose-item,
-  .purpose-item:nth-child(2),
-  .purpose-item:nth-child(3),
-  .purpose-item:nth-child(4) {
+  .about-purpose-item,
+  .about-purpose-item + .about-purpose-item {
+    display: grid;
+    grid-template-columns: 34px minmax(0, 1fr);
+    gap: 16px;
     min-height: auto;
-
-    padding: 22px 18px;
-
-    border-right: none;
-
-    border-top: 1px solid var(--border);
+    padding: 21px 0;
+    border-right: 0;
+    border-bottom: 1px solid var(--about-line);
   }
 
-  .purpose-item:first-child {
-    border-top: none;
+  .about-purpose-item:nth-child(3) {
+    border-bottom: 1px solid var(--about-line);
   }
 
-
-  /* Vision */
-
-  .vision-section {
-    min-height: 500px;
+  .about-purpose-item:last-child {
+    border-bottom: 0;
   }
 
-  .vision-content {
-    width: min(100% - 30px, 850px);
+  .about-purpose-symbol {
+    font-size: 23px;
   }
 
-  .vision-content h2 {
-    font-size: 42px;
+  .about-purpose-copy h3 {
+    font-size: 21px;
   }
 
-  .vision-content > p {
+  .about-purpose-copy p {
     font-size: 13px;
-
-    line-height: 1.75;
   }
 
-  .vision-values {
-    margin-top: 22px;
+  .about-vision-section {
+    min-height: 440px;
   }
 
-  .vision-values span {
-    padding: 8px 13px;
+  .about-vision-overlay {
+    background: rgba(35, 18, 8, .84);
   }
 
-
-  /* Service */
-
-  .service-image-grid {
-    min-height: 370px;
+  .about-vision-content {
+    padding-top: 65px;
+    padding-bottom: 65px;
   }
 
-  .service-image-main {
-    width: 88%;
+  .about-vision-content h2 {
+    font-size: clamp(36px, 8.5vw, 48px);
   }
 
-  .service-image-small {
-    width: 45%;
-
-    border-width: 5px;
+  .about-vision-content > p:not(.about-eyebrow) {
+    font-size: 14px;
   }
 
-  .service-quote {
-    margin-top: 18px;
-
-    padding: 15px 16px;
+  .about-vision-values {
+    gap: 7px;
   }
 
-  .service-quote p {
-    font-size: 18px;
+  .about-vision-values span {
+    padding: 7px 11px;
+    font-size: 11px;
   }
 
-
-  /* Gurupadam */
-
-  .gurupadam-section {
-    min-height: 500px;
+  .about-service-gallery {
+    min-height: 390px;
   }
 
-  .gurupadam-content {
-    width: min(100% - 30px, 820px);
+  .about-service-image-main {
+    width: 84%;
   }
 
-  .gurupadam-content h2 {
-    font-size: 48px;
+  .about-service-image-small {
+    width: 42%;
+    padding: 6px;
   }
 
-  .gurupadam-content > p {
-    font-size: 13px;
-
-    line-height: 1.75;
+  .about-service-quote p {
+    font-size: 16px;
   }
 
-  .gurupadam-emphasis {
-    font-size: 19px !important;
+  .about-identity-section {
+    min-height: 480px;
   }
 
-
-  /* Final */
-
-  .about-final {
-    padding: 48px 18px;
+  .about-identity-overlay {
+    background: rgba(31, 16, 7, .86);
   }
 
-  .about-final h2 {
-    font-size: 34px;
+  .about-identity-content {
+    padding-top: 65px;
+    padding-bottom: 65px;
   }
 
-  .about-final > p:not(.about-final-eyebrow) {
-    font-size: 17px;
-
-    line-height: 1.7;
+  .about-identity-content h2 {
+    font-size: clamp(43px, 10vw, 59px);
   }
 
-  .about-final-links {
-    flex-direction: column;
+  .about-identity-content > p:not(.about-eyebrow) {
+    font-size: 14px;
   }
 
-  .about-final-links a {
-    width: 100%;
+  .about-identity-content .about-identity-emphasis {
+    font-size: 16px !important;
+  }
+
+  .about-final-section {
+    padding: 60px 0 54px;
+  }
+
+  .about-final-message {
+    gap: 3px;
+    margin-top: 15px;
+    font-size: 14px;
+    line-height: 1.9;
+  }
+
+  .about-final-quote {
+    font-size: 24px;
+  }
+
+  .about-final-actions {
+    gap: 12px;
   }
 }
 
-
-/* =========================================================
-   REDUCED MOTION
-========================================================= */
-
 @media (prefers-reduced-motion: reduce) {
-
-  .about-story-image img,
-  .about-final-links a {
-    transition: none;
+  .about-page *,
+  .about-page *::before,
+  .about-page *::after {
+    scroll-behavior: auto !important;
+    transition-duration: .01ms !important;
   }
 }

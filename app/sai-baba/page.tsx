@@ -1,1058 +1,196 @@
-import Link from "next/link";
 import "./sai-baba.css";
 
 export default function SaiBabaPage() {
   return (
     <main className="sai-page">
+      <section className="sai-hero">
+        <div className="sai-hero-overlay" aria-hidden="true" />
+        <div className="sai-hero-content">
+          <p className="sai-hero-eyebrow">சாய் சத்சங் @ குருபாதம்</p>
+          <h1>சாய்பாபா</h1>
+          <div className="sai-hero-line" aria-hidden="true" />
+          <p className="sai-hero-subtitle">குருவின் மகத்துவம் · நம்பிக்கை · பொறுமை</p>
+        </div>
+      </section>
 
-      {/* =====================================================
-          HERO
-      ===================================================== */}
-
-     <section className="sai-hero">
-
-  <div className="sai-hero-overlay" />
-
-  <div className="sai-hero-content">
-     <p className="about-hero-eyebrow">
-      ஸ்ரீ சாய் தபோவனம்
-    </p>
-
-    <h1>சாய்பாபா</h1>
-
-    <div className="hero-line" />
-
-    <p className="hero-subtitle">
-      நம்பிக்கை • பொறுமை • அன்பு • சேவை
-    </p>
-
-
-
-  </div>
-
-</section>
-
-
-      {/* =====================================================
-          01 — INTRODUCTION
-      ===================================================== */}
-
-      <section className="story-section sai-intro">
-
-        <div className="story-container">
-
-          <div className="story-content">
-
-            <span className="section-number">
-              01
-            </span>
-
-            <p className="section-eyebrow">
-              ஷீரடியின் புனித குரு
-            </p>
-
-            <h2>
-              சாய்பாபா —
-              <br />
-              அன்பும் கருணையும்
-            </h2>
-
-            <p>
-              ஷீரடி சாய்பாபா, அன்பு, கருணை, நம்பிக்கை,
-              பொறுமை மற்றும் சேவையின் வழியாக மனிதர்களை
-              ஆன்மிகப் பாதையை நோக்கி அழைத்த குருவாக
-              பக்தர்களால் போற்றப்படுகிறார்.
-            </p>
-
-            <p>
-              எளிமையான வாழ்க்கையை வாழ்ந்த சாய்பாபா,
-              தன்னை நாடி வந்தவர்களை மதம், சாதி,
-              சமூக வேறுபாடுகளைக் கடந்து ஒரே அன்புடன்
-              அணுகினார்.
-            </p>
-
-            <p>
-              அவருடைய வாழ்க்கையும் போதனைகளும்,
-              வெளிப்புற வேறுபாடுகளைத் தாண்டி ஒவ்வொரு
-              உயிரிலும் இருக்கும் தெய்வீகத்தை உணரச் செய்கின்றன.
-            </p>
-
-            <div className="story-highlight">
-
-              <strong>
-                “Sabka Malik Ek”
-              </strong>
-
-              <span>
-                எல்லோருக்கும் ஒரே இறைவன்.
-              </span>
-
+      <section className="guru-section guru-intro">
+        <div className="guru-container">
+          <div className="guru-intro-grid">
+            <div className="guru-side-heading">
+              <p className="guru-eyebrow">குருவின் மகத்துவம்</p>
+              <h2>மாதா, பிதா,<br />குரு, தெய்வம்</h2>
+              <div className="guru-short-line" aria-hidden="true" />
             </div>
-
-          </div>
-
-
-          <div className="story-image">
-
-            <img
-              src="/images/gallery/gallery-1.jpeg"
-              alt="Shirdi Sai Baba"
-            />
-
-          </div>
-
-        </div>
-
-      </section>
-
-
-      {/* =====================================================
-          02 — LIFE
-      ===================================================== */}
-
-      <section className="story-section reverse-story sai-life">
-
-        <div className="story-container">
-
-          <div className="story-image">
-
-            <img
-              src="/images/gallery/gallery-2.jpeg"
-              alt="Sai Baba spiritual surroundings"
-            />
-
-          </div>
-
-
-          <div className="story-content">
-
-            <span className="section-number">
-              02
-            </span>
-
-            <p className="section-eyebrow">
-              ஒரு எளிய வாழ்க்கை
-            </p>
-
-            <h2>
-              ஷீரடி சாய்பாபாவின்
-              <br />
-              வாழ்க்கைப் பயணம்
-            </h2>
-
-            <p>
-              சாய்பாபாவின் பிறப்பு மற்றும் ஆரம்பகால வாழ்க்கை
-              குறித்த பல தகவல்கள் தெளிவாக அறியப்படவில்லை.
-              அவர் தனது பிறப்பிடம், குடும்பம் போன்ற விபரங்களைப்
-              பற்றி அதிகம் பேசவில்லை.
-            </p>
-
-            <p>
-              இளம் வயதில் ஷீரடியில் தோன்றிய அவர்,
-              வேப்பமரத்தின் கீழ் தியானத்தில் இருந்ததாக
-              பக்தர்களின் மரபு கூறுகிறது.
-            </p>
-
-            <p>
-              பின்னர் ஷீரடியையே தனது ஆன்மிக வாழ்வின்
-              மையமாகக் கொண்டு, எளிமையாக வாழ்ந்து,
-              தன்னை நாடி வந்த மக்களுக்கு ஆறுதலையும்
-              வழிகாட்டுதலையும் வழங்கினார்.
-            </p>
-
-
-            <div className="life-points">
-
-              <div>
-
-                <span>01</span>
-
-                <strong>
-                  ஷீரடி
-                </strong>
-
-                <p>
-                  பக்தர்களின் ஆன்மிகப் பயணத்தின்
-                  முக்கியத் தலமாக மாறியது.
-                </p>
-
-              </div>
-
-
-              <div>
-
-                <span>02</span>
-
-                <strong>
-                  துவாரகாமாய்
-                </strong>
-
-                <p>
-                  அனைவரும் ஒன்றாகக் கூடும்
-                  ஆன்மிகச் சூழலாக விளங்கியது.
-                </p>
-
-              </div>
-
+            <div className="guru-copy">
+              <p className="guru-lead">தாய், தந்தை, குரு, தெய்வம் — ஒவ்வொருவருக்கும் நம் வாழ்க்கையில் தனித்துவமான இடம் இருக்கிறது.</p>
+              <p>“மாதா, பிதா, குரு, தெய்வம்” என்று நாம் கூறுகிறோம். இந்த வரிசையில் தாய்க்கும் தந்தைக்கும் அடுத்ததாகக் குருவும், குருவுக்கு அடுத்ததாகத் தெய்வமும் இடம்பெறுகின்றன.</p>
+              <p>தாய், தந்தை மற்றும் தெய்வத்திடம் நாம் வேண்டும்போது, நமக்குத் தேவையான உதவிகளை அவர்கள் வழங்குகிறார்கள். ஆனால், குரு நாம் அவரை அழைப்பதற்கு முன்பே நம் வாழ்க்கைக்குள் வந்து, நமக்குள் இருக்கும் தேவையற்ற பற்றுகளையும் அறியாமையையும் அகற்றும் பணியை மேற்கொள்கிறார்.</p>
+              <p>உண்மையில், நாம் குருவுக்குச் சேவை செய்ய வேண்டும். ஆனால், நம்முடைய உள்ளத்தில் இருக்கும் அறியாமையையும் அகங்காரத்தையும் நீக்கி நம்மை நல்வழிப்படுத்துவதன் மூலம் குருவே நமக்குச் சேவை செய்கிறார்.</p>
             </div>
-
           </div>
-
+          <div className="guru-mantra">
+            <span className="guru-mantra-om" aria-hidden="true">ॐ</span>
+            <p>குரு பிரம்மா, குரு விஷ்ணு, குருதேவோ மகேஸ்வரா,<br className="desktop-break" /> குரு சாக்ஷாத் பரப்பிரம்மா, தஸ்மை ஸ்ரீ குரவே நமஹ.</p>
+          </div>
         </div>
-
       </section>
 
-
-      {/* =====================================================
-          03 — DWARKAMAI
-      ===================================================== */}
-
-      <section className="sai-immersive">
-
-        <div className="sai-immersive-image" />
-
-        <div className="sai-immersive-overlay" />
-
-
-        <div className="sai-immersive-content">
-
-          <span className="section-number">
-            03
-          </span>
-
-          <p className="section-eyebrow">
-            அனைவரையும் அரவணைத்த அன்பு
-          </p>
-
-          <h2>
-            துவாரகாமாய்
-          </h2>
-
-          <div className="immersive-line" />
-
-          <p>
-            ஷீரடியில் சாய்பாபா வாழ்ந்த பழைய மசூதி
-            பின்னர் துவாரகாமாய் என்று அழைக்கப்பட்டது.
-          </p>
-
-          <p>
-            மதம், சாதி, செல்வம் அல்லது சமூக நிலை போன்ற
-            வேறுபாடுகளைக் கடந்து மக்கள் அவரைச் சுற்றி
-            ஒன்று கூடினர்.
-          </p>
-
-          <p>
-            அவர்களின் கவலைகளைக் கேட்டும், ஆறுதலளித்தும்,
-            நம்பிக்கையுடனும் பொறுமையுடனும் வாழ
-            வழிகாட்டினார்.
-          </p>
-
-
-          <div className="immersive-emphasis">
-
-            <span>அன்பு</span>
-            <span>கருணை</span>
-            <span>சேவை</span>
-
+      <section className="guru-feature-section guru-light-feature">
+        <div className="guru-container guru-feature-grid">
+          <div className="guru-feature-image">
+            <img src="/images/gallery/gallery-3.jpeg" alt="சாய் வழிபாட்டின் ஆன்மிகச் சூழல்" />
           </div>
-
+          <div className="guru-feature-content">
+            <p className="guru-eyebrow">அறியாமையிலிருந்து ஞானத்திற்கு</p>
+            <h2>உள்ளத்தில் இருக்கும்<br />ஒளியை உணர்வோம்</h2>
+            <div className="guru-short-line" aria-hidden="true" />
+            <p>அறியாமை என்பது நம் உள்ளத்தில் இருக்கும் இருள். அந்த இருளிலிருந்து நம்மை வெளியே கொண்டு வந்து, நமக்குள் ஏற்கனவே இருக்கும் ஒளியை நமக்கே உணர்த்துபவர் குரு.</p>
+            <p>நாம் யார், நம்முடைய உண்மையான இயல்பு என்ன, நம் வாழ்க்கையின் நோக்கம் என்ன என்பதைப் புரிந்துகொள்ள ஒரு குரு நமக்குத் தேவைப்படுகிறார்.</p>
+            <p className="guru-feature-emphasis">குரு நமக்குள் இருக்கும் ஒளியை நமக்கே காட்டுகிறார்.</p>
+          </div>
         </div>
-
       </section>
 
-
-      {/* =====================================================
-          04 — TEACHINGS
-      ===================================================== */}
-
-      <section className="teachings-section">
-
-        <div className="teachings-container">
-
-
-          <div className="teachings-heading">
-
-            <span className="section-number">
-              04
-            </span>
-
-            <p className="section-eyebrow">
-              சாயியின் வழிகாட்டுதல்
-            </p>
-
-            <h2>
-              சாயியின் போதனைகள்
-            </h2>
-
-            <p>
-              சாய்பாபாவின் போதனைகள் எளிமையானவை.
-              அவை அன்றாட வாழ்க்கையில் நம்பிக்கை,
-              பொறுமை, அன்பு மற்றும் சேவையை
-              வாழ்வதற்கான பாதையை நினைவூட்டுகின்றன.
-            </p>
-
+      <section className="guru-section guru-purpose">
+        <div className="guru-container guru-editorial-grid">
+          <div className="guru-side-heading">
+            <p className="guru-eyebrow">குருவின் தனித்துவம்</p>
+            <h2>அழிப்பதல்ல,<br />அகற்றுவதே<br />குருவின் பணி</h2>
+            <div className="guru-short-line" aria-hidden="true" />
           </div>
-
-
-          <div className="teachings-grid">
-
-
-            {/* 01 */}
-
-            <article className="teaching-card">
-
-              <div className="teaching-top">
-
-                <span>01</span>
-
-                <div>ॐ</div>
-
-              </div>
-
-              <h3>
-                நம்பிக்கை
-              </h3>
-
-              <span className="teaching-english">
-                Shraddha
-              </span>
-
-              <p>
-                இறைவனின் அருளிலும், குருவின்
-                வழிகாட்டுதலிலும் மனப்பூர்வமான
-                நம்பிக்கையுடன் பயணித்தல்.
-              </p>
-
-            </article>
-
-
-            {/* 02 */}
-
-            <article className="teaching-card">
-
-              <div className="teaching-top">
-
-                <span>02</span>
-
-                <div>✦</div>
-
-              </div>
-
-              <h3>
-                பொறுமை
-              </h3>
-
-              <span className="teaching-english">
-                Saburi
-              </span>
-
-              <p>
-                வாழ்க்கையின் சூழ்நிலைகளை நம்பிக்கையுடன்
-                ஏற்றுக்கொண்டு, சரியான நேரத்திற்காக
-                பொறுமையுடன் காத்திருத்தல்.
-              </p>
-
-            </article>
-
-
-            {/* 03 */}
-
-            <article className="teaching-card">
-
-              <div className="teaching-top">
-
-                <span>03</span>
-
-                <div>♡</div>
-
-              </div>
-
-              <h3>
-                அன்பு
-              </h3>
-
-              <span className="teaching-english">
-                Love
-              </span>
-
-              <p>
-                ஒவ்வொரு உயிரையும் கருணையுடனும்
-                மரியாதையுடனும் அணுகி, எதிர்பார்ப்பில்லாமல்
-                அன்பை வழங்குதல்.
-              </p>
-
-            </article>
-
-
-            {/* 04 */}
-
-            <article className="teaching-card">
-
-              <div className="teaching-top">
-
-                <span>04</span>
-
-                <div>🤲</div>
-
-              </div>
-
-              <h3>
-                சேவை
-              </h3>
-
-              <span className="teaching-english">
-                Seva
-              </span>
-
-              <p>
-                தேவையில் இருப்பவர்களுக்கு உதவுவதும்,
-                பிறரின் நலனில் அக்கறை கொள்வதும்
-                இறைநேசத்தின் ஒரு வெளிப்பாடாகும்.
-              </p>
-
-            </article>
-
+          <div className="guru-copy">
+            <p className="guru-lead">குருவின் பணி நம்மைத் தண்டிப்பது அல்ல; நம்மை நல்வழிப்படுத்துவதாகும்.</p>
+            <p>புராணக் கதைகளில் ராமரால் ராவணன் வதைக்கப்பட்டதும், நரசிம்மர் அவதாரத்தில் ஹிரண்யகசிபு வதைக்கப்பட்டதும், நரகாசுரன் தெய்வத்தால் வதைக்கப்பட்டதும் போன்ற நிகழ்வுகள் கூறப்படுகின்றன.</p>
+            <p>ஆனால், குருவின் பணியைப் பற்றிப் பேசும்போது, நமக்குள் இருக்கும் கர்மம், பாவம், அகங்காரம் மற்றும் துர்குணங்களை அகற்றி நம்மை நல்வழிப்படுத்துவதே அவரது தனித்துவமாக எடுத்துரைக்கப்படுகிறது.</p>
+            <p>நம்முடைய குறைகளை உணர்ந்து, அவற்றைக் கடந்து முன்னேறி, இறைவனை நோக்கிய பாதையில் பயணிக்க குரு வழிகாட்டுகிறார்.</p>
           </div>
-
         </div>
-
       </section>
 
-
-      {/* =====================================================
-          05 — SAI BABA'S 11 ASSURANCES
-      ===================================================== */}
-
-      <section className="assurances-section">
-
-        <div className="assurances-background" />
-
-        <div className="assurances-overlay" />
-
-
-        <div className="assurances-container">
-
-
-          {/* HEADING */}
-
-          <div className="assurances-heading">
-
-            <span className="section-number">
-              05
-            </span>
-
-            <p className="section-eyebrow">
-              சாயியின் அருள் வாக்குகள்
-            </p>
-
-            <h2>
-              ஷீர்டி சாய் அவர்களின்
-              <br />
-              <span>
-                11 உறுதிமொழிகள்
-              </span>
-            </h2>
-
-            <div className="assurances-om">
-              ॐ
-            </div>
-
-            <p className="assurances-intro">
-              பக்தர்களுக்கு சாய்பாபா அளித்த அருள்
-              நம்பிக்கையையும் சரணாகதியையும்
-              நினைவூட்டும் உறுதிமொழிகள்.
-            </p>
-
+      <section className="guru-seeking-section">
+        <div className="guru-container guru-feature-grid guru-feature-grid-reverse">
+          <div className="guru-feature-image">
+            <img src="/images/gallery/gallery-2.jpeg" alt="சத்சங்கத்தின் ஆன்மிகச் சூழல்" />
           </div>
-
-
-          {/* ASSURANCES */}
-
-          <div className="assurances-grid">
-
-
-            {/* 01 */}
-
-            <article className="assurance-card">
-
-              <div className="assurance-number">
-                01
-              </div>
-
-              <div className="assurance-content">
-
-                <span className="assurance-label">
-                  உறுதிமொழி
-                </span>
-
-                <p>
-                  ஷிர்டி மண்ணில் கால் பதிப்பவரின் துன்பங்கள் முடிவுக்கு வரும்.
-                </p>
-
-              </div>
-
-              <div className="assurance-symbol">
-                ✦
-              </div>
-
-            </article>
-
-
-            {/* 02 */}
-
-            <article className="assurance-card">
-
-              <div className="assurance-number">
-                02
-              </div>
-
-              <div className="assurance-content">
-
-                <span className="assurance-label">
-                  உறுதிமொழி
-                </span>
-
-                <p>
-                  துயருற்றோர் மசூதியின் படிகளில் ஏறியவுடன்
-                  மகிழ்ச்சியும் ஆனந்தமும் அடைவார்கள்.
-                </p>
-
-              </div>
-
-              <div className="assurance-symbol">
-                ✦
-              </div>
-
-            </article>
-
-
-            {/* 03 */}
-
-            <article className="assurance-card">
-
-              <div className="assurance-number">
-                03
-              </div>
-
-              <div className="assurance-content">
-
-                <span className="assurance-label">
-                  உறுதிமொழி
-                </span>
-
-                <p>
-                  இந்த பூவுலக உடலை விட்டுச் சென்ற பிறகும்
-                  நான் என்றும் சுறுசுறுப்பாகவும் வீரியமாகவும் இருப்பேன்.
-                </p>
-
-              </div>
-
-              <div className="assurance-symbol">
-                ✦
-              </div>
-
-            </article>
-
-
-            {/* 04 */}
-
-            <article className="assurance-card">
-
-              <div className="assurance-number">
-                04
-              </div>
-
-              <div className="assurance-content">
-
-                <span className="assurance-label">
-                  உறுதிமொழி
-                </span>
-
-                <p>
-                  என் சமாதி என் பக்தர்களுக்கு ஆசி வழங்கி,
-                  அவர்களின் தேவைகளைப் பூர்த்தி செய்யும்.
-                </p>
-
-              </div>
-
-              <div className="assurance-symbol">
-                ✦
-              </div>
-
-            </article>
-
-
-            {/* 05 */}
-
-            <article className="assurance-card featured-assurance">
-
-              <div className="assurance-number">
-                05
-              </div>
-
-              <div className="assurance-content">
-
-                <span className="assurance-label">
-                  உறுதிமொழி
-                </span>
-
-                <p>
-                  என் கல்லறையிலிருந்தும் நான் சுறுசுறுப்பாகவும்
-                  வீரியமாகவும் இருப்பேன்.
-                </p>
-
-              </div>
-
-              <div className="assurance-symbol">
-                ✦
-              </div>
-
-            </article>
-
-
-            {/* 06 */}
-
-            <article className="assurance-card">
-
-              <div className="assurance-number">
-                06
-              </div>
-
-              <div className="assurance-content">
-
-                <span className="assurance-label">
-                  உறுதிமொழி
-                </span>
-
-                <p>
-                  என் கல்லறையிலிருந்து என் உடல் பேசும்.
-                </p>
-
-              </div>
-
-              <div className="assurance-symbol">
-                ✦
-              </div>
-
-            </article>
-
-
-            {/* 07 */}
-
-            <article className="assurance-card">
-
-              <div className="assurance-number">
-                07
-              </div>
-
-              <div className="assurance-content">
-
-                <span className="assurance-label">
-                  உறுதிமொழி
-                </span>
-
-                <p>
-                  என்னிடம் வருபவர்கள், என்னிடம் சரணடைபவர்கள்
-                  மற்றும் என்னிடம் அடைக்கலம் தேடுபவர்கள்
-                  அனைவருக்கும் உதவவும் வழிகாட்டவும்
-                  நான் என்றும் உயிரோடு இருக்கிறேன்.
-                </p>
-
-              </div>
-
-              <div className="assurance-symbol">
-                ✦
-              </div>
-
-            </article>
-
-
-            {/* 08 */}
-
-            <article className="assurance-card">
-
-              <div className="assurance-number">
-                08
-              </div>
-
-              <div className="assurance-content">
-
-                <span className="assurance-label">
-                  உறுதிமொழி
-                </span>
-
-                <p>
-                  நீ என்னை நாடினால், நான் உன்னை நாடுவேன்.
-                </p>
-
-              </div>
-
-              <div className="assurance-symbol">
-                ✦
-              </div>
-
-            </article>
-
-
-            {/* 09 */}
-
-            <article className="assurance-card">
-
-              <div className="assurance-number">
-                09
-              </div>
-
-              <div className="assurance-content">
-
-                <span className="assurance-label">
-                  உறுதிமொழி
-                </span>
-
-                <p>
-                  நீர் உமது பாரத்தை என்மேல் சுமத்தினால்,
-                  நான் அதை நிச்சயமாகச் சுமப்பேன்.
-                </p>
-
-              </div>
-
-              <div className="assurance-symbol">
-                ✦
-              </div>
-
-            </article>
-
-
-            {/* 10 */}
-
-            <article className="assurance-card">
-
-              <div className="assurance-number">
-                10
-              </div>
-
-              <div className="assurance-content">
-
-                <span className="assurance-label">
-                  உறுதிமொழி
-                </span>
-
-                <p>
-                  நீங்கள் என் ஆலோசனையையும் உதவியையும்
-                  நாடினால், அது உங்களுக்கு உடனடியாக வழங்கப்படும்.
-                </p>
-
-              </div>
-
-              <div className="assurance-symbol">
-                ✦
-              </div>
-
-            </article>
-
-
-            {/* 11 */}
-
-            <article className="assurance-card final-assurance">
-
-              <div className="assurance-number">
-                11
-              </div>
-
-              <div className="assurance-content">
-
-                <span className="assurance-label">
-                  இறுதி உறுதிமொழி
-                </span>
-
-                <p>
-                  என் பக்தனின் வீட்டில் எந்தக் குறையும் இருக்காது.
-                </p>
-
-              </div>
-
-              <div className="assurance-symbol">
-                ॐ
-              </div>
-
-            </article>
-
+          <div className="guru-feature-content">
+            <p className="guru-eyebrow">குருவைத் தேடுவதும், குரு நம்மைத் தேடி வருவதும்</p>
+            <h2>குரு நம்மைத் தேடி வருவது எவ்வளவு பெரிய பாக்கியம்!</h2>
+            <div className="guru-short-line" aria-hidden="true" />
+            <p>நாம் குருவைத் தேடிச் சென்று வணங்குவதற்கும், குருவே நம்மைத் தேடி வந்து ஆட்கொள்வதற்கும் இடையே பெரிய வித்தியாசம் இருக்கிறது.</p>
+            <p>சேலத்தில் நமக்காக ஒரு குரு வந்து அமர்ந்து, நம்மை நல்வழிப்படுத்துவதற்காக வழிகாட்டும்போது, அது எவ்வளவு பெரிய பாக்கியம்!</p>
+            <p>அத்தகைய அருளைப் பெற்ற நாம், குருவின் வழிகாட்டுதலை ஏற்று, அவரது திருவடிகளில் சரணடைவதே முதன்மையானது.</p>
+            <p className="guru-hand-quote">குரு நம் கையைப் பிடித்துவிட்டால், நாம் சேர வேண்டிய இடத்திற்கு நம்மை வழிநடத்திச் செல்வார்.</p>
           </div>
-
-
-          {/* CLOSING */}
-
-          <div className="assurances-closing">
-
-            <div className="closing-line" />
-
-            <p>
-              சாயியை நாடும் இதயத்திற்கு
-              நம்பிக்கையே வழி.
-            </p>
-
-            <strong>
-              “Sabka Malik Ek”
-            </strong>
-
-            <span>
-              எல்லோருக்கும் ஒரே இறைவன்.
-            </span>
-
-          </div>
-
         </div>
-
       </section>
 
-
-      {/* =====================================================
-          06 — SHRADDHA • SABURI • SABKA MALIK EK
-      ===================================================== */}
-
-      <section className="sai-path-section">
-
-        <div className="sai-path-container">
-
-
-          <div className="sai-path-heading">
-
-            <span className="section-number">
-              06
-            </span>
-
-            <p className="section-eyebrow">
-              சாயியின் பாதை
-            </p>
-
-            <h2>
-              நம்பிக்கை • பொறுமை • ஒற்றுமை
-            </h2>
-
+      <section className="guru-section guru-dharma">
+        <div className="guru-container guru-editorial-grid">
+          <div className="guru-side-heading">
+            <p className="guru-eyebrow">குருவின் தர்மம்</p>
+            <h2>இறைவனை நோக்கி<br />வழிநடத்துவது</h2>
+            <div className="guru-short-line" aria-hidden="true" />
           </div>
-
-
-          <div className="sai-path-grid">
-
-
-            {/* SHRADDHA */}
-
-            <article className="sai-path-item">
-
-              <span className="path-symbol">
-                श्रद्धा
-              </span>
-
-              <span className="path-number">
-                01
-              </span>
-
-              <h3>
-                Shraddha
-              </h3>
-
-              <strong>
-                நம்பிக்கை
-              </strong>
-
-              <p>
-                இறைவனின் அருளிலும், குருவின்
-                வழிகாட்டுதலிலும் முழு நம்பிக்கையுடன்
-                இருப்பது.
-              </p>
-
-            </article>
-
-
-            {/* SABURI */}
-
-            <article className="sai-path-item">
-
-              <span className="path-symbol">
-                सबुरी
-              </span>
-
-              <span className="path-number">
-                02
-              </span>
-
-              <h3>
-                Saburi
-              </h3>
-
-              <strong>
-                பொறுமை
-              </strong>
-
-              <p>
-                அனைத்தும் அதற்குரிய நேரத்தில் நடைபெறும்
-                என்ற நம்பிக்கையுடன் பொறுமையாக
-                காத்திருப்பது.
-              </p>
-
-            </article>
-
-
-            {/* SABKA MALIK EK */}
-
-            <article className="sai-path-item sai-unity-item">
-
-              <span className="path-symbol">
-                ॐ
-              </span>
-
-              <span className="path-number">
-                03
-              </span>
-
-              <h3>
-                Sabka Malik Ek
-              </h3>
-
-              <strong>
-                எல்லோருக்கும் ஒரே இறைவன்.
-              </strong>
-
-              <p>
-                மதம், சாதி, மொழி மற்றும் சமூக
-                வேறுபாடுகளைத் தாண்டி மனிதர்களை
-                அன்பாலும் ஒற்றுமையாலும் இணைக்கும்
-                ஒரு எளிய உண்மை.
-              </p>
-
-            </article>
-
+          <div className="guru-copy">
+            <p>ஒரு தாய்க்குத் தன் குழந்தைகளைப் பேணிப் பாதுகாப்பது கடமையாக இருக்கிறது. தந்தைக்குக் குடும்பத்தைப் பாதுகாப்பது கடமையாக இருக்கிறது. அதுபோல, சகோதரர்களும் சகோதரிகளும் ஒருவரை ஒருவர் கவனித்துக்கொள்கிறார்கள். ஒவ்வொருவருக்கும் அவரவர் கடமையும் தர்மமும் இருக்கின்றன.</p>
+            <p className="guru-lead">அதேபோல், குருவின் தர்மம் நம்மை இறைவனிடம் கொண்டு சேர்ப்பதே.</p>
+            <p>குரு நம் வாழ்க்கைக்குள் வந்துவிட்டால், நம்பிக்கையையும் பொறுமையையும் கடைப்பிடிக்க வழிகாட்டுகிறார். வாழ்க்கையின் இன்ப துன்பங்களில் சிக்கிக்கொள்ளாமல், அவற்றைக் கடந்து இறைவனை நோக்கிச் செல்ல உதவுகிறார்.</p>
+            <p>குருவின் வழிகாட்டுதலின் மீது நம்பிக்கை வைத்து, அவரது திருவடிகளில் சரணடைவதே நம் ஆன்மிகப் பயணத்தில் முக்கியமானதாகும்.</p>
           </div>
-
-
-          <div className="sai-path-closing">
-
-            <span>
-              ॐ
-            </span>
-
-            <p>
-              நம்பிக்கையுடன் நடப்போம்.
-              பொறுமையுடன் காத்திருப்போம்.
-              அன்புடன் ஒன்றிணைவோம்.
-            </p>
-
-          </div>
-
         </div>
-
       </section>
 
-
-      {/* =====================================================
-          07 — SERVICE & LOVE
-      ===================================================== */}
-
-      <section className="service-section">
-
-        <div className="service-image" />
-
-        <div className="service-overlay" />
-
-
-        <div className="service-container">
-
-          <div className="service-content">
-
-            <span className="section-number">
-              07
-            </span>
-
-            <p className="section-eyebrow">
-              அன்பை வாழ்க்கையாக்குவோம்
-            </p>
-
-            <h2>
-              சேவை &amp; அன்பு
-            </h2>
-
-            <div className="service-line" />
-
-            <p className="service-lead">
-              பிறரிடம் நாம் காட்டும் அன்பிலும்,
-              நாம் செய்யும் சேவையிலும்
-              இறைவனை உணர முடியும்.
-            </p>
-
-            <p>
-              பசியுடன் இருப்பவர்களுக்கு உணவு வழங்குவது,
-              தேவையில் இருப்பவர்களுக்கு உதவுவது,
-              ஒருவரின் துயரத்தை புரிந்துகொள்வது —
-              இவை அனைத்தும் அன்பின் வெளிப்பாடுகள்.
-            </p>
-
-            <p>
-              சாய்பாபாவின் பாதையில் சேவை என்பது
-              ஒரு கடமையாக மட்டும் இல்லாமல்,
-              இறைவனை நினைவுகூரும் ஒரு வழியாகும்.
-            </p>
-
+      <section className="guru-feature-section guru-guide-feature">
+        <div className="guru-container guru-feature-grid">
+          <div className="guru-feature-image">
+            <img src="/images/gallery/gallery-5.jpeg" alt="ஆன்மிகப் பயணத்தை நினைவூட்டும் சூழல்" />
           </div>
-
+          <div className="guru-feature-content">
+            <p className="guru-eyebrow">வாழ்க்கைப் பாதையில் வழிகாட்டும் குரு</p>
+            <h2>வழி தெரிந்தவர் காட்டும் பாதை</h2>
+            <div className="guru-short-line" aria-hidden="true" />
+            <p>ஒரு காட்டிற்குள் நான்கு பேர் செல்கிறார்கள் என்று வைத்துக்கொள்வோம். அந்தக் காட்டைப் பற்றி நன்கு அறிந்த ஒருவர் அவர்களுக்கு வழியைக் காட்டுகிறார்.</p>
+            <p>அவர்களில் மூவர் அந்த வழிகாட்டுதலை ஏற்காமல் செல்கிறார்கள். ஆனால், ஒருவர் மட்டும் அவர் கூறிய வழியில் நடக்கிறார். வழிகாட்டுதலை ஏற்றுக்கொண்டவர் பாதுகாப்பாகத் தனது இலக்கை அடைகிறார்; மற்றவர்கள் வழி தெரியாமல் சிரமப்படுகிறார்கள்.</p>
+            <p>நம் வாழ்க்கையும் இதுபோன்றதே. வாழ்க்கையின் உண்மையான பாதையை அறியாமல் குழப்பத்தில் இருக்கும்போது, குரு நமக்கு வழிகாட்டுகிறார். அவரது வழிகாட்டுதலை ஏற்றுக்கொண்டால், வாழ்க்கைப் பாதையில் தடுமாறாமல் முன்னேற முடியும்.</p>
+            <p className="guru-feature-emphasis">ஒரு ஆமை தண்ணீரில் இருக்கும் தனது குட்டிகளைப் பார்வையாலேயே பேணுவது போல, குருவும் நம்மைக் கவனித்துப் பாதுகாக்கிறார்.</p>
+          </div>
         </div>
-
       </section>
 
-
-      {/* =====================================================
-          FINAL
-      ===================================================== */}
-
-      <section className="sai-final">
-
-        <div className="sai-final-container">
-
-          <div className="final-om">
-            ॐ
+      <section className="guru-section guru-faith">
+        <div className="guru-container">
+          <div className="guru-faith-heading">
+            <p className="guru-eyebrow">குரு நம்மிடம் எதிர்பார்ப்பது</p>
+            <h2>இரண்டே விஷயங்கள்</h2>
+            <p>குருவுக்கு நம்மிடமிருந்து பொன்னோ, பொருளோ தேவையில்லை. அவர் நம்மிடம் எதிர்பார்ப்பது இரண்டு உயர்ந்த குணங்களையே.</p>
           </div>
-
-          <p className="final-eyebrow">
-            ஸ்ரீ சாய் தபோவனம்
-          </p>
-
-          <h2>
-            சாயியின் பாதையில்
-            <br />
-            அன்புடன் நடப்போம்.
-          </h2>
-
-          <p>
-            நம்பிக்கையுடன் வாழ்வோம்.
-            <br />
-            பொறுமையுடன் காத்திருப்போம்.
-            <br />
-            அன்புடன் சேவை செய்வோம்.
-          </p>
-
-          <strong>
-            “Sabka Malik Ek”
-          </strong>
-
-
-          <div className="final-links">
-
-            <Link href="/satsang">
-              சத்சங்கம்
-            </Link>
-
-            <Link href="/about">
-              எங்களைப் பற்றி
-            </Link>
-
-            <Link href="/calendar">
-              நிகழ்வுகள்
-            </Link>
-
+          <div className="guru-faith-grid">
+            <article className="guru-faith-card">
+              <p className="guru-card-overline">முதலாவது குணம்</p>
+              <h3>ஸ்ரத்தா</h3>
+              <span className="guru-faith-english">Shraddha</span>
+              <div className="guru-short-line" aria-hidden="true" />
+              <p className="guru-faith-label">நம்பிக்கை</p>
+              <p className="guru-faith-description">குருவின் மீதும், அவர் காட்டும் ஆன்மிகப் பாதையின் மீதும் மனப்பூர்வமான நம்பிக்கையுடன் இருப்பது.</p>
+            </article>
+            <article className="guru-faith-card">
+              <p className="guru-card-overline">இரண்டாவது குணம்</p>
+              <h3>சபூரி</h3>
+              <span className="guru-faith-english">Saburi</span>
+              <div className="guru-short-line" aria-hidden="true" />
+              <p className="guru-faith-label">பொறுமை</p>
+              <p className="guru-faith-description">வாழ்க்கையின் சூழ்நிலைகள் எப்படியிருந்தாலும் பொறுமையுடன் இருந்து, குருவின் வழிகாட்டுதலின் மீது நம்பிக்கை வைத்திருப்பது.</p>
+            </article>
           </div>
-
+          <div className="guru-faith-closing">
+            <p>இந்த இரண்டு குணங்களையும் குருவின் திருவடிகளில் சமர்ப்பித்து, வாழ்க்கையில் கடைப்பிடிப்பதே உண்மையான ஆன்மிக அர்ப்பணிப்பாகும்.</p>
+            <strong>நம்பிக்கை · பொறுமை</strong>
+          </div>
         </div>
-
       </section>
 
+      <section className="guru-section guru-divine">
+        <div className="guru-container guru-editorial-grid">
+          <div className="guru-side-heading">
+            <p className="guru-eyebrow">குருவின் அருளில் அனைத்து தெய்வங்களும்</p>
+            <h2>குருவே பிரம்மா,<br />குருவே விஷ்ணு</h2>
+            <div className="guru-short-line" aria-hidden="true" />
+          </div>
+          <div className="guru-copy">
+            <p>சிவனை வணங்கும்போது சிவனின் அருளையும், விஷ்ணுவை வணங்கும்போது விஷ்ணுவின் அருளையும், அம்பாளை வணங்கும்போது அம்பாளின் அருளையும் வேண்டுகிறோம். தாய், தந்தையிடம் நாம் பெறுவதும் அவரவர் ஆசீர்வாதங்களே.</p>
+            <p>ஆனால், குருவின் அருளில் அனைத்து தெய்வங்களும் அடங்கியிருப்பதாக ஆன்மிக மரபு போற்றுகிறது. அதனால்தான் “குருவே பிரம்மா, குருவே விஷ்ணு” என்று கூறுகிறோம்.</p>
+            <p>குரு நம்மை நம் இஷ்ட தெய்வத்திலிருந்து விலக்குவதில்லை. மாறாக, அவரது வழிகாட்டுதலின் மூலம் நாம் வழிபடும் தெய்வத்தை நோக்கி நம்மை அழைத்துச் சென்று சேர்க்கிறார்.</p>
+            <p className="guru-lead">இந்த உலகில் பல உறவுகளுடன் பல பிறவிகளாக நாம் வாழ்ந்தாலும், பிறப்பு–இறப்பு சுழற்சியைக் கடந்து இறைவனை உணரும் பாதையில் வழிநடத்தும் குருவின் பங்கு தனித்துவமானது.</p>
+          </div>
+        </div>
+      </section>
+
+      <section className="guru-reflection-section">
+        <div className="guru-container">
+          <div className="guru-reflection-card">
+            <span className="guru-reflection-om" aria-hidden="true">ॐ</span>
+            <p className="guru-eyebrow">குருவின் மகத்துவம்</p>
+            <p className="guru-reflection-lead">குருவைப் பற்றி எவ்வளவு பேசினாலும், அவரது மகத்துவத்தின் ஆழத்தை முழுமையாக அளந்துவிட முடியாது. அது ஆழம் காண முடியாத ஒரு பொக்கிஷம்.</p>
+            <div className="guru-reflection-divider" aria-hidden="true" />
+            <p className="guru-reflection-copy">குருவைப் பற்றி இன்னும் பேசலாம். பேசுவதைவிட, அவரே நம்முள் பேச வேண்டும். இங்கு நடைபெறும் அனைத்தும் அவருடைய அருளால்தான். அவர் இல்லாமல் எதுவும் இல்லை.</p>
+          </div>
+        </div>
+      </section>
+
+      <section className="guru-closing-section">
+        <div className="guru-closing-image" aria-hidden="true" />
+        <div className="guru-closing-overlay" aria-hidden="true" />
+        <div className="guru-container">
+          <div className="guru-closing-content">
+            <span className="guru-closing-om" aria-hidden="true">ॐ</span>
+            <p className="guru-eyebrow">குருவின் அருள்</p>
+            <h2>வாழ்க்கையில் எதை இழந்தாலும்,<br />குருவை மட்டும் இழக்கக்கூடாது.</h2>
+            <div className="guru-light-line" aria-hidden="true" />
+            <strong>ஓம் ஸ்ரீ குருபாதம் காப்போம்</strong>
+            <span className="guru-closing-sairam">ஜெய் சாய்ராம்</span>
+          </div>
+        </div>
+      </section>
     </main>
   );
 }

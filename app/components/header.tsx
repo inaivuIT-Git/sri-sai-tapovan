@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import "./header.css";
@@ -19,54 +19,52 @@ export default function Header() {
   const pathname = usePathname();
   const [menuOpen, setMenuOpen] = useState(false);
 
-  const closeMenu = () => {
+  useEffect(() => {
     setMenuOpen(false);
-  };
+  }, [pathname]);
+
+  const isActive = (href: string) =>
+    href === "/"
+      ? pathname === "/"
+      : pathname.startsWith(href);
 
   return (
     <header className="site-header">
       <div className="header-container">
 
-        {/* LOGO */}
+        {/* BRAND */}
         <Link
           href="/"
           className="site-logo"
-          onClick={closeMenu}
+          aria-label="சாய் சத்சங் @ குருபாதம்"
+          onClick={() => setMenuOpen(false)}
         >
-          <div className="logo-symbol">ॐ</div>
+          <span className="logo-symbol" aria-hidden="true">
+            ॐ
+          </span>
 
-          <div className="logo-text">
-            <span className="logo-name">
-              Sri Sai Tapovan
-            </span>
-
-            <span className="logo-subtitle">
-              SPIRITUAL TRUST
-            </span>
-          </div>
+          <span className="logo-name">
+            சாய் சத்சங் @ குருபாதம்
+          </span>
         </Link>
 
 
-        {/* DESKTOP NAV */}
-        <nav className="main-nav">
-          {navItems.map((item) => {
-            const isActive =
-              item.href === "/"
-                ? pathname === "/"
-                : pathname.startsWith(item.href);
-
-            return (
-              <Link
-                key={item.href}
-                href={item.href}
-                className={`nav-link ${
-                  isActive ? "active" : ""
-                }`}
-              >
-                {item.label}
-              </Link>
-            );
-          })}
+        {/* DESKTOP NAVIGATION */}
+        <nav className="main-nav" aria-label="Main navigation">
+          {navItems.map((item) => (
+            <Link
+              key={item.href}
+              href={item.href}
+              className={`nav-link ${
+                isActive(item.href) ? "active" : ""
+              }`}
+              aria-current={
+                isActive(item.href) ? "page" : undefined
+              }
+            >
+              {item.label}
+            </Link>
+          ))}
         </nav>
 
 
@@ -76,44 +74,45 @@ export default function Header() {
           className={`mobile-menu-button ${
             menuOpen ? "open" : ""
           }`}
-          onClick={() => setMenuOpen((prev) => !prev)}
-          aria-label={
-            menuOpen ? "Close menu" : "Open menu"
-          }
+          onClick={() => setMenuOpen((open) => !open)}
+          aria-label={menuOpen ? "Close menu" : "Open menu"}
           aria-expanded={menuOpen}
+          aria-controls="mobile-navigation"
         >
-          {menuOpen ? "✕" : "☰"}
+          <span />
+          <span />
+          <span />
         </button>
 
       </div>
 
 
-      {/* MOBILE NAV */}
-      <div
+      {/* MOBILE NAVIGATION */}
+      <nav
+        id="mobile-navigation"
         className={`mobile-nav ${
           menuOpen ? "mobile-nav-open" : ""
         }`}
+        aria-label="Mobile navigation"
+        aria-hidden={!menuOpen}
+        inert={!menuOpen}
       >
-        {navItems.map((item) => {
-          const isActive =
-            item.href === "/"
-              ? pathname === "/"
-              : pathname.startsWith(item.href);
-
-          return (
-            <Link
-              key={item.href}
-              href={item.href}
-              className={`mobile-nav-link ${
-                isActive ? "active" : ""
-              }`}
-              onClick={closeMenu}
-            >
-              {item.label}
-            </Link>
-          );
-        })}
-      </div>
+        {navItems.map((item) => (
+          <Link
+            key={item.href}
+            href={item.href}
+            className={`mobile-nav-link ${
+              isActive(item.href) ? "active" : ""
+            }`}
+            aria-current={
+              isActive(item.href) ? "page" : undefined
+            }
+            onClick={() => setMenuOpen(false)}
+          >
+            {item.label}
+          </Link>
+        ))}
+      </nav>
     </header>
   );
 }
