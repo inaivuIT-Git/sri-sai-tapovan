@@ -1,353 +1,327 @@
+"use client";
+
+import { useEffect, useState } from "react";
+import Link from "next/link";
 import "./gallery.css";
 
-const categories = [
-  {
-    title: "Temple",
-    description:
-      "Glimpses of Sri Sai Tapovan and the temple premises.",
-    icon: "🛕",
-  },
-  {
-    title: "Pooja & Aarti",
-    description:
-      "Moments from daily pooja, aarti and devotional activities.",
-    icon: "🪔",
-  },
-  {
-    title: "Festivals",
-    description:
-      "Special celebrations and important spiritual occasions.",
-    icon: "🌺",
-  },
-  {
-    title: "Devotional Moments",
-    description:
-      "Beautiful moments shared by devotees and the Trust.",
-    icon: "🙏",
-  },
-];
+type Photo = {
+  src: string;
+  title: string;
+  category: string;
+  alt: string;
+};
 
-const galleryImages = [
+type Video = {
+  src: string;
+  title: string;
+  category: string;
+  description: string;
+};
+
+// Update these paths to match the photographs available in public/images/gallery.
+const photos: Photo[] = [
   {
-    image: "gallery-1.jpeg",
-    category: "Temple",
-    title: "Temple",
+    src: "/images/gallery/gallery-1.jpeg",
+    title: "சாயியின் சந்நிதி",
+    category: "ஆலயம்",
+    alt: "சாயியின் சந்நிதி மற்றும் வழிபாட்டு அலங்காரம்",
   },
   {
-    image: "gallery-2.jpeg",
-    category: "Temple",
-    title: "Sri Sai Tapovan",
+    src: "/images/gallery/gallery-2.jpeg",
+    title: "பக்தியில் ஒன்றிணைவோம்",
+    category: "பக்தர்கள்",
+    alt: "சாய் வழிபாட்டில் ஒன்றிணைந்த பக்தர்கள்",
   },
   {
-    image: "gallery-3.jpeg",
-    category: "Pooja & Aarti",
-    title: "Daily Aarti",
+    src: "/images/gallery/gallery-3.jpeg",
+    title: "பூஜையின் புனிதம்",
+    category: "பூஜை",
+    alt: "மலர்களால் அலங்கரிக்கப்பட்ட சாய் வழிபாட்டுத் தருணம்",
   },
   {
-    image: "gallery-4.jpeg",
-    category: "Pooja & Aarti",
-    title: "Special Pooja",
+    src: "/images/gallery/gallery-4.jpeg",
+    title: "அருள்மிகு தரிசனம்",
+    category: "தரிசனம்",
+    alt: "சாயியின் அருள்மிகு தரிசனக் காட்சி",
   },
   {
-    image: "gallery-5.jpeg",
-    category: "Festivals",
-    title: "Festival Celebration",
+    src: "/images/gallery/gallery-5.jpeg",
+    title: "திருவிழா நினைவுகள்",
+    category: "திருவிழா",
+    alt: "திருவிழாவில் மலர்களால் அலங்கரிக்கப்பட்ட வழிபாட்டுத் தலம்",
   },
   {
-    image: "gallery-6.jpeg",
-    category: "Festivals",
-    title: "Special Celebration",
+    src: "/images/gallery/gallery-6.jpeg",
+    title: "அமைதியின் தருணம்",
+    category: "தியானம்",
+    alt: "அமைதியான ஆன்மிகத் தியானச் சூழல்",
   },
   {
-    image: "gallery-7.jpeg",
-    category: "Devotional Moments",
-    title: "Devotional Moments",
+    src: "/images/gallery/gallery-7.jpeg",
+    title: "அன்பின் வழியில் சேவை",
+    category: "சேவை",
+    alt: "அன்புடன் செய்யப்படும் ஆன்மிகச் சேவை",
   },
   {
-    image: "gallery-8.jpeg",
-    category: "Devotional Moments",
-    title: "Moments of Devotion",
+    src: "/images/gallery/gallery-8.jpeg",
+    title: "சத்சங்கத்தின் இனிய நினைவுகள்",
+    category: "சத்சங்கம்",
+    alt: "சத்சங்கத்திற்காக அலங்கரிக்கப்பட்ட ஆன்மிகத் தலம்",
   },
-];
+  {
+    src: "/images/gallery/gallery-9.jpeg",
+    title: "சாயியின் அருளில்",
+    category: "ஆன்மிகம்",
+    alt: "சாயியின் அருளை நினைவூட்டும் ஆன்மிகக் காட்சி",
+  },
+]
+
+// Add the corresponding MP4 files to public/videos, or edit each src below.
+const videos: Video[] = [
+  {
+    src: "/videos/satsang-1.mp4",
+    title: "சத்சங்கத்தின் தருணங்கள்",
+    category: "சத்சங்கம்",
+    description: "ஒன்றுகூடி சாயியை நினைக்கும் இனிய தருணங்கள்.",
+  },
+  {
+    src: "/videos/satsang-2.mp4",
+    title: "பூஜையும் பிரார்த்தனையும்",
+    category: "வழிபாடு",
+    description: "பக்தியும் பிரார்த்தனையும் நிறைந்த காட்சிகள்.",
+  },
+  {
+    src: "/videos/satsang-3.mp4",
+    title: "திருவிழா சிறப்புத் தருணங்கள்",
+    category: "திருவிழா",
+    description: "ஒன்றிணையும் பக்தர்களின் மகிழ்ச்சியான நினைவுகள்.",
+  },
+  {
+    src: "/videos/satsang-4.mp4",
+    title: "அன்பும் சேவையும்",
+    category: "சேவை",
+    description: "சேவையின் வழியாக அன்பை வெளிப்படுத்தும் தருணங்கள்.",
+  },
+]
+
+function PhotoCard({ photo }: { photo: Photo }) {
+  const [imageFailed, setImageFailed] = useState(false);
+
+  return (
+    <article className="gallery-photo-card">
+      <div className="gallery-photo-media">
+        {imageFailed ? (
+          <div className="gallery-media-fallback" role="img" aria-label={photo.alt}>
+            <span aria-hidden="true">ॐ</span>
+            <p>புகைப்படத்தைச் சேர்க்கவும்</p>
+          </div>
+        ) : (
+          <img
+            src={photo.src}
+            alt={photo.alt}
+            loading="lazy"
+            onError={() => setImageFailed(true)}
+          />
+        )}
+        <span className="gallery-photo-category">{photo.category}</span>
+      </div>
+      <div className="gallery-photo-caption">
+        <h3>{photo.title}</h3>
+        <span aria-hidden="true">✦</span>
+      </div>
+    </article>
+  );
+}
+
+function VideoCard({ video }: { video: Video }) {
+  const [videoFailed, setVideoFailed] = useState(false);
+  const [thumbnail, setThumbnail] = useState<string | undefined>(undefined);
+
+  useEffect(() => {
+    let cancelled = false;
+    let captured = false;
+    let seekRequested = false;
+    const preview = document.createElement("video");
+    preview.muted = true;
+    preview.playsInline = true;
+    preview.preload = "metadata";
+
+    const captureFrame = () => {
+      if (cancelled || captured || !preview.videoWidth || !preview.videoHeight) return;
+      try {
+        const canvas = document.createElement("canvas");
+        canvas.width = 640;
+        canvas.height = 360;
+        const context = canvas.getContext("2d");
+        if (!context) return;
+
+        // Keep portrait videos centered with dark side bars, like the video player preview.
+        context.fillStyle = "#170e09";
+        context.fillRect(0, 0, canvas.width, canvas.height);
+        const scale = Math.min(canvas.width / preview.videoWidth, canvas.height / preview.videoHeight);
+        const width = preview.videoWidth * scale;
+        const height = preview.videoHeight * scale;
+        const x = (canvas.width - width) / 2;
+        const y = (canvas.height - height) / 2;
+        context.drawImage(preview, x, y, width, height);
+
+        captured = true;
+        setThumbnail(canvas.toDataURL("image/jpeg", 0.84));
+      } catch {
+        // If thumbnail extraction is unavailable, the native video player still works.
+      }
+    };
+
+    const handleLoadedMetadata = () => {
+      if (Number.isFinite(preview.duration) && preview.duration > 1) {
+        seekRequested = true;
+        preview.addEventListener("seeked", captureFrame, { once: true });
+        try {
+          // A frame slightly after the start is less likely to be a blank transition frame.
+          preview.currentTime = Math.min(0.8, preview.duration * 0.08);
+        } catch {
+          seekRequested = false;
+          captureFrame();
+        }
+      }
+    };
+
+    const handleLoadedData = () => {
+      if (!seekRequested) captureFrame();
+    };
+
+    preview.addEventListener("loadedmetadata", handleLoadedMetadata);
+    preview.addEventListener("loadeddata", handleLoadedData);
+    preview.src = video.src;
+    preview.load();
+
+    return () => {
+      cancelled = true;
+      preview.removeEventListener("loadedmetadata", handleLoadedMetadata);
+      preview.removeEventListener("loadeddata", handleLoadedData);
+      preview.pause();
+      preview.removeAttribute("src");
+      preview.load();
+    };
+  }, [video.src]);
+
+  return (
+    <article className="gallery-video-card">
+      <div className="gallery-video-media">
+        {videoFailed ? (
+          <div className="gallery-video-fallback">
+            <span className="gallery-play-symbol" aria-hidden="true">▶</span>
+            <p>வீடியோ கோப்பை <code>public/videos</code> கோப்புறையில் சேர்க்கவும்</p>
+          </div>
+        ) : (
+          <video
+            controls
+            playsInline
+            preload="metadata"
+            poster={thumbnail}
+            onError={() => setVideoFailed(true)}
+            aria-label={video.title}
+          >
+            <source src={video.src} type="video/mp4" />
+            உங்கள் உலாவி இந்த வீடியோவை இயக்க முடியவில்லை.
+          </video>
+        )}
+      </div>
+      <div className="gallery-video-copy">
+        <p className="gallery-card-eyebrow">{video.category}</p>
+        <h3>{video.title}</h3>
+        <p>{video.description}</p>
+      </div>
+    </article>
+  );
+}
 
 export default function GalleryPage() {
   return (
     <main className="gallery-page">
+      <section className="gallery-hero" aria-labelledby="gallery-hero-title">
+        <div className="gallery-hero-image" aria-hidden="true" />
+        <div className="gallery-hero-overlay" aria-hidden="true" />
 
-      {/* =====================================================
-          HERO
-      ===================================================== */}
-
-      <section className="gallery-hero">
-
-        <div className="gallery-hero-content">
-
-          <p className="gallery-eyebrow">
-            SRI SAI TAPOVAN
+        <div className="gallery-container gallery-hero-content">
+          <p className="gallery-hero-eyebrow">சாய் சத்சங் @ குருபாதம்</p>
+          <h1 id="gallery-hero-title">படத்தொகுப்பு</h1>
+          <span className="gallery-hero-line" aria-hidden="true" />
+          <p className="gallery-hero-subtitle">
+            பூஜை, சத்சங்கம், தியானம் மற்றும் சேவையின் அருள்மிகு தருணங்கள்.
+            <br className="gallery-desktop-break" />
+            சாயியின் அருளை நினைவூட்டும் புகைப்படங்களும் காணொளிகளும்.
           </p>
-
-          <h1>Gallery</h1>
-
-          <div className="gallery-divider">
-            <span>ॐ</span>
+          <div className="gallery-hero-actions">
+            <a className="gallery-button gallery-button-primary" href="#photos">புகைப்படங்களைப் பார்க்க</a>
+            <a className="gallery-button gallery-button-outline" href="#videos">காணொளிகளைப் பார்க்க</a>
           </div>
-
-          <p className="gallery-breadcrumb">
-            Home&nbsp; / &nbsp;Gallery
-          </p>
-
         </div>
 
-      </section>
-
-
-      {/* =====================================================
-          INTRO
-      ===================================================== */}
-
-      <section className="gallery-intro">
-
-        <div className="gallery-container">
-
-          <p className="gallery-label">
-            MOMENTS OF DEVOTION
-          </p>
-
-          <h2>
-            Our Gallery
-          </h2>
-
-          <p className="gallery-intro-text">
-            Explore moments from Sri Sai Tapovan, including temple
-            activities, pooja, festivals and devotional gatherings.
-          </p>
-
+        <div className="gallery-values-strip" aria-label="சத்சங்கத்தின் நான்கு பண்புகள்">
+          <span>நம்பிக்கை</span><i aria-hidden="true">·</i>
+          <span>பொறுமை</span><i aria-hidden="true">·</i>
+          <span>அன்பு</span><i aria-hidden="true">·</i>
+          <span>சேவை</span>
         </div>
-
       </section>
 
-
-      {/* =====================================================
-          CATEGORIES
-      ===================================================== */}
-
-      <section className="gallery-categories">
-
-        <div className="gallery-container">
-
-          <div className="gallery-category-grid">
-
-            {categories.map((category) => (
-
-              <div
-                key={category.title}
-                className="gallery-category-card"
-              >
-
-                <div className="gallery-category-icon">
-                  {category.icon}
-                </div>
-
-                <h3>
-                  {category.title}
-                </h3>
-
-                <p>
-                  {category.description}
-                </p>
-
-              </div>
-
-            ))}
-
-          </div>
-
+      <section className="gallery-intro gallery-container" aria-labelledby="gallery-photos-title">
+        <div>
+          <p className="gallery-eyebrow">பக்தியின் இனிய நினைவுகள்</p>
+          <h2 id="gallery-photos-title">நினைவுகளில் சாயி</h2>
         </div>
-
+        <p className="gallery-intro-copy">
+          ஒவ்வொரு புகைப்படமும் ஒரு நினைவு; ஒவ்வொரு நினைவும் சாயியின் அருளை உணர்த்தும் ஓர் அனுபவம்.
+          வழிபாடு, சத்சங்கம், திருவிழா மற்றும் சேவையின் தருணங்களை இங்கே காணலாம்.
+        </p>
       </section>
 
-
-      {/* =====================================================
-          PHOTOS
-      ===================================================== */}
-
-      <section className="gallery-photos">
-
+      <section className="gallery-photos-section" id="photos" aria-labelledby="gallery-photos-heading">
         <div className="gallery-container">
-
           <div className="gallery-section-heading">
-
-            <p className="gallery-label">
-              MOMENTS OF DEVOTION
-            </p>
-
-            <h2>
-              Our Memories
-            </h2>
-
-            <p>
-              A collection of moments from Sri Sai Tapovan.
-            </p>
-
+            <div>
+              <p className="gallery-eyebrow">புகைப்படங்கள்</p>
+              <h2 id="gallery-photos-heading">சாயியின் அருள்மிகு தருணங்கள்</h2>
+            </div>
+            <p>பக்தி · ஒன்றிணைவு · சேவை</p>
           </div>
-
 
           <div className="gallery-photo-grid">
-
-            {galleryImages.map((item) => (
-
-              <article
-                className="gallery-photo-card"
-                key={item.image}
-              >
-
-                <div className="gallery-photo-image">
-
-                  <img
-                    src={`/images/gallery/${item.image}`}
-                    alt={item.title}
-                  />
-
-                </div>
-
-                <div className="gallery-photo-content">
-
-                  <p>
-                    {item.category}
-                  </p>
-
-                  <h3>
-                    {item.title}
-                  </h3>
-
-                </div>
-
-              </article>
-
-            ))}
-
+            {photos.map((photo) => <PhotoCard key={photo.src} photo={photo} />)}
           </div>
-
         </div>
-
       </section>
 
-
-      {/* =====================================================
-          VIDEOS
-      ===================================================== */}
-
-      <section className="gallery-videos">
-
+      <section className="gallery-videos-section" id="videos" aria-labelledby="gallery-videos-heading">
         <div className="gallery-container">
-
-          <div className="gallery-section-heading">
-
-            <p className="gallery-label">
-              WATCH & LISTEN
-            </p>
-
-            <h2>
-              Devotional Videos
-            </h2>
-
-            <p>
-              Moments of prayer, devotion and spiritual activities
-              from Sri Sai Tapovan.
-            </p>
-
-          </div>
-
-
-          <div className="gallery-video-grid">
-
-            <div className="gallery-video-card">
-
-              <div className="gallery-video-thumbnail">
-                <div className="gallery-play-button">
-                  ▶
-                </div>
-              </div>
-
-              <div className="gallery-video-content">
-                <p>DEVOTIONAL</p>
-                <h3>Spiritual Moments</h3>
-              </div>
-
-            </div>
-
-
-            <div className="gallery-video-card">
-
-              <div className="gallery-video-thumbnail">
-                <div className="gallery-play-button">
-                  ▶
-                </div>
-              </div>
-
-              <div className="gallery-video-content">
-                <p>POOJA & AARTI</p>
-                <h3>Temple Activities</h3>
-              </div>
-
-            </div>
-
-
-            <div className="gallery-video-card">
-
-              <div className="gallery-video-thumbnail">
-                <div className="gallery-play-button">
-                  ▶
-                </div>
-              </div>
-
-              <div className="gallery-video-content">
-                <p>FESTIVALS</p>
-                <h3>Special Celebrations</h3>
-              </div>
-
-            </div>
-
-          </div>
-
-        </div>
-
-      </section>
-
-
-      {/* =====================================================
-          ADMIN NOTE
-      ===================================================== */}
-
-      <section className="gallery-admin-note">
-
-        <div className="gallery-container">
-
-          <div className="gallery-admin-content">
-
-            <div className="gallery-admin-icon">
-              📷
-            </div>
-
+          <div className="gallery-section-heading gallery-video-heading">
             <div>
-
-              <p className="gallery-label">
-                FUTURE ADMIN FEATURE
-              </p>
-
-              <h3>
-                More Memories Coming Soon
-              </h3>
-
-             
+              <p className="gallery-eyebrow">காணொளிகள்</p>
+              <h2 id="gallery-videos-heading">காணும் தருணங்கள், மனதில் நிற்கும் நினைவுகள்</h2>
             </div>
-
+            <p>சாயியின் பாதையில் சிறு காட்சிகள்</p>
           </div>
-
+          <div className="gallery-video-grid">
+            {videos.map((video) => <VideoCard key={video.src} video={video} />)}
+          </div>
         </div>
-
       </section>
 
+      <section className="gallery-closing">
+        <div className="gallery-closing-overlay" aria-hidden="true" />
+        <div className="gallery-closing-content gallery-container">
+          <span className="gallery-closing-om" aria-hidden="true">ॐ</span>
+          <p className="gallery-eyebrow">சாயியின் அருளில்</p>
+          <h2>அமைதியில் சாயியை உணர்வோம்.<br />அன்பில் சாயியை வாழ்வோம்.</h2>
+          <span className="gallery-closing-line" aria-hidden="true" />
+          <p>நம்பிக்கையுடன் இருப்போம். பொறுமையுடன் சேவை செய்வோம்.</p>
+          <div className="gallery-closing-links">
+            <Link href="/satsang">சத்சங்கத்தை அறிய</Link>
+            <Link href="/sai-baba">சாய்பாபாவைப் பற்றி</Link>
+          </div>
+        </div>
+      </section>
     </main>
   );
 }

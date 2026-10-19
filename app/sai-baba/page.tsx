@@ -1,3 +1,4 @@
+import Link from "next/link";
 import "./sai-baba.css";
 
 export default function SaiBabaPage() {
@@ -10,6 +11,16 @@ export default function SaiBabaPage() {
           <h1>சாய்பாபா</h1>
           <div className="sai-hero-line" aria-hidden="true" />
           <p className="sai-hero-subtitle">குருவின் மகத்துவம் · நம்பிக்கை · பொறுமை</p>
+          <div className="sai-hero-actions">
+            <Link href="/satsang" className="sai-hero-button sai-hero-button-primary">சத்சங்கத்தை அறிய</Link>
+            <Link href="/about" className="sai-hero-button sai-hero-button-secondary">எங்களைப் பற்றி</Link>
+          </div>
+        </div>
+        <div className="sai-hero-bottomline" role="group" aria-label="நம்பிக்கை, பொறுமை, அன்பு, சேவை">
+          <span>நம்பிக்கை</span><i aria-hidden="true" />
+          <span>பொறுமை</span><i aria-hidden="true" />
+          <span>அன்பு</span><i aria-hidden="true" />
+          <span>சேவை</span>
         </div>
       </section>
 

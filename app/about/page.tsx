@@ -68,12 +68,12 @@ export default function AboutPage() {
         <div className="about-hero-content">
           <p className="about-hero-eyebrow">சாய் சத்சங் @ குருபாதம்</p>
           <h1>
-            ஒரு இடம் மட்டுமல்ல.
+            ஒரு பிரார்த்தனையில்
             <br />
-            <span>ஒரு ஆன்மிகப் பயணம்.</span>
+            <span>தொடங்கிய பயணம்…</span>
           </h1>
           <p className="about-hero-subtitle">
-            அன்பில் தொடங்கி, சத்சங்கமாக மலர்ந்த ஒரு பயணம்.
+            அன்பில் தொடங்கி, பக்தி மற்றும் சேவையால் தொடர்ந்து மலரும் ஆன்மிகப் பயணம்.
           </p>
           <div className="about-hero-actions">
             <Link href="/satsang" className="about-button about-button-light">
@@ -85,9 +85,11 @@ export default function AboutPage() {
           </div>
         </div>
 
-        <div className="about-hero-caption" aria-hidden="true">
-          <span>SAI SATSANG</span>
-          <span>GURUPADAM</span>
+        <div className="about-hero-bottomline" role="group" aria-label="நம்பிக்கை, பொறுமை, அன்பு, சேவை">
+          <span>நம்பிக்கை</span><i aria-hidden="true" />
+          <span>பொறுமை</span><i aria-hidden="true" />
+          <span>அன்பு</span><i aria-hidden="true" />
+          <span>சேவை</span>
         </div>
       </section>
 
@@ -95,7 +97,7 @@ export default function AboutPage() {
       <section className="about-intro-section">
         <div className="about-container about-intro-grid">
           <div className="about-intro-media">
-            <img src="/images/about/image-1.jpeg" alt="சாய் தபோவனத்தின் ஆன்மிகச் சூழல்" />
+            <img src="/images/gallery/gallery-1.jpeg" alt="சாய் தபோவனத்தின் ஆன்மிகச் சூழல்" />
             <div className="about-image-note">
               <span className="about-image-note-mark">ॐ</span>
               <span>அமைதி · நம்பிக்கை · அன்பு</span>

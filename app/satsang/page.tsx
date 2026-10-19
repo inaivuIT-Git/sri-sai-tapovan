@@ -8,29 +8,36 @@ export default function SatsangPage() {
       {/* =====================================================
           HERO
       ===================================================== */}
-     <section className="satsang-hero">
-  <div className="satsang-hero-overlay" />
+      <section className="satsang-hero">
+        <div className="satsang-hero-overlay" aria-hidden="true" />
 
-  <div className="satsang-hero-content">
+        <div className="satsang-hero-content">
+          <p className="hero-eyebrow">சாய் சத்சங் @ குருபாதம்</p>
+          <h1>சத்சங்கம்</h1>
+          <div className="hero-line" aria-hidden="true" />
+          <p className="hero-subtitle">
+            சாதாரண வாழ்க்கையிலிருந்து
+            <br />
+            தெய்வீக வாழ்க்கையை நோக்கிய ஓர் ஆன்மிகப் பயணம்
+          </p>
 
-    <p className="hero-eyebrow">
-      சாய் சத்சங் @ குருபாதம்
-    </p>
+          <div className="satsang-hero-actions">
+            <Link href="/sai-baba" className="satsang-hero-button satsang-hero-button-primary">
+              சாய்பாபாவைப் பற்றி அறிய
+            </Link>
+            <Link href="/about" className="satsang-hero-link">
+              எங்களைப் பற்றி
+            </Link>
+          </div>
+        </div>
 
-    <h1>சத்சங்கம்</h1>
-
-    <div className="hero-line" />
-
-    <p className="hero-subtitle">
-      சாதாரண வாழ்க்கையிலிருந்து
-      <br />
-      தெய்வீக வாழ்க்கையை நோக்கிய ஓர் ஆன்மிகப் பயணம்
-    </p>
-
-   
-
-  </div>
-</section>
+        <div className="satsang-hero-bottomline" aria-label="நம்பிக்கை, பொறுமை, அன்பு, சேவை">
+          <span>நம்பிக்கை</span><i aria-hidden="true" />
+          <span>பொறுமை</span><i aria-hidden="true" />
+          <span>அன்பு</span><i aria-hidden="true" />
+          <span>சேவை</span>
+        </div>
+      </section>
 
 
       {/* =====================================================

@@ -1,11 +1,16 @@
-/* =====================================================
+/*
+   =====================================================
+   
    SAI SATSANG @ GURUPADAM — SATSANG PAGE
+   
    Contemporary editorial layout with shorter sections
-===================================================== */
+   
+   =====================================================
+*/
 
 .satsang-page {
   --sat-saffron: #d9822b;
-  --sat-orange: #bd5d18;
+  --sat-orange: #b85c16;
   --sat-gold: #dcb66d;
   --sat-light-gold: #f2d99b;
   --sat-ink: #25170f;
@@ -16,7 +21,6 @@
   --sat-cream: #fffaf3;
   --sat-soft: #f8f4ee;
   --sat-line: #e5d9c8;
-
   width: 100%;
   overflow: hidden;
   background: var(--sat-white);
@@ -24,85 +28,29 @@
   font-family: Arial, "Noto Sans Tamil", sans-serif;
 }
 
-.satsang-page,
-.satsang-page *,
-.satsang-page *::before,
-.satsang-page *::after { box-sizing: border-box; }
-
-.satsang-page img { display: block; width: 100%; height: auto; }
-
-.satsang-page h1,
-.satsang-page h2,
-.satsang-page h3,
-.satsang-page p,
-.satsang-page blockquote { margin-top: 0; }
-
-.satsang-page p { font-size: 16px; line-height: 1.85; }
-
-/* HERO: the primary image banner stays immersive; inner sections are split into shorter content blocks. */
-.satsang-hero {
-  position: relative;
-  isolation: isolate;
-  display: flex;
-  align-items: center;
-  min-height: 440px;
-  overflow: hidden;
-  color: var(--sat-white);
-  background: var(--sat-ink) url("/images/gallery/gallery-1.jpeg") center 47% / cover no-repeat;
+.satsang-page, .satsang-page *, .satsang-page *::before, .satsang-page *::after {
+  box-sizing: border-box;
 }
 
-.satsang-hero-overlay {
-  position: absolute;
-  z-index: -1;
-  inset: 0;
-  background: linear-gradient(90deg, rgba(27, 15, 8, .92) 0%, rgba(27, 15, 8, .76) 48%, rgba(27, 15, 8, .30) 100%),
-              linear-gradient(0deg, rgba(27, 15, 8, .25), transparent 60%);
+.satsang-page img {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
-.satsang-hero-content {
-  width: min(1240px, calc(100% - 72px));
-  margin: 0 auto;
-  padding: 78px 0 84px;
-  text-align: left;
+.satsang-page h1, .satsang-page h2, .satsang-page h3, .satsang-page p, .satsang-page blockquote {
+  margin-top: 0;
 }
 
-.satsang-hero .hero-eyebrow {
-  margin: 0 0 15px;
-  color: var(--sat-light-gold);
-  font-family: Georgia, "Noto Serif Tamil", serif;
-  font-size: 17px;
-  font-weight: 500;
-  letter-spacing: .3px;
-  line-height: 1.7;
-}
-
-.satsang-hero h1 {
-  max-width: 800px;
-  margin: 0;
-  color: var(--sat-white);
-  font-family: Georgia, "Noto Serif Tamil", serif;
-  font-size: clamp(52px, 6.7vw, 80px);
-  font-weight: 500;
-  line-height: 1.2;
-}
-
-.satsang-hero .hero-line {
-  width: 66px;
-  height: 2px;
-  margin: 22px 0 18px;
-  background: var(--sat-gold);
-}
-
-.satsang-hero .hero-subtitle {
-  max-width: 700px;
-  margin: 0;
-  color: rgba(255, 255, 255, .9);
-  font-family: Georgia, "Noto Serif Tamil", serif;
-  font-size: 18px;
+.satsang-page p {
+  font-size: 16px;
   line-height: 1.85;
 }
 
+/* HERO: the primary image banner stays immersive; inner sections are split into shorter content blocks. */
+
 /* Shared typography and editorial image/text sections */
+
 .section-eyebrow {
   margin: 0 0 10px;
   color: var(--sat-orange);
@@ -112,13 +60,16 @@
   letter-spacing: .7px;
 }
 
-.story-section,
-.small-satsang-section { padding: 70px 0; background: var(--sat-white); }
-.reverse-story,
-.meditation-section { background: var(--sat-cream); }
+.story-section, .small-satsang-section {
+  padding: 70px 0;
+  background: var(--sat-white);
+}
 
-.story-container,
-.small-satsang-container {
+.reverse-story, .meditation-section {
+  background: var(--sat-cream);
+}
+
+.story-container, .small-satsang-container {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
   align-items: center;
@@ -127,8 +78,7 @@
   margin: 0 auto;
 }
 
-.story-content h2,
-.small-satsang-content h2 {
+.story-content h2, .small-satsang-content h2 {
   margin: 0 0 18px;
   color: var(--sat-ink);
   font-family: Georgia, "Noto Serif Tamil", serif;
@@ -137,8 +87,7 @@
   line-height: 1.36;
 }
 
-.story-content > p,
-.small-satsang-content > p {
+.story-content > p, .small-satsang-content > p {
   margin: 0 0 14px;
   color: var(--sat-text);
   font-size: 15.5px;
@@ -155,32 +104,41 @@
   line-height: 1.85 !important;
 }
 
-.story-image,
-.small-satsang-image,
-.divine-photo {
+.story-image, .small-satsang-image, .divine-photo {
   position: relative;
   min-width: 0;
   overflow: hidden;
   background: #efe5d8;
 }
 
-.story-image img,
-.small-satsang-image img,
-.divine-photo img {
+.story-image img, .small-satsang-image img, .divine-photo img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   transition: transform .6s ease;
 }
 
-.story-image img { aspect-ratio: 5 / 4; }
-.story-image:hover img,
-.small-satsang-image:hover img,
-.divine-photo:hover img { transform: scale(1.025); }
-.large-image img { aspect-ratio: 4 / 5; }
+.story-image img {
+  aspect-ratio: 5 / 4;
+}
+
+.story-image:hover img, .small-satsang-image:hover img, .divine-photo:hover img {
+  transform: scale(1.025);
+}
+
+.large-image img {
+  aspect-ratio: 4 / 5;
+}
 
 /* Meaning: sat + sangam */
-.meaning-inline { display: flex; align-items: stretch; gap: 12px; margin: 23px 0; }
+
+.meaning-inline {
+  display: flex;
+  align-items: stretch;
+  gap: 12px;
+  margin: 23px 0;
+}
+
 .meaning-inline > div {
   min-width: 125px;
   padding: 14px 17px 13px;
@@ -188,6 +146,7 @@
   background: var(--sat-soft);
   text-align: center;
 }
+
 .meaning-inline strong {
   display: block;
   color: var(--sat-orange);
@@ -196,19 +155,73 @@
   font-weight: 500;
   line-height: 1.4;
 }
-.meaning-inline span { display: block; margin-top: 4px; color: var(--sat-muted); font-size: 12px; line-height: 1.6; }
-.meaning-inline b { align-self: center; color: var(--sat-gold); font-size: 22px; font-weight: 400; }
+
+.meaning-inline span {
+  display: block;
+  margin-top: 4px;
+  color: var(--sat-muted);
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.meaning-inline b {
+  align-self: center;
+  color: var(--sat-gold);
+  font-size: 22px;
+  font-weight: 400;
+}
 
 /* Faith and patience */
-.faith-pair { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 13px; margin: 23px 0; }
-.faith-pair > div { padding: 18px; border-top: 2px solid var(--sat-gold); background: var(--sat-white); box-shadow: 0 6px 20px rgba(50, 30, 15, .045); }
-.faith-pair strong { display: block; margin-bottom: 6px; color: var(--sat-ink); font-family: Georgia, "Noto Serif Tamil", serif; font-size: 21px; font-weight: 500; }
-.faith-pair p { margin: 0; color: var(--sat-muted); font-size: 13.5px; line-height: 1.75; }
+
+.faith-pair {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 13px;
+  margin: 23px 0;
+}
+
+.faith-pair > div {
+  padding: 18px;
+  border-top: 2px solid var(--sat-gold);
+  background: var(--sat-white);
+  box-shadow: 0 6px 20px rgba(50, 30, 15, .045);
+}
+
+.faith-pair strong {
+  display: block;
+  margin-bottom: 6px;
+  color: var(--sat-ink);
+  font-family: Georgia, "Noto Serif Tamil", serif;
+  font-size: 21px;
+  font-weight: 500;
+}
+
+.faith-pair p {
+  margin: 0;
+  color: var(--sat-muted);
+  font-size: 13.5px;
+  line-height: 1.75;
+}
 
 /* Four pillars: shorter warm-cream block with individual cards instead of a tall full-width banner */
-.pillars-section { padding: 64px 0 68px; color: var(--sat-text); background: var(--sat-cream); }
-.pillars-container { width: min(1180px, calc(100% - 72px)); margin: 0 auto; }
-.pillars-heading { max-width: 760px; margin: 0 auto 29px; text-align: center; }
+
+.pillars-section {
+  padding: 64px 0 68px;
+  color: var(--sat-text);
+  background: var(--sat-cream);
+}
+
+.pillars-container {
+  width: min(1180px, calc(100% - 72px));
+  margin: 0 auto;
+}
+
+.pillars-heading {
+  max-width: 760px;
+  margin: 0 auto 29px;
+  text-align: center;
+}
+
 .pillars-heading h2 {
   margin: 0 0 10px;
   color: var(--sat-ink);
@@ -217,8 +230,20 @@
   font-weight: 500;
   line-height: 1.35;
 }
-.pillars-heading > p:last-child { margin: 0; color: var(--sat-muted); font-size: 15px; line-height: 1.8; }
-.pillar-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; }
+
+.pillars-heading > p:last-child {
+  margin: 0;
+  color: var(--sat-muted);
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+.pillar-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+}
+
 .pillar-item {
   min-width: 0;
   min-height: 0;
@@ -228,6 +253,7 @@
   background: var(--sat-white);
   text-align: center;
 }
+
 .pillar-top {
   display: flex;
   align-items: center;
@@ -239,28 +265,137 @@
   border-radius: 50%;
   color: var(--sat-orange);
 }
-.pillar-symbol { font-size: 24px; line-height: 1; }
-.pillar-item h3 { margin: 0 0 7px; color: var(--sat-ink); font-family: Georgia, "Noto Serif Tamil", serif; font-size: 21px; font-weight: 500; line-height: 1.5; }
-.pillar-item p { max-width: 220px; margin: 0 auto; color: var(--sat-muted); font-size: 13.5px; line-height: 1.75; }
+
+.pillar-symbol {
+  font-size: 24px;
+  line-height: 1;
+}
+
+.pillar-item h3 {
+  margin: 0 0 7px;
+  color: var(--sat-ink);
+  font-family: Georgia, "Noto Serif Tamil", serif;
+  font-size: 21px;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.pillar-item p {
+  max-width: 220px;
+  margin: 0 auto;
+  color: var(--sat-muted);
+  font-size: 13.5px;
+  line-height: 1.75;
+}
 
 /* Heart-to-heart reflection */
-.heart-box { margin-top: 24px; padding: 26px 24px 23px; border-top: 2px solid var(--sat-gold); background: var(--sat-white); text-align: center; }
-.heart-quote-mark { display: block; margin-bottom: 7px; color: var(--sat-gold); font-family: Georgia, "Times New Roman", serif; font-size: 48px; line-height: .7; }
-.heart-box blockquote { max-width: 620px; margin: 0 auto; color: var(--sat-brown); font-family: Georgia, "Noto Serif Tamil", serif; font-size: clamp(18px, 1.8vw, 22px); font-weight: 400; line-height: 1.85; }
-.heart-divider { width: 48px; height: 1px; margin: 17px auto 12px; background: var(--sat-gold); }
-.heart-box strong { display: block; color: var(--sat-orange); font-family: Georgia, serif; font-size: 17px; font-style: italic; font-weight: 500; }
+
+.heart-box {
+  margin-top: 24px;
+  padding: 26px 24px 23px;
+  border-top: 2px solid var(--sat-gold);
+  background: var(--sat-white);
+  text-align: center;
+}
+
+.heart-quote-mark {
+  display: block;
+  margin-bottom: 7px;
+  color: var(--sat-gold);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 48px;
+  line-height: .7;
+}
+
+.heart-box blockquote {
+  max-width: 620px;
+  margin: 0 auto;
+  color: var(--sat-brown);
+  font-family: Georgia, "Noto Serif Tamil", serif;
+  font-size: clamp(18px, 1.8vw, 22px);
+  font-weight: 400;
+  line-height: 1.85;
+}
+
+.heart-divider {
+  width: 48px;
+  height: 1px;
+  margin: 17px auto 12px;
+  background: var(--sat-gold);
+}
+
+.heart-box strong {
+  display: block;
+  color: var(--sat-orange);
+  font-family: Georgia, serif;
+  font-size: 17px;
+  font-style: italic;
+  font-weight: 500;
+}
 
 /* Transformation is its own light section. No background photo banner. */
-.transformation-section { padding: 68px 0 64px; background: var(--sat-white); }
-.transformation-container { width: min(1000px, calc(100% - 72px)); margin: 0 auto; }
-.transformation-heading { max-width: 740px; margin: 0 auto 28px; text-align: center; }
-.transformation-heading h2 { margin: 0 0 10px; color: var(--sat-ink); font-family: Georgia, "Noto Serif Tamil", serif; font-size: clamp(32px, 4vw, 46px); font-weight: 500; line-height: 1.35; }
-.transformation-heading > p:last-child { max-width: 680px; margin: 0 auto; color: var(--sat-muted); font-size: 15px; line-height: 1.85; }
-.transformation-intro,
-.transformation-row { display: grid; grid-template-columns: minmax(0, 1fr) 42px minmax(0, 1fr); align-items: center; }
-.transformation-intro { max-width: 780px; margin: 0 auto 8px; padding: 0 18px; color: var(--sat-muted); font-size: 11px; font-weight: 700; letter-spacing: .5px; text-align: center; }
-.transformation-line { height: 1px; background: linear-gradient(90deg, transparent, var(--sat-line), transparent); }
-.transformation-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+
+.transformation-section {
+  padding: 68px 0 64px;
+  background: var(--sat-white);
+}
+
+.transformation-container {
+  width: min(1000px, calc(100% - 72px));
+  margin: 0 auto;
+}
+
+.transformation-heading {
+  max-width: 740px;
+  margin: 0 auto 28px;
+  text-align: center;
+}
+
+.transformation-heading h2 {
+  margin: 0 0 10px;
+  color: var(--sat-ink);
+  font-family: Georgia, "Noto Serif Tamil", serif;
+  font-size: clamp(32px, 4vw, 46px);
+  font-weight: 500;
+  line-height: 1.35;
+}
+
+.transformation-heading > p:last-child {
+  max-width: 680px;
+  margin: 0 auto;
+  color: var(--sat-muted);
+  font-size: 15px;
+  line-height: 1.85;
+}
+
+.transformation-intro, .transformation-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 42px minmax(0, 1fr);
+  align-items: center;
+}
+
+.transformation-intro {
+  max-width: 780px;
+  margin: 0 auto 8px;
+  padding: 0 18px;
+  color: var(--sat-muted);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .5px;
+  text-align: center;
+}
+
+.transformation-line {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--sat-line), transparent);
+}
+
+.transformation-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
 .transformation-row {
   min-width: 0;
   min-height: 66px;
@@ -268,51 +403,259 @@
   border: 1px solid var(--sat-line);
   background: var(--sat-cream);
 }
-.change-before { padding-right: 5px; color: var(--sat-muted); font-family: Georgia, "Noto Serif Tamil", serif; font-size: 17px; text-align: right; }
-.change-arrow { position: relative; display: flex; align-items: center; justify-content: center; min-height: 32px; }
-.change-arrow span { display: none; }
-.change-arrow::before { content: none; }
-.change-arrow::after { content: "→"; position: relative; color: var(--sat-gold); font-size: 19px; }
-.change-after { padding-left: 5px; color: var(--sat-brown); font-family: Georgia, "Noto Serif Tamil", serif; font-size: 18px; font-weight: 600; text-align: left; }
-.grace-message { display: grid; grid-template-columns: 48px 1fr; align-items: center; gap: 17px; max-width: 780px; margin: 25px auto 0; padding: 19px 22px; border-left: 2px solid var(--sat-gold); background: var(--sat-soft); }
-.grace-symbol { color: var(--sat-gold); font-size: 31px; text-align: center; }
-.grace-message .section-eyebrow { margin-bottom: 4px; }
-.grace-message h3 { margin: 0; color: var(--sat-ink); font-family: Georgia, "Noto Serif Tamil", serif; font-size: 19px; font-weight: 500; line-height: 1.6; }
-.transformation-ending { margin: 18px 0 0; color: var(--sat-orange); font-family: Georgia, "Noto Serif Tamil", serif; font-size: 17px; line-height: 1.8; text-align: center; }
+
+.change-before {
+  padding-right: 5px;
+  color: var(--sat-muted);
+  font-family: Georgia, "Noto Serif Tamil", serif;
+  font-size: 17px;
+  text-align: right;
+}
+
+.change-arrow {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 32px;
+}
+
+.change-arrow span {
+  display: none;
+}
+
+.change-arrow::before {
+  content: none;
+}
+
+.change-arrow::after {
+  content: "→";
+  position: relative;
+  color: var(--sat-gold);
+  font-size: 19px;
+}
+
+.change-after {
+  padding-left: 5px;
+  color: var(--sat-brown);
+  font-family: Georgia, "Noto Serif Tamil", serif;
+  font-size: 18px;
+  font-weight: 600;
+  text-align: left;
+}
+
+.grace-message {
+  display: grid;
+  grid-template-columns: 48px 1fr;
+  align-items: center;
+  gap: 17px;
+  max-width: 780px;
+  margin: 25px auto 0;
+  padding: 19px 22px;
+  border-left: 2px solid var(--sat-gold);
+  background: var(--sat-soft);
+}
+
+.grace-symbol {
+  color: var(--sat-gold);
+  font-size: 31px;
+  text-align: center;
+}
+
+.grace-message .section-eyebrow {
+  margin-bottom: 4px;
+}
+
+.grace-message h3 {
+  margin: 0;
+  color: var(--sat-ink);
+  font-family: Georgia, "Noto Serif Tamil", serif;
+  font-size: 19px;
+  font-weight: 500;
+  line-height: 1.6;
+}
+
+.transformation-ending {
+  margin: 18px 0 0;
+  color: var(--sat-orange);
+  font-family: Georgia, "Noto Serif Tamil", serif;
+  font-size: 17px;
+  line-height: 1.8;
+  text-align: center;
+}
 
 /* Seva */
-.seva-section { background: var(--sat-cream); }
-.seva-list { margin: 21px 0; }
-.seva-list p { margin: 0; padding: 10px 0; border-bottom: 1px solid var(--sat-line); color: var(--sat-brown); font-size: 15px; line-height: 1.8; }
+
+.seva-section {
+  background: var(--sat-cream);
+}
+
+.seva-list {
+  margin: 21px 0;
+}
+
+.seva-list p {
+  margin: 0;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--sat-line);
+  color: var(--sat-brown);
+  font-size: 15px;
+  line-height: 1.8;
+}
 
 /* Ordinary to divine: editorial split section with compact value grid */
-.divine-section { padding: 70px 0; background: var(--sat-white); }
-.divine-container { display: grid; grid-template-columns: minmax(0, .88fr) minmax(0, 1.12fr); align-items: start; gap: clamp(35px, 5vw, 68px); width: min(1180px, calc(100% - 72px)); margin: 0 auto; }
-.divine-photo { position: sticky; top: 105px; }
-.divine-photo img { aspect-ratio: 4 / 5; max-height: 660px; }
-.divine-heading { margin: 0 0 22px; }
-.divine-heading h2 { margin: 0 0 16px; color: var(--sat-ink); font-family: Georgia, "Noto Serif Tamil", serif; font-size: clamp(30px, 3.2vw, 42px); font-weight: 500; line-height: 1.4; }
-.divine-divider { width: 52px; height: 2px; margin: 0 0 18px; background: var(--sat-gold); }
-.divine-heading p { margin: 0 0 10px; color: var(--sat-text); font-size: 15px; line-height: 1.85; }
-.divine-journey { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; margin: 23px 0; }
-.journey-item { display: flex; flex-direction: column; align-items: flex-start; min-width: 0; padding: 14px 13px; border: 1px solid var(--sat-line); background: var(--sat-cream); }
-.journey-context { margin-bottom: 4px; color: var(--sat-muted); font-size: 11px; line-height: 1.6; }
-.journey-item strong { color: var(--sat-brown); font-family: Georgia, "Noto Serif Tamil", serif; font-size: 19px; font-weight: 500; line-height: 1.5; }
-.journey-connector { display: none; }
-.divine-ending { margin: 22px 0 0; padding: 19px 0 0; border-top: 1px solid var(--sat-line); }
-.divine-ending p { margin: 0 0 8px; color: var(--sat-muted); font-size: 15px; line-height: 1.85; }
-.divine-ending strong { color: var(--sat-orange); font-family: Georgia, "Noto Serif Tamil", serif; font-size: 19px; font-weight: 500; line-height: 1.6; }
+
+.divine-section {
+  padding: 70px 0;
+  background: var(--sat-white);
+}
+
+.divine-container {
+  display: grid;
+  grid-template-columns: minmax(0, .88fr) minmax(0, 1.12fr);
+  align-items: start;
+  gap: clamp(35px, 5vw, 68px);
+  width: min(1180px, calc(100% - 72px));
+  margin: 0 auto;
+}
+
+.divine-photo {
+  position: sticky;
+  top: 105px;
+}
+
+.divine-photo img {
+  aspect-ratio: 4 / 5;
+  max-height: 660px;
+}
+
+.divine-heading {
+  margin: 0 0 22px;
+}
+
+.divine-heading h2 {
+  margin: 0 0 16px;
+  color: var(--sat-ink);
+  font-family: Georgia, "Noto Serif Tamil", serif;
+  font-size: clamp(30px, 3.2vw, 42px);
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.divine-divider {
+  width: 52px;
+  height: 2px;
+  margin: 0 0 18px;
+  background: var(--sat-gold);
+}
+
+.divine-heading p {
+  margin: 0 0 10px;
+  color: var(--sat-text);
+  font-size: 15px;
+  line-height: 1.85;
+}
+
+.divine-journey {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+  margin: 23px 0;
+}
+
+.journey-item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-width: 0;
+  padding: 14px 13px;
+  border: 1px solid var(--sat-line);
+  background: var(--sat-cream);
+}
+
+.journey-context {
+  margin-bottom: 4px;
+  color: var(--sat-muted);
+  font-size: 11px;
+  line-height: 1.6;
+}
+
+.journey-item strong {
+  color: var(--sat-brown);
+  font-family: Georgia, "Noto Serif Tamil", serif;
+  font-size: 19px;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.journey-connector {
+  display: none;
+}
+
+.divine-ending {
+  margin: 22px 0 0;
+  padding: 19px 0 0;
+  border-top: 1px solid var(--sat-line);
+}
+
+.divine-ending p {
+  margin: 0 0 8px;
+  color: var(--sat-muted);
+  font-size: 15px;
+  line-height: 1.85;
+}
+
+.divine-ending strong {
+  color: var(--sat-orange);
+  font-family: Georgia, "Noto Serif Tamil", serif;
+  font-size: 19px;
+  font-weight: 500;
+  line-height: 1.6;
+}
 
 /* A small satsang */
-.small-satsang-container { grid-template-columns: minmax(0, .92fr) minmax(0, 1.08fr); }
-.small-satsang-image img { aspect-ratio: 4 / 5; }
-.small-satsang-content h2 { margin-bottom: 18px; }
-.small-satsang-content > p { margin-bottom: 14px; }
-.small-points { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 9px; margin: 21px 0; }
-.small-points span { padding: 11px 13px; border-left: 2px solid var(--sat-gold); background: var(--sat-soft); color: var(--sat-brown); font-size: 13.5px; line-height: 1.7; }
-.small-highlight { color: var(--sat-orange) !important; font-family: Georgia, "Noto Serif Tamil", serif; font-size: 17px !important; line-height: 1.85 !important; }
+
+.small-satsang-container {
+  grid-template-columns: minmax(0, .92fr) minmax(0, 1.08fr);
+}
+
+.small-satsang-image img {
+  aspect-ratio: 4 / 5;
+}
+
+.small-satsang-content h2 {
+  margin-bottom: 18px;
+}
+
+.small-satsang-content > p {
+  margin-bottom: 14px;
+}
+
+.small-points {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 9px;
+  margin: 21px 0;
+}
+
+.small-points span {
+  padding: 11px 13px;
+  border-left: 2px solid var(--sat-gold);
+  background: var(--sat-soft);
+  color: var(--sat-brown);
+  font-size: 13.5px;
+  line-height: 1.7;
+}
+
+.small-highlight {
+  color: var(--sat-orange) !important;
+  font-family: Georgia, "Noto Serif Tamil", serif;
+  font-size: 17px !important;
+  line-height: 1.85 !important;
+}
 
 /* Invitation: full-width photographic banner, kept compact in height */
+
 .invitation-section {
   position: relative;
   isolation: isolate;
@@ -325,6 +668,7 @@
   color: var(--sat-white);
   text-align: center;
 }
+
 .invitation-section::before {
   content: "";
   position: absolute;
@@ -333,6 +677,7 @@
   background: url("/images/gallery/gallery-8.jpeg") center 48% / cover no-repeat;
   transform: scale(1.01);
 }
+
 .invitation-section::after {
   content: "";
   position: absolute;
@@ -340,138 +685,695 @@
   z-index: -1;
   background: linear-gradient(105deg, rgba(35, 19, 11, .87), rgba(74, 34, 15, .73));
 }
-.invitation-content { width: min(850px, 100%); min-width: 0; margin: 0 auto; }
-.invitation-content .section-eyebrow { margin-bottom: 10px; color: var(--sat-light-gold, #e4c98e); }
-.invitation-content h2 { margin: 0 0 10px; color: var(--sat-white); font-family: Georgia, "Noto Serif Tamil", serif; font-size: clamp(32px, 4.3vw, 52px); font-weight: 500; line-height: 1.35; overflow-wrap: anywhere; }
-.invitation-om { margin: 3px 0 12px; color: var(--sat-light-gold, #e4c98e); font-size: 31px; line-height: 1.2; }
-.invitation-content > p { max-width: 720px; margin: 0 auto 12px; color: rgba(255, 255, 255, .9); font-size: 15px; line-height: 1.85; }
-.invitation-emphasis { margin-top: 14px !important; color: #f1d7a3 !important; font-family: Georgia, "Noto Serif Tamil", serif; font-size: 18px !important; line-height: 1.85 !important; }
-.invitation-values { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin-top: 20px; }
-.invitation-values span { padding: 7px 13px; border: 1px solid rgba(255, 255, 255, .5); border-radius: 999px; color: var(--sat-white); font-size: 12px; line-height: 1.5; }
+
+.invitation-content {
+  width: min(850px, 100%);
+  min-width: 0;
+  margin: 0 auto;
+}
+
+.invitation-content .section-eyebrow {
+  margin-bottom: 10px;
+  color: var(--sat-light-gold, #e4c98e);
+}
+
+.invitation-content h2 {
+  margin: 0 0 10px;
+  color: var(--sat-white);
+  font-family: Georgia, "Noto Serif Tamil", serif;
+  font-size: clamp(32px, 4.3vw, 52px);
+  font-weight: 500;
+  line-height: 1.35;
+  overflow-wrap: anywhere;
+}
+
+.invitation-om {
+  margin: 3px 0 12px;
+  color: var(--sat-light-gold, #e4c98e);
+  font-size: 31px;
+  line-height: 1.2;
+}
+
+.invitation-content > p {
+  max-width: 720px;
+  margin: 0 auto 12px;
+  color: rgba(255, 255, 255, .9);
+  font-size: 15px;
+  line-height: 1.85;
+}
+
+.invitation-emphasis {
+  margin-top: 14px !important;
+  color: #f1d7a3 !important;
+  font-family: Georgia, "Noto Serif Tamil", serif;
+  font-size: 18px !important;
+  line-height: 1.85 !important;
+}
+
+.invitation-values {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 20px;
+}
+
+.invitation-values span {
+  padding: 7px 13px;
+  border: 1px solid rgba(255, 255, 255, .5);
+  border-radius: 999px;
+  color: var(--sat-white);
+  font-size: 12px;
+  line-height: 1.5;
+}
 
 /* Closing */
-.satsang-final { padding: 50px 24px 56px; background: var(--sat-white); text-align: center; }
-.final-om { margin-bottom: 14px; color: var(--sat-gold); font-size: 35px; line-height: 1.2; }
-.satsang-final > p { margin: 0 auto 17px; color: var(--sat-brown); font-family: Georgia, "Noto Serif Tamil", serif; font-size: 17px; line-height: 1.9; }
-.satsang-final > strong { display: block; margin-bottom: 22px; color: var(--sat-orange); font-family: Georgia, serif; font-size: 23px; font-weight: 500; }
-.final-links { display: flex; justify-content: center; flex-wrap: wrap; gap: 10px; }
-.final-links a { display: inline-flex; align-items: center; justify-content: center; min-height: 42px; padding: 10px 20px; border: 1px solid var(--sat-gold); border-radius: 999px; color: var(--sat-orange); font-size: 13px; font-weight: 600; line-height: 1.4; text-decoration: none; transition: background .2s ease, color .2s ease, border-color .2s ease; }
-.final-links a:hover { border-color: var(--sat-orange); background: var(--sat-orange); color: var(--sat-white); }
+
+.satsang-final {
+  padding: 50px 24px 56px;
+  background: var(--sat-white);
+  text-align: center;
+}
+
+.final-om {
+  margin-bottom: 14px;
+  color: var(--sat-gold);
+  font-size: 35px;
+  line-height: 1.2;
+}
+
+.satsang-final > p {
+  margin: 0 auto 17px;
+  color: var(--sat-brown);
+  font-family: Georgia, "Noto Serif Tamil", serif;
+  font-size: 17px;
+  line-height: 1.9;
+}
+
+.satsang-final > strong {
+  display: block;
+  margin-bottom: 22px;
+  color: var(--sat-orange);
+  font-family: Georgia, serif;
+  font-size: 23px;
+  font-weight: 500;
+}
+
+.final-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.final-links a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 42px;
+  padding: 10px 20px;
+  border: 1px solid var(--sat-gold);
+  border-radius: 999px;
+  color: var(--sat-orange);
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.4;
+  text-decoration: none;
+  transition: background .2s ease, color .2s ease, border-color .2s ease;
+}
+
+.final-links a:hover {
+  border-color: var(--sat-orange);
+  background: var(--sat-orange);
+  color: var(--sat-white);
+}
 
 /* Tablet */
+
 @media (max-width: 980px) {
-  .story-container,
-  .small-satsang-container { gap: 32px; }
-  .pillar-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .divine-container { grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr); gap: 30px; }
-  .divine-photo { position: static; }
-  .divine-journey { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .transformation-list { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .story-container, .small-satsang-container {
+    gap: 32px;
+  }
+  .pillar-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .divine-container {
+    grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr);
+    gap: 30px;
+  }
+  .divine-photo {
+    position: static;
+  }
+  .divine-journey {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .transformation-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
 
 /* Mobile */
+
 @media (max-width: 700px) {
-  .satsang-hero { min-height: 430px; background-position: 58% center; }
-  .satsang-hero-overlay { background: linear-gradient(90deg, rgba(27, 15, 8, .92), rgba(27, 15, 8, .72)), linear-gradient(0deg, rgba(27, 15, 8, .45), transparent 65%); }
-  .satsang-hero-content,
-  .story-container,
-  .pillars-container,
-  .transformation-container,
-  .divine-container,
-  .small-satsang-container { width: calc(100% - 40px); }
-  .satsang-hero-content { padding: 65px 0; }
-  .satsang-hero .hero-eyebrow { margin-bottom: 12px; font-size: 14px; line-height: 1.7; }
-  .satsang-hero h1 { font-size: clamp(39px, 10vw, 54px); line-height: 1.35; }
-  .satsang-hero .hero-line { margin: 18px 0 15px; }
-  .satsang-hero .hero-subtitle { font-size: 14px; line-height: 1.85; }
-  .story-section,
-  .small-satsang-section { padding: 52px 0; }
-  .story-container,
-  .small-satsang-container,
-  .divine-container { grid-template-columns: minmax(0, 1fr); gap: 25px; }
-  .story-container .story-image { order: 2; }
-  .story-container .story-content { order: 1; }
-  .story-content h2,
-  .small-satsang-content h2 { font-size: clamp(28px, 8vw, 36px); line-height: 1.42; }
-  .story-content > p,
-  .small-satsang-content > p,
-  .satsang-page p { font-size: 14.5px; line-height: 1.85; }
-  .story-image img,
-  .large-image img,
-  .small-satsang-image img,
-  .divine-photo img { aspect-ratio: 4 / 3; max-height: none; }
-  .meaning-inline { gap: 8px; margin: 19px 0; }
-  .meaning-inline > div { flex: 1 1 0; min-width: 0; padding: 12px 8px; }
-  .meaning-inline strong { font-size: 21px; }
-  .meaning-inline span { font-size: 10.5px; }
-  .faith-pair { gap: 9px; }
-  .faith-pair > div { padding: 14px 12px; }
-  .faith-pair strong { font-size: 19px; }
-  .faith-pair p { font-size: 12.5px; }
-  .pillars-section { padding: 52px 0 55px; }
-  .pillars-heading { margin-bottom: 23px; }
-  .pillars-heading h2 { font-size: 29px; }
-  .pillars-heading > p:last-child { font-size: 14px; }
-  .pillar-grid { gap: 9px; }
-  .pillar-item { padding: 17px 10px; }
-  .pillar-top { width: 48px; height: 48px; margin-bottom: 10px; }
-  .pillar-symbol { font-size: 21px; }
-  .pillar-item h3 { font-size: 18px; }
-  .pillar-item p { font-size: 12px; line-height: 1.7; }
-  .heart-box { padding: 24px 16px 21px; }
-  .heart-box blockquote { font-size: 16px; line-height: 1.9; }
-  .transformation-section { padding: 52px 0 48px; }
-  .transformation-heading { margin-bottom: 23px; }
-  .transformation-heading h2 { font-size: 31px; }
-  .transformation-heading > p:last-child { font-size: 14px; }
-  .transformation-container { width: calc(100% - 36px); }
-  .transformation-list { grid-template-columns: minmax(0, 1fr); gap: 8px; }
-  .transformation-row { min-height: 57px; padding: 9px 12px; }
-  .change-before { font-size: 16px; }
-  .change-after { font-size: 17px; }
-  .grace-message { grid-template-columns: 35px minmax(0, 1fr); gap: 11px; margin-top: 20px; padding: 15px 13px; }
-  .grace-symbol { font-size: 27px; }
-  .grace-message h3 { font-size: 16px; }
-  .transformation-ending { font-size: 15px; }
-  .divine-section { padding: 53px 0; }
-  .divine-photo { order: 2; }
-  .divine-content { order: 1; }
-  .divine-heading { margin-bottom: 17px; }
-  .divine-heading h2 { font-size: 30px; line-height: 1.42; }
-  .divine-heading p { font-size: 14px; }
-  .divine-journey { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; margin: 17px 0; }
-  .journey-item { padding: 11px; }
-  .journey-context { font-size: 10px; }
-  .journey-item strong { font-size: 17px; }
-  .divine-ending { margin-top: 16px; padding-top: 15px; }
-  .divine-ending p { font-size: 14px; }
-  .divine-ending strong { font-size: 17px; }
-  .small-points { grid-template-columns: minmax(0, 1fr); gap: 7px; margin: 17px 0; }
-  .small-points span { padding: 10px 12px; font-size: 13px; }
-  .small-highlight { font-size: 16px !important; }
-  .invitation-section { min-height: 0; padding: 48px 18px; }
-  .invitation-section::before { background-position: center; }
-  .invitation-section::after { background: linear-gradient(180deg, rgba(35, 19, 11, .88), rgba(74, 34, 15, .82)); }
-  .invitation-content h2 { font-size: 30px; line-height: 1.42; }
-  .invitation-om { font-size: 27px; }
-  .invitation-content > p { font-size: 14px; }
-  .invitation-emphasis { font-size: 16px !important; }
-  .invitation-values { gap: 7px; }
-  .invitation-values span { padding: 7px 10px; font-size: 11px; }
-  .satsang-final { padding: 45px 18px 50px; }
-  .satsang-final > p { font-size: 15px; line-height: 1.95; }
-  .satsang-final > strong { font-size: 21px; }
-  .final-links { gap: 8px; }
-  .final-links a { padding: 9px 13px; font-size: 12px; }
+  .satsang-hero-content, .story-container, .pillars-container, .transformation-container, .divine-container, .small-satsang-container {
+    width: calc(100% - 40px);
+  }
+  .story-section, .small-satsang-section {
+    padding: 52px 0;
+  }
+  .story-container, .small-satsang-container, .divine-container {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 25px;
+  }
+  .story-container .story-image {
+    order: 2;
+  }
+  .story-container .story-content {
+    order: 1;
+  }
+  .story-content h2, .small-satsang-content h2 {
+    font-size: clamp(28px, 8vw, 36px);
+    line-height: 1.42;
+  }
+  .story-content > p, .small-satsang-content > p, .satsang-page p {
+    font-size: 14.5px;
+    line-height: 1.85;
+  }
+  .story-image img, .large-image img, .small-satsang-image img, .divine-photo img {
+    aspect-ratio: 4 / 3;
+    max-height: none;
+  }
+  .meaning-inline {
+    gap: 8px;
+    margin: 19px 0;
+  }
+  .meaning-inline > div {
+    flex: 1 1 0;
+    min-width: 0;
+    padding: 12px 8px;
+  }
+  .meaning-inline strong {
+    font-size: 21px;
+  }
+  .meaning-inline span {
+    font-size: 10.5px;
+  }
+  .faith-pair {
+    gap: 9px;
+  }
+  .faith-pair > div {
+    padding: 14px 12px;
+  }
+  .faith-pair strong {
+    font-size: 19px;
+  }
+  .faith-pair p {
+    font-size: 12.5px;
+  }
+  .pillars-section {
+    padding: 52px 0 55px;
+  }
+  .pillars-heading {
+    margin-bottom: 23px;
+  }
+  .pillars-heading h2 {
+    font-size: 29px;
+  }
+  .pillars-heading > p:last-child {
+    font-size: 14px;
+  }
+  .pillar-grid {
+    gap: 9px;
+  }
+  .pillar-item {
+    padding: 17px 10px;
+  }
+  .pillar-top {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 10px;
+  }
+  .pillar-symbol {
+    font-size: 21px;
+  }
+  .pillar-item h3 {
+    font-size: 18px;
+  }
+  .pillar-item p {
+    font-size: 12px;
+    line-height: 1.7;
+  }
+  .heart-box {
+    padding: 24px 16px 21px;
+  }
+  .heart-box blockquote {
+    font-size: 16px;
+    line-height: 1.9;
+  }
+  .transformation-section {
+    padding: 52px 0 48px;
+  }
+  .transformation-heading {
+    margin-bottom: 23px;
+  }
+  .transformation-heading h2 {
+    font-size: 31px;
+  }
+  .transformation-heading > p:last-child {
+    font-size: 14px;
+  }
+  .transformation-container {
+    width: calc(100% - 36px);
+  }
+  .transformation-list {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 8px;
+  }
+  .transformation-row {
+    min-height: 57px;
+    padding: 9px 12px;
+  }
+  .change-before {
+    font-size: 16px;
+  }
+  .change-after {
+    font-size: 17px;
+  }
+  .grace-message {
+    grid-template-columns: 35px minmax(0, 1fr);
+    gap: 11px;
+    margin-top: 20px;
+    padding: 15px 13px;
+  }
+  .grace-symbol {
+    font-size: 27px;
+  }
+  .grace-message h3 {
+    font-size: 16px;
+  }
+  .transformation-ending {
+    font-size: 15px;
+  }
+  .divine-section {
+    padding: 53px 0;
+  }
+  .divine-photo {
+    order: 2;
+  }
+  .divine-content {
+    order: 1;
+  }
+  .divine-heading {
+    margin-bottom: 17px;
+  }
+  .divine-heading h2 {
+    font-size: 30px;
+    line-height: 1.42;
+  }
+  .divine-heading p {
+    font-size: 14px;
+  }
+  .divine-journey {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+    margin: 17px 0;
+  }
+  .journey-item {
+    padding: 11px;
+  }
+  .journey-context {
+    font-size: 10px;
+  }
+  .journey-item strong {
+    font-size: 17px;
+  }
+  .divine-ending {
+    margin-top: 16px;
+    padding-top: 15px;
+  }
+  .divine-ending p {
+    font-size: 14px;
+  }
+  .divine-ending strong {
+    font-size: 17px;
+  }
+  .small-points {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 7px;
+    margin: 17px 0;
+  }
+  .small-points span {
+    padding: 10px 12px;
+    font-size: 13px;
+  }
+  .small-highlight {
+    font-size: 16px !important;
+  }
+  .invitation-section {
+    min-height: 0;
+    padding: 48px 18px;
+  }
+  .invitation-section::before {
+    background-position: center;
+  }
+  .invitation-section::after {
+    background: linear-gradient(180deg, rgba(35, 19, 11, .88), rgba(74, 34, 15, .82));
+  }
+  .invitation-content h2 {
+    font-size: 30px;
+    line-height: 1.42;
+  }
+  .invitation-om {
+    font-size: 27px;
+  }
+  .invitation-content > p {
+    font-size: 14px;
+  }
+  .invitation-emphasis {
+    font-size: 16px !important;
+  }
+  .invitation-values {
+    gap: 7px;
+  }
+  .invitation-values span {
+    padding: 7px 10px;
+    font-size: 11px;
+  }
+  .satsang-final {
+    padding: 45px 18px 50px;
+  }
+  .satsang-final > p {
+    font-size: 15px;
+    line-height: 1.95;
+  }
+  .satsang-final > strong {
+    font-size: 21px;
+  }
+  .final-links {
+    gap: 8px;
+  }
+  .final-links a {
+    padding: 9px 13px;
+    font-size: 12px;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .satsang-page *,
-  .satsang-page *::before,
-  .satsang-page *::after {
+  .satsang-page *, .satsang-page *::before, .satsang-page *::after {
     scroll-behavior: auto !important;
     transition-duration: .01ms !important;
     animation-duration: .01ms !important;
     animation-iteration-count: 1 !important;
+  }
+}
+
+/*
+   =====================================================
+   
+   CROSS-PAGE DESIGN SYSTEM — HERO + SECTION RHYTHM
+   
+   Shared with Home, About and Sai Baba pages.
+   
+   =====================================================
+*/
+
+.satsang-page {
+  --sat-orange: #b85c16;
+}
+
+.story-container, .small-satsang-container {
+  width: min(1240px, calc(100% - 64px));
+}
+
+.story-section, .small-satsang-section {
+  padding-top: 68px;
+  padding-bottom: 68px;
+}
+
+.pillars-section, .transformation-section, .divine-section {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.invitation-section {
+  min-height: 360px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.final-links a {
+  min-height: 42px;
+  border-radius: 999px;
+}
+
+@media (max-width: 700px) {
+  .story-container, .small-satsang-container {
+    width: calc(100% - 36px);
+  }
+  .story-section, .small-satsang-section, .pillars-section, .transformation-section, .divine-section {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  .invitation-section {
+    min-height: 340px;
+    padding-top: 46px;
+    padding-bottom: 46px;
+  }
+}
+
+.satsang-hero-actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 22px;
+  margin-top: 30px;
+}
+
+.satsang-hero-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 46px;
+  padding: 12px 22px;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  font-family: Arial, "Noto Sans Tamil", sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.4;
+  text-decoration: none;
+  transition: transform .2s ease, background .2s ease, border-color .2s ease;
+}
+
+.satsang-hero-button:hover {
+  transform: translateY(-2px);
+}
+
+.satsang-hero-button-primary {
+  background: #f4bd5d;
+  color: #2e1b10;
+}
+
+.satsang-hero-button-primary:hover {
+  background: #ffd17e;
+}
+
+.satsang-hero-link {
+  padding: 9px 0;
+  border-bottom: 1px solid rgba(242, 217, 155, .65);
+  color: var(--sat-white);
+  font-family: Arial, "Noto Sans Tamil", sans-serif;
+  font-size: 13px;
+  text-decoration: none;
+}
+
+.satsang-hero-link:hover {
+  color: var(--sat-light-gold);
+}
+
+.satsang-hero-bottomline {
+  position: absolute;
+  z-index: 1;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  min-height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  padding: 8px 20px;
+  border-top: 1px solid rgba(244, 195, 107, .25);
+  background: rgba(21, 12, 7, .28);
+  color: rgba(255, 255, 255, .75);
+  font-family: Georgia, "Noto Serif Tamil", serif;
+  font-size: 10px;
+  line-height: 1.5;
+  letter-spacing: .08em;
+}
+
+.satsang-hero-bottomline i {
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background: var(--sat-light-gold);
+}
+
+@media (max-width: 760px) {
+  .satsang-hero-actions {
+    gap: 17px;
+    margin-top: 25px;
+  }
+  .satsang-hero-button {
+    min-height: 43px;
+    padding: 10px 17px;
+    font-size: 12px;
+  }
+  .satsang-hero-link {
+    font-size: 12px;
+  }
+  .satsang-hero-bottomline {
+    gap: 9px;
+    padding: 8px 10px;
+    font-size: 9px;
+    letter-spacing: 0;
+  }
+}
+
+@media (max-width: 390px) {
+  .satsang-hero-actions {
+    align-items: flex-start;
+    gap: 12px;
+  }
+  .satsang-hero-bottomline {
+    gap: 6px;
+    font-size: 8px;
+  }
+}
+
+/* Unified hero styles — same visible banner height as the Home hero, accounting for the separate header. */
+
+.satsang-hero {
+  position: relative;
+  isolation: isolate;
+  display: flex;
+  align-items: center;
+  height: 426px;
+  min-height: 426px;
+  overflow: hidden;
+  color: var(--sat-white);
+  background: var(--sat-ink) url("/images/gallery/gallery-1.jpeg") center 46% / cover no-repeat;
+}
+
+.satsang-hero-overlay {
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(26, 15, 8, .93) 0%, rgba(26, 15, 8, .75) 48%, rgba(26, 15, 8, .2) 100%);
+}
+
+.satsang-hero-content {
+  position: relative;
+  z-index: 1;
+  width: min(1240px, calc(100% - 64px));
+  margin: 0 auto;
+  padding: 0;
+  text-align: left;
+}
+
+.satsang-hero .hero-eyebrow {
+  margin: 0 0 12px;
+  color: var(--sat-light-gold);
+  font-family: Georgia, "Noto Serif Tamil", serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.6;
+  letter-spacing: .3px;
+}
+
+.satsang-hero h1 {
+  max-width: 960px;
+  margin: 0;
+  color: var(--sat-white);
+  font-family: Georgia, "Noto Serif Tamil", serif;
+  font-size: clamp(42px, 5.2vw, 68px);
+  font-weight: 500;
+  line-height: 1.22;
+  letter-spacing: -.4px;
+}
+
+.satsang-hero .hero-line {
+  width: 64px;
+  height: 2px;
+  margin: 20px 0 16px;
+  background: var(--sat-gold);
+}
+
+.satsang-hero .hero-subtitle {
+  max-width: 700px;
+  margin: 0;
+  color: rgba(255, 255, 255, .9);
+  font-family: Georgia, "Noto Serif Tamil", serif;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+@media (max-width: 760px) {
+  .satsang-hero {
+    height: 344px;
+    min-height: 344px;
+    align-items: center;
+    background-position: 58% center;
+  }
+  .satsang-hero-overlay {
+    background: linear-gradient(90deg, rgba(26, 15, 8, .93), rgba(26, 15, 8, .69) 68%, rgba(26, 15, 8, .4));
+  }
+  .satsang-hero-content {
+    width: calc(100% - 36px);
+    padding: 0 0 10px;
+  }
+  .satsang-hero .hero-eyebrow {
+    margin-bottom: 10px;
+    font-size: 14px;
+  }
+  .satsang-hero h1 {
+    font-size: clamp(38px, 9vw, 44px);
+    line-height: 1.28;
+  }
+  .satsang-hero .hero-line {
+    margin: 17px 0 14px;
+  }
+  .satsang-hero .hero-subtitle {
+    font-size: 14px;
+    line-height: 1.75;
+  }
+  .satsang-hero-actions {
+    gap: 12px;
+    margin-top: 18px;
+  }
+  .satsang-hero-button {
+    min-height: 43px;
+    padding: 10px 17px;
+    font-size: 12px;
+  }
+  .satsang-hero-link {
+    font-size: 12px;
+  }
+  .satsang-hero-bottomline {
+    gap: 9px;
+    padding: 7px 10px;
+    font-size: 9px;
+    letter-spacing: 0;
+  }
+}
+
+@media (max-width: 390px) {
+  .satsang-hero-actions {
+    align-items: flex-start;
+    gap: 10px;
+  }
+  .satsang-hero-bottomline {
+    gap: 6px;
+    font-size: 8px;
   }
 }

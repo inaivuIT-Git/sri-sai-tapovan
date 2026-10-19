@@ -1,117 +1,103 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { useState } from "react";
 import "./header.css";
 
 const navItems = [
-  { label: "Home", href: "/" },
-  { label: "About Us", href: "/about" },
-  { label: "Satsang", href: "/satsang" },
-  { label: "Sai Baba", href: "/sai-baba" },
-  { label: "Calendar", href: "/calendar" },
-  { label: "Gallery", href: "/gallery" },
-  { label: "Contact", href: "/contact" },
+  { label: "முகப்பு", href: "/" },
+  { label: "எங்களைப் பற்றி", href: "/about" },
+  { label: "சத்சங்கம்", href: "/satsang" },
+  { label: "சாய்பாபா", href: "/sai-baba" },
+  { label: "தட்சிணை", href: "/donation" },
+  { label: "காட்சியகம்", href: "/gallery" },
+  { label: "தொடர்பு", href: "/contact" },
 ];
 
 export default function Header() {
   const pathname = usePathname();
   const [menuOpen, setMenuOpen] = useState(false);
+  const isHome = pathname === "/";
 
-  useEffect(() => {
-    setMenuOpen(false);
-  }, [pathname]);
-
+  const closeMenu = () => setMenuOpen(false);
   const isActive = (href: string) =>
-    href === "/"
-      ? pathname === "/"
-      : pathname.startsWith(href);
+    href === "/" ? pathname === "/" : pathname.startsWith(href);
 
   return (
-    <header className="site-header">
-      <div className="header-container">
-
-        {/* BRAND */}
+    <header className={`site-header ${isHome ? "site-header-home" : ""}`}>
+      <div className="header-inner">
         <Link
           href="/"
-          className="site-logo"
-          aria-label="சாய் சத்சங் @ குருபாதம்"
-          onClick={() => setMenuOpen(false)}
+          className="site-brand"
+          onClick={closeMenu}
+          aria-label="சாய் சத்சங் @ குருபாதம் — Home"
         >
-          <span className="logo-symbol" aria-hidden="true">
-            ॐ
+          <span className="site-logo-frame" aria-hidden="true">
+            <Image
+              src="/images/logo/paduka-logo.png"
+              alt=""
+              width={512}
+              height={512}
+              sizes="46px"
+              className="site-logo-image"
+              priority
+            />
           </span>
-
-          <span className="logo-name">
-            சாய் சத்சங் @ குருபாதம்
-          </span>
+          <span className="site-brand-name">சாய் சத்சங் @ குருபாதம்</span>
         </Link>
 
-
-        {/* DESKTOP NAVIGATION */}
-        <nav className="main-nav" aria-label="Main navigation">
-          {navItems.map((item) => (
-            <Link
-              key={item.href}
-              href={item.href}
-              className={`nav-link ${
-                isActive(item.href) ? "active" : ""
-              }`}
-              aria-current={
-                isActive(item.href) ? "page" : undefined
-              }
-            >
-              {item.label}
-            </Link>
-          ))}
+        <nav className="desktop-nav" aria-label="முதன்மை வழிசெலுத்தல்">
+          {navItems.map((item) => {
+            const active = isActive(item.href);
+            return (
+              <Link
+                key={item.href}
+                href={item.href}
+                className={`desktop-nav-link ${active ? "is-active" : ""}`}
+                aria-current={active ? "page" : undefined}
+              >
+                {item.label}
+              </Link>
+            );
+          })}
         </nav>
 
-
-        {/* MOBILE MENU BUTTON */}
         <button
           type="button"
-          className={`mobile-menu-button ${
-            menuOpen ? "open" : ""
-          }`}
-          onClick={() => setMenuOpen((open) => !open)}
-          aria-label={menuOpen ? "Close menu" : "Open menu"}
+          className={`mobile-menu-toggle ${menuOpen ? "is-open" : ""}`}
+          aria-label={menuOpen ? "மெனுவை மூடு" : "மெனுவைத் திற"}
           aria-expanded={menuOpen}
-          aria-controls="mobile-navigation"
+          aria-controls="mobile-site-nav"
+          onClick={() => setMenuOpen((open) => !open)}
         >
-          <span />
           <span />
           <span />
         </button>
-
       </div>
 
-
-      {/* MOBILE NAVIGATION */}
       <nav
-        id="mobile-navigation"
-        className={`mobile-nav ${
-          menuOpen ? "mobile-nav-open" : ""
-        }`}
-        aria-label="Mobile navigation"
+        id="mobile-site-nav"
+        className={`mobile-site-nav ${menuOpen ? "mobile-site-nav-open" : ""}`}
+        aria-label="கைபேசி வழிசெலுத்தல்"
         aria-hidden={!menuOpen}
-        inert={!menuOpen}
       >
-        {navItems.map((item) => (
-          <Link
-            key={item.href}
-            href={item.href}
-            className={`mobile-nav-link ${
-              isActive(item.href) ? "active" : ""
-            }`}
-            aria-current={
-              isActive(item.href) ? "page" : undefined
-            }
-            onClick={() => setMenuOpen(false)}
-          >
-            {item.label}
-          </Link>
-        ))}
+        {navItems.map((item) => {
+          const active = isActive(item.href);
+          return (
+            <Link
+              key={item.href}
+              href={item.href}
+              className={`mobile-nav-link ${active ? "is-active" : ""}`}
+              aria-current={active ? "page" : undefined}
+              onClick={closeMenu}
+              tabIndex={menuOpen ? 0 : -1}
+            >
+              {item.label}
+            </Link>
+          );
+        })}
       </nav>
     </header>
   );
