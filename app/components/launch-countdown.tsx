@@ -4,7 +4,7 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 import "./launch-countdown.css";
 
-const LAUNCH_AT = new Date("2026-10-20T12:30:00+05:30").getTime();
+const LAUNCH_AT = new Date("2026-10-20T13:30:00+05:30").getTime();
 
 type TimeLeft = {
   hours: number;
@@ -71,7 +71,7 @@ export default function LaunchCountdown({
         <p className="launch-kicker">ஓம் சாய் ராம்</p>
         <h1 id="launch-title">சாய் சத்சங் @ குருபாதம்</h1>
         <p className="launch-message">
-          சாயியின் அருளில் நமது ஆன்மிக இணையதளம் இன்று மதியம் 12:30 மணிக்கு
+          சாயியின் அருளில் நமது ஆன்மிக இணையதளம் இன்று மதியம் 1:30 மணிக்கு
           மலர்கிறது.
         </p>
 
@@ -107,7 +107,7 @@ export default function LaunchCountdown({
 
         <div className="launch-divider" />
         <p className="launch-blessing">நம்பிக்கை · பொறுமை · அன்பு · சேவை</p>
-        <p className="launch-date">20 அக்டோபர் 2026 · மதியம் 12:30 · IST</p>
+        <p className="launch-date">20 அக்டோபர் 2026 · மதியம் 1:30 · IST</p>
       </section>
     </main>
   );
