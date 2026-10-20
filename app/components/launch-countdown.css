@@ -1,0 +1,215 @@
+.launch-countdown-page {
+  position: relative;
+  isolation: isolate;
+  min-height: 100svh;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  padding: 32px 20px;
+  background:
+    radial-gradient(circle at 50% 5%, rgba(236, 194, 107, 0.2), transparent 34%),
+    linear-gradient(145deg, #1a0d0a 0%, #461b10 50%, #150907 100%);
+  color: #fff9ec;
+}
+
+.launch-countdown-page::before {
+  content: "";
+  position: absolute;
+  inset: 20px;
+  z-index: -1;
+  border: 1px solid rgba(242, 203, 121, 0.24);
+  border-radius: 28px;
+  pointer-events: none;
+}
+
+.launch-countdown-glow {
+  position: absolute;
+  z-index: -2;
+  width: 420px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.18;
+}
+
+.launch-countdown-glow-left {
+  left: -240px;
+  bottom: -220px;
+  background: #f5b547;
+}
+
+.launch-countdown-glow-right {
+  right: -230px;
+  top: -220px;
+  background: #bc4d2b;
+}
+
+.launch-countdown-card {
+  width: min(760px, 100%);
+  text-align: center;
+  animation: launch-card-enter 800ms ease-out both;
+}
+
+.launch-logo-wrap {
+  width: 118px;
+  height: 118px;
+  margin: 0 auto 22px;
+  display: grid;
+  place-items: center;
+  border: 1px solid rgba(250, 219, 152, 0.38);
+  border-radius: 50%;
+  background: rgba(255, 248, 228, 0.08);
+  box-shadow: 0 0 60px rgba(244, 184, 73, 0.15);
+}
+
+.launch-logo-wrap img {
+  width: 94px;
+  height: 94px;
+  object-fit: contain;
+}
+
+.launch-kicker {
+  margin: 0 0 14px;
+  color: #e9c174;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+}
+
+.launch-countdown-card h1 {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(2rem, 6vw, 4.5rem);
+  font-weight: 500;
+  line-height: 1.15;
+  letter-spacing: -0.025em;
+  text-wrap: balance;
+}
+
+.launch-message {
+  max-width: 620px;
+  margin: 24px auto 34px;
+  color: rgba(255, 248, 233, 0.78);
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  line-height: 1.85;
+  text-wrap: balance;
+}
+
+.launch-timer {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: clamp(10px, 3vw, 28px);
+}
+
+.launch-time-unit {
+  min-width: clamp(76px, 15vw, 130px);
+}
+
+.launch-time-unit strong {
+  display: block;
+  color: #f2cc80;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(2.6rem, 9vw, 5.5rem);
+  font-weight: 400;
+  font-variant-numeric: tabular-nums;
+  line-height: 1;
+}
+
+.launch-time-unit span {
+  display: block;
+  margin-top: 12px;
+  color: rgba(255, 248, 233, 0.6);
+  font-size: 0.76rem;
+  letter-spacing: 0.12em;
+}
+
+.launch-time-separator {
+  color: rgba(242, 204, 128, 0.45);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(2.2rem, 8vw, 4.6rem);
+  line-height: 0.9;
+}
+
+.launch-divider {
+  width: 96px;
+  height: 1px;
+  margin: 38px auto 22px;
+  background: linear-gradient(90deg, transparent, #e8bd6b, transparent);
+}
+
+.launch-blessing {
+  margin: 0;
+  color: #f5dfb2;
+  font-size: 0.86rem;
+  letter-spacing: 0.13em;
+}
+
+.launch-date {
+  margin: 12px 0 0;
+  color: rgba(255, 248, 233, 0.52);
+  font-size: 0.78rem;
+  letter-spacing: 0.06em;
+}
+
+@keyframes launch-card-enter {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 520px) {
+  .launch-countdown-page {
+    padding: 28px 16px;
+  }
+
+  .launch-countdown-page::before {
+    inset: 10px;
+    border-radius: 20px;
+  }
+
+  .launch-logo-wrap {
+    width: 94px;
+    height: 94px;
+    margin-bottom: 18px;
+  }
+
+  .launch-logo-wrap img {
+    width: 74px;
+    height: 74px;
+  }
+
+  .launch-message {
+    margin-bottom: 28px;
+  }
+
+  .launch-timer {
+    gap: 6px;
+  }
+
+  .launch-time-unit {
+    min-width: 72px;
+  }
+
+  .launch-time-unit span {
+    margin-top: 8px;
+    font-size: 0.68rem;
+  }
+
+  .launch-blessing {
+    font-size: 0.72rem;
+    letter-spacing: 0.08em;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .launch-countdown-card {
+    animation: none;
+  }
+}
