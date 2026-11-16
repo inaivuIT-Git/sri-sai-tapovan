@@ -282,10 +282,10 @@ export default function Home() {
               <Link href="/donation" className="home-button home-button-ghost">தட்சிணை / நன்கொடை</Link>
             </div>
             <div className="home-final-links">
-              <Link href="/calendar">நிகழ்வுகள்</Link>
-              <Link href="/shirdi-travel">ஷீர்டி பயணம்</Link>
-              <Link href="/ask-sai">சாயியிடம் கேளுங்கள்</Link>
-              <Link href="/contact">தொடர்பு</Link>
+              <Link href="">நிகழ்வுகள்</Link>
+              <Link href="">ஷீர்டி பயணம்</Link>
+              <Link href="">சாயியிடம் கேளுங்கள்</Link>
+              <Link href="">தொடர்பு</Link>
             </div>
           </div>
         </div>
