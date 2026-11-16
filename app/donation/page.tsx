@@ -158,11 +158,11 @@ export default function DonationPage() {
               <p className="donation-bank-label">வங்கி விவரங்கள்</p>
               <div className="donation-bank-row">
                 <span>Account Name</span>
-                <strong>002922010002012</strong>
+                <strong>SRI SAI TAPOVAN SPIRITUAL TRUST</strong>
               </div>
               <div className="donation-bank-row">
                 <span>Account Number</span>
-                <strong>SRI SAI TAPOVAN SPIRITUAL TRUST</strong>
+                <strong>002922010002012</strong>
               </div>
               <div className="donation-bank-row">
                 <span>IFSC Code</span>
