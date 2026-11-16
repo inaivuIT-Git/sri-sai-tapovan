@@ -372,12 +372,7 @@ export default function EnglishHome() {
                 Dakshina / Offerings
               </Link>
             </div>
-            <div className="home-final-links">
-              <Link href="">Events</Link>
-              <Link href="">Sai Baba Stories</Link>
-              <Link href="">Gallery</Link>
-              <Link href="">Contact</Link>
-            </div>
+            
           </div>
         </div>
       </section>

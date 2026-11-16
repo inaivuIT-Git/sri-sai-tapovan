@@ -281,12 +281,7 @@ export default function Home() {
               <Link href="/satsang" className="home-button home-button-gold">சத்சங்கத்தில் இணைய</Link>
               <Link href="/donation" className="home-button home-button-ghost">தட்சிணை / நன்கொடை</Link>
             </div>
-            <div className="home-final-links">
-              <Link href="">நிகழ்வுகள்</Link>
-              <Link href="">ஷீர்டி பயணம்</Link>
-              <Link href="">சாயியிடம் கேளுங்கள்</Link>
-              <Link href="">தொடர்பு</Link>
-            </div>
+            
           </div>
         </div>
       </section>
