@@ -28,7 +28,7 @@ export default function DonationPage() {
       <section className="donation-intro donation-section">
         <div className="donation-container donation-intro-grid">
           <div className="donation-section-heading">
-            <p className="donation-eyebrow">சாய் சச்சரித்ரத்தின் அடிப்படையில்</p>
+            <p className="donation-eyebrow">ஸ்ரீ சாயி சத்சரிதத்தின் அடிப்படையில்</p>
             <h2>சாய்பாபாவின்<br />தட்சிணை</h2>
             <span className="donation-rule" aria-hidden="true" />
             <p className="donation-muted-note">தட்சிணை என்பது பணத்தைத் தாண்டிய ஓர் ஆன்மிக அர்ப்பணிப்பு.</p>
