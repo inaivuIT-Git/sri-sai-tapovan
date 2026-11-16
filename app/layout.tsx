@@ -1,8 +1,11 @@
-
 import type { Metadata } from "next";
+
 import Header from "./components/header";
 import LaunchCountdown from "./components/launch-countdown";
+import LanguageAttribute from "./components/language-attribute";
+
 import "./globals.css";
+import "./en/en-theme.css";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.salemshirdi.org"),
@@ -34,7 +37,7 @@ export const metadata: Metadata = {
     title: "சாய் சத்சங் @ குருபாதம் | Salem Shirdi",
     description:
       "Devotion, satsang and compassionate service in the grace of Shirdi Sai Baba.",
-    images: ["/images/salemshirdi-share.jpeg"],
+    images: ["/images/salemshirdi-share.jpg"],
   },
 
   icons: {
@@ -51,6 +54,8 @@ export default function RootLayout({
   return (
     <html lang="ta">
       <body>
+        <LanguageAttribute />
+
         <LaunchCountdown>
           <Header />
           {children}

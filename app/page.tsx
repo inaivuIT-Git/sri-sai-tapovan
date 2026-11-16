@@ -127,7 +127,7 @@ export default function Home() {
         <div className="home-section-intro">
           <div className="home-section-intro-copy">
             <p className="home-eyebrow">எங்கள் சத்சங்கம்</p>
-            <h2>பக்தி.<br />அறிவு.<br />சேவை.</h2>
+            <h2>பக்தி.<br />அன்பு.<br />சேவை.</h2>
             <p className="home-section-description">
               சாயியை நினைவுகூர்ந்து, அவருடைய போதனைகளை வாழ்வில் உணர்ந்து,
               ஒரு ஆன்மிகச் சமூகமாக இணைவோம்.

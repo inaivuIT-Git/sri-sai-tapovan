@@ -265,3 +265,50 @@
     height: 38px;
   }
 }
+
+/* Language switcher shared by Tamil and English routes */
+.language-switch {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  flex: 0 0 auto;
+  min-height: 32px;
+  padding: 0 11px;
+  border: 1px solid rgba(232, 173, 74, .48);
+  border-radius: 999px;
+  color: rgba(255,255,255,.86);
+  font-family: Arial, sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  text-decoration: none;
+  letter-spacing: .02em;
+}
+.language-switch:hover { border-color: #ffc96b; color: #ffc96b; }
+.language-current { color: #ffc96b; }
+.language-divider { color: rgba(255,255,255,.38); }
+.site-header-en .site-brand-name { font-family: Georgia, "Times New Roman", serif; font-size: 14px; }
+.site-header-en .desktop-nav-link { font-family: Georgia, "Times New Roman", serif; font-size: 12px; }
+.mobile-language-switch {
+  display: block;
+  margin-top: 12px;
+  padding: 12px 14px;
+  border: 1px solid rgba(232,173,74,.4);
+  border-radius: 7px;
+  color: #ffc96b;
+  font-size: 13px;
+  font-weight: 600;
+  text-align: center;
+  text-decoration: none;
+}
+@media (max-width: 1080px) {
+  .language-switch { padding: 0 9px; gap: 5px; font-size: 10px; }
+  .site-header-en .desktop-nav-link { font-size: 11px; }
+}
+@media (max-width: 850px) {
+  .language-switch { display: none; }
+  .site-header-en .site-brand-name { font-size: 12px; }
+}
+@media (max-width: 390px) {
+  .site-header-en .site-brand-name { font-size: 10.5px; }
+}
